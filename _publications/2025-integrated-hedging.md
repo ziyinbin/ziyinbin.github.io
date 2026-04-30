@@ -8,7 +8,7 @@ date: 2025-10-03
 venue: 'Major Revision at Management Science'
 slidesurl: ''
 paperurl: 'https://ssrn.com/abstract=5559558'
-citation: 'Bin, Z., Kouvelis, P., Wu, X., & Xiao, Y. (2025). Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks. SSRN Working Paper No. 5559558. Major revision at Management Science.'
+citation: 'Bin, Z., Kouvelis, P., Wu, X., & Xiao, Y. (2025). Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks. SSRN Working Paper No. 5559558. <strong>Major revision at Management Science.</strong>'
 ---
 
 **Coauthors:** Panos Kouvelis (Olin Business School, Washington University in St. Louis), Xiaole Wu (Fudan University), Yixuan Xiao.
