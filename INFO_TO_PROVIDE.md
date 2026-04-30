@@ -97,18 +97,41 @@
 
 ## D. 账号与外部档案 (重要)
 
-- [ ] **GitHub 账号最终决定**：继续用 `ZoeBin`，还是新注册一个 Gmail 邮箱的 `ziyinbin`/`binziyin`？
-  - ✏️ 答：
-  - 详见我下面回答里的对比
+- ✅ **GitHub 账号**：`ziyinbin`（注册完成，SSH 已通）
 - [ ] **Google Scholar**：已有？✏️ 链接 / 没有 → 我教你 5 分钟建好
 - [ ] **ORCID iD**：已有？✏️ ID / 没有 → 一起建
 - [ ] **ResearchGate**：要建吗？OM 圈用得不多但低成本，可以兜底
   - ✏️ 答：
 - [ ] **LinkedIn**（可选）：✏️ 链接 / 不放
-- [ ] **域名**：确认 `ziyinbin.com` 拼写无误？是否已购买？
+- [ ] **域名**：`ziyinbin.com` 是否已购买？
   - ✏️ 答：
-- [ ] **域名注册商**：默认推荐 Cloudflare Registrar（at-cost ~$10/年）。介意的话可换 Porkbun
+- [ ] **域名注册商**：默认 Cloudflare Registrar（at-cost ~$10/年）；介意可换 Porkbun
   - ✏️ 答：
+
+---
+
+## D-bis. SEO 加速（域名通后立即做，job market 才能 8-9 月被搜到）
+
+### AI 自动做的部分（你不用动手）
+
+- [ ] 加 **JSON-LD `Person` schema** 到 `<head>`：声明你是个人 + Affiliation Fudan + 别名 (`Bin Ziyin` / `Ziyin Bin` / `宾梓吟` / `Z. Bin`) + sameAs 链接到 SSRN/Scholar/ORCID
+- [ ] 加 **multi-name meta**：让搜任何姓名顺序变体都能命中
+- [ ] 启用 academicpages 自带的 `jekyll-seo-tag`（OpenGraph + Twitter Cards），确认 description / image 都填好
+- [ ] 配置 `sitemap.xml`（已自动生成，确认 `/sitemap.xml` 可访问）
+- [ ] 给 `404.md` 加合理跳转（提升站内 UX → 间接 SEO 加分）
+
+### 你需要操作的部分（每条 5--15 分钟）
+
+- [ ] **Google Search Console**：https://search.google.com/search-console → Add property → ziyinbin.com → 用 DNS TXT 记录验证（Cloudflare 控制台粘一行）→ Submit `https://ziyinbin.com/sitemap.xml`
+- [ ] **Bing Webmaster Tools**：可以从 GSC 一键导入，不用重复填
+- [ ] **SSRN author page**（最高优先级，权重最高）：登录 SSRN → My Account → Personal Information → "Personal Homepage URL" 填 `https://ziyinbin.com`
+- [ ] **Google Scholar profile**（注册后）：右上角铅笔 → "Homepage" 字段填 `https://ziyinbin.com`
+- [ ] **ORCID profile**（注册后）：左侧栏 "Websites & Social Links" → Add → 填主页
+- [ ] **ResearchGate**（如启用）：profile → Edit → External links → 加主页
+- [ ] **复旦 PhD student page**（如学院网站有）：联系小米/管理员加上你主页链接 —— `.edu.cn` 域名外链是 SEO 神器
+- [ ] **Email signature**：把 `https://ziyinbin.com` 加到所有邮箱（Fudan / Gmail）的 signature；学术 mailing list 转发能爬到
+- [ ] **Author info on papers**：以后投稿 / arXiv / SSRN，corresponding author footnote 加上 homepage URL
+- [ ] **Conference badge / poster**：现场印 QR code 链 `ziyinbin.com`（POMS Annual 2026 / SCF SMU 2026 都可以用）
 
 ---
 

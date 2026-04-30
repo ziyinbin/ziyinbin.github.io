@@ -15,7 +15,7 @@ name                     : &name "Ziyin Bin"
 description              : &description "Ziyin Bin (宾梓吟) — PhD candidate in Operations Management at Fudan University. Research on supply chain risk management, financial hedging, and structural analysis of industrial sectors."
 url                      : "https://ziyinbin.com"            # 域名上线后生效；DNS 未通时可临时改为 https://ziyinbin.github.io
 baseurl                  : ""                                # repo 命名为 username.github.io 时留空
-repository               : "ziyinbin/ziyinbin.github.io"     # 待 GitHub 账号创建后确认
+repository               : "ziyinbin/ziyinbin.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -50,7 +50,7 @@ author:
   bitbucket        :
   codepen          :
   dribbble         :
-  github           : "ziyinbin"                               # 待新账号注册后确认
+  github           : "ziyinbin"
   kaggle           :
   stackoverflow    :
 
