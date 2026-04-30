@@ -22,7 +22,7 @@ Research Interests
 ======
 * Operations Management
 * Supply Chain Risk Management
-* Financial Hedging in Operations
+* Financial/Operational Hedging in Operations
 * Empirical / Structural Operations Management
 
 Working Papers
