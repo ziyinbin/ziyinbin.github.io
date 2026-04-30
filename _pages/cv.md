@@ -9,7 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
-[**Download PDF version**](/files/cv.pdf){: .btn .btn--info}
+<!-- PDF 版本待 LaTeX 依赖装好后补上：
+     tlmgr install fontawesome6 sourcesanspro --usermode
+     cd cv && make
+     git add files/cv.pdf && git commit -m "Add CV PDF" && git push -->
+*A printable PDF version of this CV is coming soon.*
 
 Education
 ======

@@ -1,17 +1,7 @@
 ---
-# Front matter triggers Jekyll to render this file with Liquid.
-# Production (GitHub Pages) → block all crawlers (site under construction)
-# Development / docker (Codespaces / local) → allow normal crawl rules
+# Front matter triggers Jekyll to render this with Liquid so {{ site.url }} works.
 ---
-{%- if jekyll.environment == "production" -%}
-# Site under construction — block all crawlers until launch.
-# Remove this conditional from robots.txt when ready to publish.
-
-User-agent: *
-Disallow: /
-{%- else -%}
 User-agent: *
 Allow: /
 
 Sitemap: {{ site.url }}/sitemap.xml
-{%- endif -%}
