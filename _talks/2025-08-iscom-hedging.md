@@ -9,5 +9,3 @@ location: "TBD"
 ---
 
 Presented at ISCOM 2025.
-
-*[Verify exact date and host city.]*

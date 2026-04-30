@@ -9,5 +9,3 @@ location: "Hong Kong"
 ---
 
 Presented at the 2025 POMS-HK International Conference.
-
-*[Verify exact date.]*

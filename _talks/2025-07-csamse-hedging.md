@@ -5,9 +5,7 @@ type: "Conference talk"
 permalink: /talks/2025-07-csamse-hedging
 venue: "CSAMSE Annual Meeting"
 date: 2025-07-01
-location: "China (TBD)"
+location: "China"
 ---
 
 Presented at the 2025 CSAMSE Annual Meeting.
-
-*[Verify exact date and host city.]*

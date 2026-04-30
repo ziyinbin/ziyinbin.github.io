@@ -3,11 +3,14 @@ title: "Integrated Hedging Strategies for Exchange Rate and Commodity Price Risk
 collection: talks
 type: "Invited talk"
 permalink: /talks/2026-05-poms-annual-hedging
-venue: "POMS Annual Conference"
-date: 2026-05-01
-location: "TBD (United States)"
+venue: "POMS Annual Conference, Production and Operations Management Society"
+date: 2026-05-10
+location: "Las Vegas, NV (Nevada 11)"
 ---
 
-**Upcoming**: Invited talk at the 2026 POMS Annual Conference.
+**Upcoming · Invited Paper #148-0307**
 
-*[Verify exact date and host city — POMS Annual 2026 typically in late April or May.]*
+- **Date / Time:** Sunday, May 10, 2026, 10:20 – 11:50 AM
+- **Room:** Nevada 11
+- **Session:** *Risk, Signals, and Supply Chain Strategy*
+- **Track:** Supply Chain Risk & Resilience

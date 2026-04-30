@@ -29,4 +29,4 @@ In the **duopoly setting**, competition drives firms to adopt complementary hedg
 - CSAMSE Annual Meeting, 2025
 - POMS-HK International Conference, 2025
 - ISCOM (International Symposium on Contemporary Operations Management), 2025
-- *Upcoming:* POMS Annual Conference, 2026 (invited talk)
+- *Upcoming:* **POMS Annual Conference 2026** — Sunday, May 10, 10:20–11:50 AM, Las Vegas, NV (Nevada 11); session: *Risk, Signals, and Supply Chain Strategy* (Track: Supply Chain Risk & Resilience); **Invited Paper** (#148-0307)

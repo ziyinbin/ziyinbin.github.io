@@ -1,13 +1,16 @@
 ---
-title: "A Structural Analysis of the Four-Tier Photovoltaic Industry: Overcapacity, Mergers, and Policies (Invited)"
+title: "A Structural Analysis of the Four-tier Photovoltaic Industry: The Effects of Capacity, Mergers, and Policies (Invited)"
 collection: talks
 type: "Invited talk"
 permalink: /talks/2026-05-poms-annual-photovoltaic
-venue: "POMS Annual Conference"
-date: 2026-05-02
-location: "TBD (United States)"
+venue: "POMS Annual Conference, Production and Operations Management Society"
+date: 2026-05-09
+location: "Las Vegas, NV (Nevada 6)"
 ---
 
-**Upcoming**: Invited talk at the 2026 POMS Annual Conference.
+**Upcoming · Invited Paper #148-0434**
 
-*[Verify exact date and host city.]*
+- **Date / Time:** Saturday, May 9, 2026, 1:45 – 3:15 PM
+- **Room:** Nevada 6
+- **Session:** *Strategic Competition and Cooperation in Sustainable Markets*
+- **Track:** Industry Studies & Public Policy
