@@ -2,9 +2,14 @@
 
 <meta charset="utf-8">
 
-<!-- Site under construction — temporarily prevent search engine indexing.
-     Remove this single noindex line when ready to launch. -->
+{%- comment -%}
+  Block search-engine indexing only in production (GitHub Pages) while site is
+  under construction. In development / docker (Codespaces), the noindex tag is
+  skipped so jekyll serve renders a clean preview.
+{%- endcomment -%}
+{% if jekyll.environment == "production" %}
 <meta name="robots" content="noindex,nofollow">
+{% endif %}
 
 {% include seo.html %}
 {% include person-schema.html %}

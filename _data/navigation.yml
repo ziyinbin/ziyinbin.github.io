@@ -1,15 +1,18 @@
 # 顶部导航条 ——
-# 当前网站处于 "Under Construction" 状态，导航暂时清空 (main: [])。
-# 上线时把下方注释取消掉、注释掉 main: [] 即可恢复。
-#
-# main:
-#   - title: "Research"
-#     url: /publications/
-#   - title: "Talks"
-#     url: /talks/
-#   - title: "Teaching"
-#     url: /teaching/
-#   - title: "CV"
-#     url: /cv/
+# 通过 _includes/masthead.html 里的 {% unless jekyll.environment == "production" %}
+# 控制：production 环境（GitHub Pages）下隐藏所有导航项；
+# 本地 jekyll serve / Codespaces 预览时全部显示。
+# 准备公开上线时，把 masthead.html 里那行 unless 包裹去掉即可。
 
-main: []
+main:
+  - title: "Research"
+    url: /publications/
+
+  - title: "Talks"
+    url: /talks/
+
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "CV"
+    url: /cv/
