@@ -15,6 +15,7 @@ Education
 ======
 * **Ph.D. Candidate in Management Science**, *2021 – present (joint Master–Ph.D. program)*
   * School of Management, Fudan University, Shanghai
+  * Advisor: **Prof. Xiaole Wu**
   * Coursework: Supply Chain Management, Advanced Microeconomics, Game Theory, Contract Theory, Empirical IO, Convex Analysis
 * **B.S. in Management Science**, *2017 – 2021*
   * School of Government, Beijing Normal University, Beijing

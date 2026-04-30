@@ -20,7 +20,11 @@ citation: 'Bin, Z., Li, M., Liu, Z., Wu, L., & Wu, X. (2025). A Structural Analy
 **Status:** Working paper. *(SSRN link / target journal — TBD)*
 
 ### Abstract
-*TBD — please provide a 200--300 word abstract.* The paper presents a structural analysis of the four-tier photovoltaic (PV) supply chain (poly-Si → wafer → cell → module), examining the effects of capacity, M&A waves, and industrial policy interventions in China's PV sector.
+Photovoltaic manufacturing is organized as a sequence of capital-intensive stages that experienced rapid capacity expansion, persistent overcapacity, and sharp price compression during 2022–2025. We estimate comparable Cournot oligopoly models for the four major tiers of the China-centered crystalline-silicon supply chain (polysilicon, wafers, cells, and modules), recovering tier-specific demand elasticities, utilization-dependent marginal-cost schedules, and markups.
+
+The estimated cost curvature differs markedly across tiers: wafers and cells exhibit U-shaped schedules with interior cost minima, polysilicon marginal cost declines monotonically, and module marginal cost declines approximately linearly. We interpret these differences as reflecting distinct forms of operational rigidity along the chain.
+
+In recursive counterfactual exercises, an upstream cost shock is amplified at the first link of the chain, where firm exit reinforces direct cost pass-through, and attenuates downstream. Horizontal-merger counterfactuals decompose ownership consolidation, direct efficiency transfer, and capacity pooling: common control and efficiency transfer raise welfare in all pairings, whereas full integration is state-dependent and can reduce welfare when pooling moves the merged producer away from the efficient loading region.
 
 ### Presentations
 - ISCOM (International Symposium on Contemporary Operations Management), 2025

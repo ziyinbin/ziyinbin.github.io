@@ -22,7 +22,7 @@ repository               : "ziyinbin/ziyinbin.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"                            # 待用户提供照片放到 images/profile.png
+  avatar           : "picture.jpg"
   name             : "Ziyin Bin"
   pronouns         : # 如需要可填 "she/her"
   bio              : "PhD Candidate, Operations Management.<br>Supply Chain Risk · Financial Hedging."
@@ -144,8 +144,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "picture.jpg"   # 用作 Twitter/X、Facebook、Slack 等分享时的预览图
+og_description           : "Ziyin Bin (宾梓吟) — PhD Candidate in Operations Management, Fudan University. Working papers on supply chain risk hedging and structural analysis of the photovoltaic industry."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
