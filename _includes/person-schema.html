@@ -1,0 +1,56 @@
+{%- comment -%}
+  JSON-LD Person schema for SEO.
+  Tells Google: this site = a real person (Bin Ziyin / 宾梓吟) at Fudan University,
+  with these alternate names + sameAs links to verified academic profiles.
+  Boosts ranking when people search any name variant.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ziyin Bin",
+  "alternateName": [
+    "Bin Ziyin",
+    "宾梓吟",
+    "Z. Bin",
+    "Bin, Z."
+  ],
+  "givenName": "Ziyin",
+  "familyName": "Bin",
+  "jobTitle": "PhD Candidate in Operations Management",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "School of Management, Fudan University",
+    "url": "https://www.fdsm.fudan.edu.cn/en/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shanghai",
+      "addressCountry": "CN"
+    }
+  },
+  "knowsAbout": [
+    "Operations Management",
+    "Supply Chain Risk Management",
+    "Financial Hedging",
+    "Empirical Operations Management",
+    "Industrial Policy"
+  ],
+  "url": "{{ site.url }}",
+  "email": "mailto:{{ site.author.email }}",
+  "sameAs": [
+    {%- if site.author.ssrn -%}{{ site.author.ssrn | jsonify }},{%- endif %}
+    {%- if site.author.googlescholar -%}{{ site.author.googlescholar | jsonify }},{%- endif %}
+    {%- if site.author.orcid -%}{{ site.author.orcid | jsonify }},{%- endif %}
+    {%- if site.author.researchgate -%}{{ site.author.researchgate | jsonify }},{%- endif %}
+    {%- if site.author.github -%}{{ "https://github.com/" | append: site.author.github | jsonify }}{%- endif %}
+  ]
+}
+</script>
+
+{%- comment -%}Multi-name meta tags so search engines and SSRN/Scholar bots can match all 4 name variants{%- endcomment -%}
+<meta name="author" content="Ziyin Bin">
+<meta name="DC.creator" content="Ziyin Bin">
+<meta name="DC.creator" content="Bin Ziyin">
+<meta name="DC.creator" content="宾梓吟">
+<meta name="citation_author" content="Bin, Ziyin">
+<meta name="citation_author_institution" content="Fudan University, School of Management">
