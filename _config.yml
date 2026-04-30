@@ -37,7 +37,7 @@ author:
   googlescholar    :                                          # 注册后填 "https://scholar.google.com/citations?user=XXXXX"
   inspire-hep      :
   impactstory      :
-  orcid            :                                          # 注册后填 "https://orcid.org/0000-0000-0000-0000"
+  orcid            : "https://orcid.org/0009-0009-5476-5424"
   semantic         :
   ssrn             : "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=8432028"
   pubmed           :
