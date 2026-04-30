@@ -1,0 +1,5 @@
+# Site under construction — block all crawlers until launch.
+# Remove this file (or change to "Allow: /") when ready to publish.
+
+User-agent: *
+Disallow: /

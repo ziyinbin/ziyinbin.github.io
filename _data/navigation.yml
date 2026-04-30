@@ -1,15 +1,13 @@
 # 顶部导航条 ——
-# 学术 job market 主页保持精简：Home / Research / Talks / CV
-# 后续如有 Teaching 经历，再加：
-#   - title: "Teaching"
-#     url: /teaching/
+# 当前网站处于 "Under Construction" 状态，导航暂时清空。
+# 上线时把下方注释取消掉即可恢复。
+#
+# main:
+#   - title: "Research"
+#     url: /publications/
+#   - title: "Talks"
+#     url: /talks/
+#   - title: "CV"
+#     url: /cv/
 
-main:
-  - title: "Research"
-    url: /publications/
-
-  - title: "Talks"
-    url: /talks/
-
-  - title: "CV"
-    url: /cv/
+main: []
