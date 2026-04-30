@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD candidate in **Management Science** at the [School of Management, Fudan University](https://www.fdsm.fudan.edu.cn/en/), advised by **Prof. Xiaole Wu**. My research lies at the intersection of **operations management** and **financial risk management**, with a current focus on hedging strategies for supply chains exposed to exchange rate, commodity, and policy risks, and structural analysis of capital-intensive manufacturing supply chains.
+I am a PhD candidate in **Management Science** at the [School of Management, Fudan University](https://www.fdsm.fudan.edu.cn/en/), advised by **Prof. Xiaole Wu**. I am currently a **visiting PhD student** at the **[Olin Business School, Washington University in St. Louis](https://olin.wustl.edu/)** (Jan – Jul 2026), hosted by **Prof. Panos Kouvelis**. My research lies at the intersection of **operations management** and **financial risk management**, with a current focus on hedging strategies for supply chains exposed to exchange rate, commodity, and policy risks, and structural analysis of capital-intensive manufacturing supply chains.
 
 I will be on the **2026–2027 academic job market** for tenure-track positions in Operations Management.
 

@@ -14,6 +14,7 @@ Education
 * **Ph.D. Candidate in Management Science**, *2021 – present (MPhil-PhD Program)*
   * School of Management, Fudan University, Shanghai
   * Advisor: **Prof. Xiaole Wu**
+  * **Visiting PhD Student**, Olin Business School, Washington University in St. Louis, *Jan – Jul 2026* (host: **Prof. Panos Kouvelis**)
 * **B.S. in Management Science**, *2017 – 2021*
   * School of Government, Beijing Normal University, Beijing
   * Visiting Student, UC Berkeley Summer Program, Jul – Aug 2019
