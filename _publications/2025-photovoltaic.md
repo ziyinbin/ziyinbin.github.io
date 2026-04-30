@@ -28,5 +28,5 @@ In recursive counterfactual exercises, an upstream cost shock is amplified at th
 
 ### Presentations
 - ISCOM (International Symposium on Contemporary Operations Management), 2025
-- *Upcoming:* **POMS Annual Conference 2026** — Saturday, May 9, 1:45–3:15 PM, Las Vegas, NV (Nevada 6); session: *Strategic Competition and Cooperation in Sustainable Markets* (Track: Industry Studies & Public Policy); **Invited Paper** (#148-0434)
+- *Upcoming:* **POMS Annual Conference 2026** — Saturday, May 9, 1:45–3:15 PM, Reno, NV (Nevada 6); session: *Strategic Competition and Cooperation in Sustainable Markets* (Track: Industry Studies & Public Policy)
 - *Upcoming:* **2026 Supply Chain Finance Workshop**, Singapore Management University — May 18–19, 2026

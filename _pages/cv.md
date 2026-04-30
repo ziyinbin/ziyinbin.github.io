@@ -9,22 +9,14 @@ redirect_from:
 
 {% include base_path %}
 
-<!-- PDF 版本待 LaTeX 依赖装好后补上：
-     tlmgr install fontawesome6 sourcesanspro --usermode
-     cd cv && make
-     git add files/cv.pdf && git commit -m "Add CV PDF" && git push -->
-*A printable PDF version of this CV is coming soon.*
-
 Education
 ======
-* **Ph.D. Candidate in Management Science**, *2021 – present (joint Master–Ph.D. program)*
+* **Ph.D. Candidate in Management Science**, *2021 – present (MPhil-PhD Program)*
   * School of Management, Fudan University, Shanghai
   * Advisor: **Prof. Xiaole Wu**
-  * Coursework: Supply Chain Management, Advanced Microeconomics, Game Theory, Contract Theory, Empirical IO, Convex Analysis
 * **B.S. in Management Science**, *2017 – 2021*
   * School of Government, Beijing Normal University, Beijing
-  * Coursework: Operations Research, Optimization Theory, Applied Statistics, MATLAB, Mathematical Modeling, Financial Engineering, Financial Risk Management
-  * Visiting Student, **UC Berkeley Summer Program**, Jul – Aug 2019
+  * Visiting Student, UC Berkeley Summer Program, Jul – Aug 2019
 
 Research Interests
 ======
@@ -32,7 +24,6 @@ Research Interests
 * Supply Chain Risk Management
 * Financial Hedging in Operations
 * Empirical / Structural Operations Management
-* Industrial Policy & Sustainable Markets
 
 Working Papers
 ======
@@ -64,8 +55,6 @@ Industry Experience
 Research Projects (Selected)
 ======
 * **Research Assistant**, NSFC Major Project *"Theoretical Foundations of Supply Chain Resilience and Security"*, Fudan University, Jul 2022 – present
-* **Core Member**, *Risk Transmission across A-share Industries under COVID-19 Shock (Complex Network Approach)*, Beijing Normal University, Mar – May 2020
-* **Project Leader**, *Systemic Financial Risk Measurement via SRISK with Interbank Network* (National Innovation Project), Beijing Normal University, May 2019 – May 2020 — *Outstanding rating*
 
 Honors & Awards
 ======
@@ -73,14 +62,7 @@ Honors & Awards
 * Outstanding Master's Academic Scholarship, Fudan University
 * "Outstanding Student" Award, Fudan University
 * First-Class Jingshi Scholarship, Beijing Normal University
-* Third Prize, China Undergraduate Mathematics Competition
-* Second Prize, Beijing Inter-Collegiate Mathematical Modeling Contest
 
 Professional Service
 ======
 * Ad-hoc Reviewer, *Naval Research Logistics*
-
-Technical Skills
-======
-* **Programming & Analysis:** Python, R, MATLAB, Mathematica, LaTeX
-* **Languages:** Mandarin (native), English (CET-6: 583, CET-4: 685)

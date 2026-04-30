@@ -5,7 +5,7 @@ type: "Conference talk"
 permalink: /talks/2025-08-iscom-photovoltaic
 venue: "ISCOM (International Symposium on Contemporary Operations Management)"
 date: 2025-08-02
-location: "TBD"
+location: ""
 ---
 
 Presented at ISCOM 2025.

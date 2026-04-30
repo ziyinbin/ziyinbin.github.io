@@ -5,10 +5,10 @@ type: "Invited talk"
 permalink: /talks/2026-05-poms-annual-photovoltaic
 venue: "POMS Annual Conference, Production and Operations Management Society"
 date: 2026-05-09
-location: "Las Vegas, NV (Nevada 6)"
+location: "Reno, NV (Nevada 6)"
 ---
 
-**Upcoming · Invited Paper #148-0434**
+**Upcoming**
 
 - **Date / Time:** Saturday, May 9, 2026, 1:45 – 3:15 PM
 - **Room:** Nevada 6

@@ -20,7 +20,7 @@ See the [Research](/publications/) page for full details.
 
 ## Upcoming Talks
 
-- **2026 POMS Annual Conference** (Las Vegas, NV)
+- **2026 POMS Annual Conference** (Reno, NV)
   - *PV paper* — Saturday, May 9, 1:45–3:15 PM (Nevada 6); session: *Strategic Competition and Cooperation in Sustainable Markets*
   - *Hedging paper* — Sunday, May 10, 10:20–11:50 AM (Nevada 11); session: *Risk, Signals, and Supply Chain Strategy*
 - **2026 Supply Chain Finance Workshop**, Singapore Management University — May 18–19, 2026 (PV paper)
