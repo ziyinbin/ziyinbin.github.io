@@ -1,0 +1,15 @@
+# 顶部导航条 ——
+# 学术 job market 主页保持精简：Home / Research / Talks / CV
+# 后续如有 Teaching 经历，再加：
+#   - title: "Teaching"
+#     url: /teaching/
+
+main:
+  - title: "Research"
+    url: /publications/
+
+  - title: "Talks"
+    url: /talks/
+
+  - title: "CV"
+    url: /cv/

@@ -1,0 +1,237 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+% Bin Ziyin (宾梓吟) — Academic CV
+% Built on Awesome-CV (https://github.com/posquit0/Awesome-CV), MIT/CC BY-SA 4.0
+% Compile: xelatex cv.tex   (or just `make` from this directory)
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, letterpaper]{awesome-cv}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Accent color: pick one of awesome-emerald / awesome-skyblue / awesome-red /
+% awesome-pink / awesome-orange / awesome-nephritis / awesome-concrete / awesome-darknight
+\colorlet{awesome}{awesome-darknight}     % 学术风建议低饱和度
+
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+% PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Ziyin}{Bin}                                 % 英文 given-first 顺序
+% \photo[circle,edge,left]{profile}              % 如需头像，把图片放本目录命名 profile.png 然后取消注释
+\position{PhD Candidate \enskip\cdotp\enskip Operations Management}
+\address{Fanhai Building, 670 Guoshun Road, Yangpu District, Shanghai 200433, China}
+
+% \mobile{(+86) XXX-XXXX-XXXX}    % 仅本地编译面试用 CV 时手动填入；不要 commit 真实号码
+\email{zybin23@m.fudan.edu.cn}
+\homepage{ziyinbin.com}                          % 域名上线后生效
+% \github{ZoeBin}
+% \linkedin{}
+% \orcid{0000-0000-0000-0000}                    % 注册后填
+% \googlescholar{}                               % Google Scholar user= 后的字串
+% \twitter{}
+
+\quote{Operations \& Supply Chain Management \enskip\cdotp\enskip Risk Hedging \enskip\cdotp\enskip Empirical OM}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader
+\makecvfooter
+  {\today}
+  {Ziyin Bin~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+% EDUCATION
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+    {PhD Candidate, Management Science}     % degree
+    {Fudan University, School of Management}% institution
+    {Shanghai, China}                       % location
+    {Sep. 2021 -- Present (Expected: 20XX)} % date
+    {
+      \begin{cvitems}
+        \item {Joint Master--PhD program (硕博连读). Advisor: \emph{TBD}.}
+        \item {Coursework: Supply Chain Management, Advanced Microeconomics, Game Theory, Contract Theory, Empirical IO, Convex Analysis.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {BSc, Management Science}
+    {Beijing Normal University, School of Government}
+    {Beijing, China}
+    {Sep. 2017 -- Jun. 2021}
+    {
+      \begin{cvitems}
+        \item {Visiting Student, UC Berkeley Summer Program, Jul.--Aug. 2019.}
+        \item {Vice President, School Student Union.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+% RESEARCH INTERESTS
+%-------------------------------------------------------------------------------
+\cvsection{Research Interests}
+\begin{cvparagraph}
+Risk management in operations; financial hedging strategies for supply chains; empirical operations management; supply chain resilience and trade policy. \\
+\textit{(请用户用 3--5 个英文关键词替换上述占位描述)}
+\end{cvparagraph}
+
+%-------------------------------------------------------------------------------
+% WORKING PAPERS
+%-------------------------------------------------------------------------------
+\cvsection{Working Papers}
+\begin{cventries}
+  \cventry
+    {Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks}
+    {with Panos Kouvelis, Xiaole Wu, Yixuan Xiao}
+    {}
+    {Posted Oct. 2025; current revision in progress}
+    {
+      \begin{cvitems}
+        \item {Available on SSRN: \href{https://ssrn.com/abstract=5559558}{ssrn.com/abstract=5559558}.}
+        \item {Studies a firm's joint hedging strategy for exchange rate and commodity price risks. In the monopoly setting, optimal hedging depends on the sign of the correlation and the relative volatility of the two risks; in the duopoly setting, competition induces complementary hedging strategies in equilibrium.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {A Structural Analysis of the Four-Tier Photovoltaic Industry: Overcapacity, Mergers, and Policies}
+    {with [coauthors --- TBD]}
+    {}
+    {2025 -- Present}
+    {
+      \begin{cvitems}
+        \item {Structural model of the four-tier photovoltaic (PV) supply chain (poly-Si $\to$ wafer $\to$ cell $\to$ module), examining the interplay among overcapacity, M\&A waves, and industrial policy in China's PV sector.}
+        \item {Status: working paper. SSRN link --- TBD.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+% CONFERENCE PRESENTATIONS
+%-------------------------------------------------------------------------------
+\cvsection{Conference Presentations \& Invited Talks}
+\textit{Hedging paper unless otherwise noted; PV = Photovoltaic paper.}
+\begin{cventries}
+  \cventry{2026 Supply Chain Finance Workshop \textit{(PV, upcoming)}}
+    {Singapore Management University}{Singapore}{May 18--19, 2026}{}
+  \cventry{POMS Annual Conference \textit{(invited; both papers, upcoming)}}
+    {Production and Operations Management Society}{TBD, USA}{2026}{}
+  \cventry{ISCOM \textit{(both papers)}}
+    {International Symposium on Contemporary Operations Management}{TBD}{2025}{}
+  \cventry{POMS-HK International Conference}{}{Hong Kong}{2025}{}
+  \cventry{CSAMSE Annual Meeting}{}{China}{2024, 2025}{}
+  \cventry{POMS-China Annual Meeting}{}{China}{2023, 2024}{}
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+% RESEARCH PROJECTS / GRANTS
+%-------------------------------------------------------------------------------
+\cvsection{Research Projects}
+\begin{cventries}
+  \cventry
+    {Research Assistant}
+    {NSFC Major Project ``Theoretical Foundations of Supply Chain Resilience and Security'' (PI: TBD)}
+    {Fudan University}
+    {Jul. 2022 -- Present}
+    {
+      \begin{cvitems}
+        \item {Literature review on supply chain network resilience metrics, international sourcing under disruption, and great-power competition in trade.}
+        \item {Built game-theoretic and empirical models on tariff/non-tariff measures and Belt-and-Road sourcing dynamics; analyzed RCEP and China-Europe Railway cases.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Core Member}
+    {Risk Transmission across A-share Industries under COVID-19 Shock (Complex Network Approach)}
+    {Beijing Normal University}
+    {Mar. 2020 -- May 2020}
+    {
+      \begin{cvitems}
+        \item {Built Granger-causality network and CoVaR-based risk network; ran SEIR contagion simulation on 28 industries.}
+        \item {Selected for BNU Undergraduate Forum (Economics \& Management).}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Project Leader}
+    {Systemic Financial Risk Measurement via SRISK with Interbank Network (National Innovation Project)}
+    {Beijing Normal University}
+    {May 2019 -- May 2020}
+    {
+      \begin{cvitems}
+        \item {Estimated asymmetric Granger causality among 26 A-share financial firms; built volatility-spillover network.}
+        \item {Simulated risk contagion across 31 listed banks via DebtRank model. Project rated \textit{Outstanding}.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+% INDUSTRY EXPERIENCE
+%-------------------------------------------------------------------------------
+\cvsection{Industry Experience}
+\begin{cventries}
+  \cventry{Data Analyst Intern}{Nielsen}{}{Dec. 2020 -- Feb. 2021}
+    {
+      \begin{cvitems}
+        \item {Cleaned, encoded, and analyzed survey data from 46 branches of a regional bank and 59 branches of a state-owned commercial bank using R and Excel.}
+        \item {Co-authored 10+ client reports on customer satisfaction (banking, insurance).}
+      \end{cvitems}
+    }
+
+  \cventry{Trading Department Intern}{CITIC Securities Futures}{}{Aug. 2019 -- Sep. 2019}
+    {
+      \begin{cvitems}
+        \item {Analyzed natural-rubber industry chain and TSR-20 futures contracts; built option hedging strategies for tire manufacturers.}
+        \item {Maintained daily option-hedging risk dashboard; priced options in MATLAB with volatility-adjusted quotes.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+% HONORS & AWARDS
+%-------------------------------------------------------------------------------
+\cvsection{Honors \& Awards}
+\begin{cvhonors}
+  \cvhonor{First-Class PhD Academic Scholarship}{}{Fudan University}{20XX, 20XX}
+  \cvhonor{Outstanding Master's Academic Scholarship}{}{Fudan University}{20XX}
+  \cvhonor{``Outstanding Student'' Award}{}{Fudan University}{20XX}
+  \cvhonor{First-Class Jingshi Scholarship}{}{Beijing Normal University}{20XX, 20XX}
+  \cvhonor{Third Prize, China Undergraduate Mathematics Competition}{}{}{20XX}
+  \cvhonor{Second Prize, Beijing Inter-Collegiate Mathematical Modeling Contest}{}{}{20XX}
+\end{cvhonors}
+
+%-------------------------------------------------------------------------------
+% TEACHING (uncomment when applicable)
+%-------------------------------------------------------------------------------
+% \cvsection{Teaching Experience}
+% \begin{cventries}
+%   \cventry{Teaching Assistant, Supply Chain Management (MBA)}{Fudan University}{}{Spring 20XX}{}
+% \end{cventries}
+
+%-------------------------------------------------------------------------------
+% PROFESSIONAL SERVICE (uncomment when applicable)
+%-------------------------------------------------------------------------------
+% \cvsection{Professional Service}
+% \begin{cvhonors}
+%   \cvhonor{Ad-hoc Reviewer}{}{Management Science}{20XX}
+% \end{cvhonors}
+
+%-------------------------------------------------------------------------------
+% SKILLS
+%-------------------------------------------------------------------------------
+\cvsection{Technical Skills}
+\begin{cvskills}
+  \cvskill{Programming \& Analysis}{Python, R, MATLAB, Mathematica, \LaTeX}
+  \cvskill{Languages}{Mandarin (native), English (CET-6: 583, CET-4: 685)}
+\end{cvskills}
+
+\end{document}
