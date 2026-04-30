@@ -41,7 +41,7 @@ author:
   semantic         :
   ssrn             : "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=8432028"
   pubmed           :
-  researchgate     :                                          # 如要建：https://www.researchgate.net/profile/Ziyin-Bin
+  researchgate     : "https://www.researchgate.net/profile/Ziyin-Bin"
   scopus           :
   zotero           :
 

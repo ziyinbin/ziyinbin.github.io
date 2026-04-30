@@ -9,56 +9,73 @@ redirect_from:
 
 {% include base_path %}
 
+[**Download PDF version**](/files/cv.pdf){: .btn .btn--info}
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **Ph.D. Candidate in Management Science**, *2021 – present (joint Master–Ph.D. program)*
+  * School of Management, Fudan University, Shanghai
+  * Coursework: Supply Chain Management, Advanced Microeconomics, Game Theory, Contract Theory, Empirical IO, Convex Analysis
+* **B.S. in Management Science**, *2017 – 2021*
+  * School of Government, Beijing Normal University, Beijing
+  * Coursework: Operations Research, Optimization Theory, Applied Statistics, MATLAB, Mathematical Modeling, Financial Engineering, Financial Risk Management
+  * Visiting Student, **UC Berkeley Summer Program**, Jul – Aug 2019
 
-Work experience
+Research Interests
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Operations Management
+* Supply Chain Risk Management
+* Financial Hedging in Operations
+* Empirical / Structural Operations Management
+* Industrial Policy & Sustainable Markets
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Working Papers
+======
+{% for post in site.publications reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Conference Presentations & Invited Talks
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+{% for post in site.talks reversed %}
+  {% include archive-single-talk-cv.html %}
+{% endfor %}
 
-Publications
+Teaching Experience
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+{% for post in site.teaching reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}
+
+Industry Experience
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
+* **Data Analyst Intern**, Nielsen, *Dec 2020 – Feb 2021*
+  * Cleaned, encoded and analyzed survey data from 46 branches of a regional bank and 59 branches of a state-owned commercial bank using R and Excel.
+  * Co-authored 10+ client reports on customer satisfaction (banking, insurance).
+* **Trading Department Intern**, CITIC Securities Futures, *Aug – Sep 2019*
+  * Analyzed natural-rubber industry chain and TSR-20 futures contracts; built option hedging strategies for tire manufacturers.
+  * Maintained daily option-hedging risk dashboard; priced options in MATLAB with volatility-adjusted quotes.
+
+Research Projects (Selected)
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
+* **Research Assistant**, NSFC Major Project *"Theoretical Foundations of Supply Chain Resilience and Security"*, Fudan University, Jul 2022 – present
+* **Core Member**, *Risk Transmission across A-share Industries under COVID-19 Shock (Complex Network Approach)*, Beijing Normal University, Mar – May 2020
+* **Project Leader**, *Systemic Financial Risk Measurement via SRISK with Interbank Network* (National Innovation Project), Beijing Normal University, May 2019 – May 2020 — *Outstanding rating*
+
+Honors & Awards
 ======
-* Currently signed in to 43 different slack teams
+* First-Class Ph.D. Academic Scholarship, Fudan University
+* Outstanding Master's Academic Scholarship, Fudan University
+* "Outstanding Student" Award, Fudan University
+* First-Class Jingshi Scholarship, Beijing Normal University
+* Third Prize, China Undergraduate Mathematics Competition
+* Second Prize, Beijing Inter-Collegiate Mathematical Modeling Contest
+
+Professional Service
+======
+* Ad-hoc Reviewer, *Naval Research Logistics*
+
+Technical Skills
+======
+* **Programming & Analysis:** Python, R, MATLAB, Mathematica, LaTeX
+* **Languages:** Mandarin (native), English (CET-6: 583, CET-4: 685)

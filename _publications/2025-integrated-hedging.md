@@ -5,15 +5,15 @@ category: working-papers
 permalink: /publication/2025-integrated-hedging
 excerpt: 'Optimal hedging of joint FX and commodity price risk under monopoly and duopoly competition.'
 date: 2025-10-03
-venue: 'Working Paper'
+venue: 'Major Revision at Management Science'
 slidesurl: ''
 paperurl: 'https://ssrn.com/abstract=5559558'
-citation: 'Bin, Z., Kouvelis, P., Wu, X., & Xiao, Y. (2025). Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks. SSRN Working Paper No. 5559558.'
+citation: 'Bin, Z., Kouvelis, P., Wu, X., & Xiao, Y. (2025). Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks. SSRN Working Paper No. 5559558. Major revision at Management Science.'
 ---
 
 **Coauthors:** Panos Kouvelis (Olin Business School, Washington University in St. Louis), Xiaole Wu (Fudan University), Yixuan Xiao.
 
-**Status:** Working paper, available on [SSRN](https://ssrn.com/abstract=5559558) (DOI: [10.2139/ssrn.5559558](https://doi.org/10.2139/ssrn.5559558)).
+**Status:** Major Revision at *Management Science*. Available on [SSRN](https://ssrn.com/abstract=5559558) (DOI: [10.2139/ssrn.5559558](https://doi.org/10.2139/ssrn.5559558)).
 
 ### Abstract
 We study a firm's hedging strategy when facing both exchange rate and commodity price risks, where the firm procures a commodity in the domestic market and sells its product to a foreign market.
@@ -28,5 +28,6 @@ In the **duopoly setting**, competition drives firms to adopt complementary hedg
 - CSAMSE Annual Meeting, 2024
 - CSAMSE Annual Meeting, 2025
 - POMS-HK International Conference, 2025
+- 2025 Supply Chain Finance & Risk Management Workshop, Olin Business School, Washington University in St. Louis (May 2025)
 - ISCOM (International Symposium on Contemporary Operations Management), 2025
 - *Upcoming:* **POMS Annual Conference 2026** — Sunday, May 10, 10:20–11:50 AM, Las Vegas, NV (Nevada 11); session: *Risk, Signals, and Supply Chain Strategy* (Track: Supply Chain Risk & Resilience); **Invited Paper** (#148-0307)

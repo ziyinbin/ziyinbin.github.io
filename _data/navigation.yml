@@ -1,12 +1,14 @@
 # 顶部导航条 ——
-# 当前网站处于 "Under Construction" 状态，导航暂时清空。
-# 上线时把下方注释取消掉即可恢复。
+# 当前网站处于 "Under Construction" 状态，导航暂时清空 (main: [])。
+# 上线时把下方注释取消掉、注释掉 main: [] 即可恢复。
 #
 # main:
 #   - title: "Research"
 #     url: /publications/
 #   - title: "Talks"
 #     url: /talks/
+#   - title: "Teaching"
+#     url: /teaching/
 #   - title: "CV"
 #     url: /cv/
 
