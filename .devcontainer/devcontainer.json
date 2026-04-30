@@ -1,15 +1,24 @@
 {
-    "name": "ACADEMIC PAGES",
-    "dockerComposeFile": "../docker-compose.yaml",
-    "service": "jekyll-site",
-    "remoteEnv": {
-        "VSCODE_SERVER_DIR": "/home/vscode/.vscode-server"
+    "name": "Ziyin Bin · Academic Pages (Jekyll)",
+    "image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
     },
-    "runArgs": [
-        "--user",
-        "1000:1000"
-    ],
-    "workspaceFolder": "/usr/src/app",
+    "forwardPorts": [4000],
+    "portsAttributes": {
+        "4000": {
+            "label": "Jekyll Preview",
+            "onAutoForward": "openPreview"
+        }
+    },
+    "postCreateCommand": "bundle install",
     "remoteUser": "vscode",
-    "forwardPorts": [4000] // Add port forwarding
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "shopify.ruby-lsp",
+                "redhat.vscode-yaml"
+            ]
+        }
+    }
 }
