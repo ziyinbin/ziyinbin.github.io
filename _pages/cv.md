@@ -62,7 +62,9 @@ Teaching Experience
   {% include archive-single-cv.html %}
 {% endfor %}
 
-<!-- Industry Experience: hidden for now (2026-05-03). Remove this HTML comment wrapper to re-enable.
+{% comment %}
+Industry Experience: hidden from rendered site (2026-05-03). Remove this Liquid comment wrapper to re-enable.
+
 Industry Experience
 ======
 * **Data Analyst Intern**, Nielsen, *Dec 2020 – Feb 2021*
@@ -71,21 +73,23 @@ Industry Experience
 * **Trading Department Intern**, CITIC Securities Futures, *Aug – Sep 2019*
   * Analyzed natural-rubber industry chain and TSR-20 futures contracts; built option hedging strategies for tire manufacturers.
   * Maintained daily option-hedging risk dashboard; priced options in MATLAB with volatility-adjusted quotes.
--->
+{% endcomment %}
 
 
 Research Projects (Selected)
 ======
 * **Research Assistant**, NSFC Major Project *"Theoretical Foundations of Supply Chain Resilience and Security"*, Fudan University, Jul 2022 – present
 
-<!-- Honors & Awards: hidden for now (2026-05-03). Remove this HTML comment wrapper to re-enable.
+{% comment %}
+Honors & Awards: hidden from rendered site (2026-05-03). Remove this Liquid comment wrapper to re-enable.
+
 Honors & Awards
 ======
 * First-Class Ph.D. Academic Scholarship, Fudan University
 * Outstanding Master's Academic Scholarship, Fudan University
 * "Outstanding Student" Award, Fudan University
 * First-Class Jingshi Scholarship, Beijing Normal University
--->
+{% endcomment %}
 
 Professional Service
 ======
