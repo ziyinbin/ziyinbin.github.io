@@ -25,6 +25,9 @@ package-lock.json
 # 用户原始 CV 文件（含手机号等 PII，仅本地保留）
 简历/
 
+# 私有研究材料（独立 git repo，见 my private materials/.git/）
+my private materials/
+
 # LaTeX intermediate files (cv/ has its own .gitignore but belt-and-suspenders)
 *.aux
 *.log
