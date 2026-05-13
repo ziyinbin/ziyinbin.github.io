@@ -8,7 +8,7 @@ date: 2026-05-10
 location: "Reno, NV (Nevada 11)"
 ---
 
-**Upcoming**
+**Presented**
 
 - **Date / Time:** Sunday, May 10, 2026, 10:20 – 11:50 AM
 - **Room:** Nevada 11

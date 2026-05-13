@@ -8,7 +8,7 @@ date: 2026-05-09
 location: "Reno, NV (Nevada 6)"
 ---
 
-**Upcoming**
+**Presented**
 
 - **Date / Time:** Saturday, May 9, 2026, 1:45 – 3:15 PM
 - **Room:** Nevada 6
