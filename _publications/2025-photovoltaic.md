@@ -15,7 +15,7 @@ citation: 'Bin, Z., Li, M., Liu, Z., Wu, L., & Wu, X. (2025). Competition, Overc
 - Mengfei Li
 - Zibo Liu
 - Lezhen Wu
-- Xiaole Wu
+- [Xiaole Wu](https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm)
 
 **Status:** Working paper. *(SSRN link / target journal — TBD)*
 
