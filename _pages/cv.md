@@ -56,12 +56,6 @@ Conference Presentations & Invited Talks
 * POMS Annual Conference, Reno, NV, May 2026 *(Invited)*
 * ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
 
-Teaching Experience
-======
-{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-
 {% comment %}
 Industry Experience: hidden from rendered site (2026-05-03). Remove this Liquid comment wrapper to re-enable.
 
@@ -94,3 +88,9 @@ Honors & Awards
 Professional Service
 ======
 * Ad-hoc Reviewer, *Naval Research Logistics*
+
+Teaching Experience
+======
+{% for post in site.teaching reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}

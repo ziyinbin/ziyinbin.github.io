@@ -10,8 +10,10 @@ main:
   - title: "Talks"
     url: /talks/
 
-  - title: "Teaching"
-    url: /teaching/
+  # Teaching: hidden from nav (2026-05-12) — TA work, not actual teaching.
+  # Uncomment the two lines below to re-enable.
+  # - title: "Teaching"
+  #   url: /teaching/
 
   - title: "CV"
     url: /cv/
