@@ -223,7 +223,9 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   teaching:
-    output: true
+    # output: false → don't build /teaching/<slug>/ pages (TA work, not meant for search).
+    # _teaching/*.md still loaded into site.teaching so the CV loop can render entries.
+    output: false
     permalink: /:collection/:path/
   publications:
     output: true

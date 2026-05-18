@@ -91,6 +91,10 @@ Professional Service
 
 Teaching Experience
 ======
+{% comment %}
+  Inline render (no per-entry links) — teaching collection has output: false,
+  so post.url would be empty. Source of truth stays in _teaching/*.md.
+{% endcomment %}
 {% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
+* **{{ post.title }}** — {{ post.type }}, {{ post.venue }}, {{ post.date | date: "%b %Y" }}
 {% endfor %}
