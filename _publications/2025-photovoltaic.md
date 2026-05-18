@@ -1,5 +1,5 @@
 ---
-title: "A Structural Analysis of the Four-tier Photovoltaic Industry: The Effects of Capacity, Mergers, and Policies"
+title: "Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain"
 collection: publications
 category: working-papers
 permalink: /publication/2025-photovoltaic-industry
@@ -8,7 +8,7 @@ date: 2025-01-01
 venue: 'Working Paper'
 slidesurl: ''
 paperurl: ''
-citation: 'Bin, Z., Li, M., Liu, Z., Wu, L., & Wu, X. (2025). A Structural Analysis of the Four-tier Photovoltaic Industry: The Effects of Capacity, Mergers, and Policies. Working Paper.'
+citation: 'Bin, Z., Li, M., Liu, Z., Wu, L., & Wu, X. (2025). Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain. Working Paper.'
 ---
 
 **Coauthors** (all at School of Management, Fudan University):

@@ -50,7 +50,7 @@ Conference Presentations & Invited Talks
 * CSAMSE Annual Meeting, Jul 2024
 * POMS-China Annual Meeting, Dec 2023
 
-**A Structural Analysis of the Four-Tier Photovoltaic Industry: Overcapacity, Mergers, and Policies**
+**Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain**
 
 * Supply Chain Finance Workshop, Singapore Management University, May 2026
 * POMS Annual Conference, Reno, NV, May 2026 *(Invited)*

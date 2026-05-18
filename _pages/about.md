@@ -14,7 +14,7 @@ I will be on the **2026–2027 academic job market** for tenure-track positions 
 ## Working Papers
 
 - **[Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks](https://ssrn.com/abstract=5559558)** &nbsp;*(with Panos Kouvelis, Xiaole Wu, Yixuan Xiao)* — Optimal joint hedging of FX and commodity risks; competition induces complementary hedging strategies in equilibrium. **Major Revision at *Management Science***. [SSRN](https://ssrn.com/abstract=5559558)
-- **A Structural Analysis of the Four-tier Photovoltaic Industry: The Effects of Capacity, Mergers, and Policies** &nbsp;*(with Mengfei Li, Zibo Liu, Lezhen Wu, Xiaole Wu)* — Cournot oligopoly model for the four tiers of China's crystalline-silicon PV supply chain; recursive cost-shock and merger counterfactuals.
+- **Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain** &nbsp;*(with Mengfei Li, Zibo Liu, Lezhen Wu, Xiaole Wu)* — Cournot oligopoly model for the four tiers of China's crystalline-silicon PV supply chain; recursive cost-shock and merger counterfactuals.
 
 See the [Research](/publications/) page for full details.
 

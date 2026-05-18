@@ -1,5 +1,5 @@
 ---
-title: "A Structural Analysis of the Four-Tier Photovoltaic Industry: Overcapacity, Mergers, and Policies"
+title: "Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain"
 collection: talks
 type: "Workshop talk"
 permalink: /talks/2026-05-scf-smu-photovoltaic

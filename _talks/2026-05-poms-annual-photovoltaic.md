@@ -1,5 +1,5 @@
 ---
-title: "A Structural Analysis of the Four-tier Photovoltaic Industry: The Effects of Capacity, Mergers, and Policies (Invited)"
+title: "Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain (Invited)"
 collection: talks
 type: "Invited talk"
 permalink: /talks/2026-05-poms-annual-photovoltaic

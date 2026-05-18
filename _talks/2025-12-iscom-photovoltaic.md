@@ -1,5 +1,5 @@
 ---
-title: "A Structural Analysis of the Four-tier Photovoltaic Industry: The Effects of Capacity, Mergers, and Policies"
+title: "Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain"
 collection: talks
 type: "Conference talk"
 permalink: /talks/2025-12-iscom-photovoltaic
