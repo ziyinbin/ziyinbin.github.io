@@ -27,6 +27,6 @@ The estimated cost curvature differs markedly across tiers: wafers and cells exh
 In recursive counterfactual exercises, an upstream cost shock is amplified at the first link of the chain, where firm exit reinforces direct cost pass-through, and attenuates downstream. Horizontal-merger counterfactuals decompose ownership consolidation, direct efficiency transfer, and capacity pooling: common control and efficiency transfer raise welfare in all pairings, whereas full integration is state-dependent and can reduce welfare when pooling moves the merged producer away from the efficient loading region.
 
 ### Presentations
-- ISCOM (International Symposium on Contemporary Operations Management), 2025
-- *Upcoming:* **POMS Annual Conference 2026** — Saturday, May 9, 1:45–3:15 PM, Reno, NV (Nevada 6); session: *Strategic Competition and Cooperation in Sustainable Markets* (Track: Industry Studies & Public Policy)
+- ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
+- **POMS Annual Conference 2026** — Saturday, May 9, 2026, 1:45–3:15 PM, Reno, NV (Nevada 6); session: *Strategic Competition and Cooperation in Sustainable Markets* (Track: Industry Studies & Public Policy)
 - *Upcoming:* **2026 Supply Chain Finance Workshop**, Singapore Management University — May 18–19, 2026
