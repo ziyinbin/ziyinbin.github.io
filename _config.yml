@@ -182,6 +182,7 @@ exclude:
   - config
   - Dockerfile
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -191,8 +192,21 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - README.md
   - tmp
   - vendor
+  # internal-only docs / workflow notes / non-website files — were leaking publicly via GitHub Pages
+  - AGENTS.md
+  - INFO_TO_PROVIDE.md
+  - DEPLOY.md
+  - CONTRIBUTING.md
+  - docker-compose.yaml
+  - markdown_generator
+  - scripts
+  # NOTE: "简历/" and "my private materials/" are also gitignored — they don't
+  # exist on GitHub Pages' build at all. We don't add them to Jekyll exclude
+  # because Jekyll 3.10's entry_filter throws encoding errors on UTF-8 paths.
+  # Locally they leak into _site/ as static copies — harmless, not pushed.
 keep_files:
   - .git
   - .svn
