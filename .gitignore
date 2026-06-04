@@ -28,6 +28,11 @@ package-lock.json
 # 私有研究材料（独立 git repo，见 my private materials/.git/）
 my private materials/
 
+# 内部工作文档（保留在本地供 AI agent / 工作流参考，不进公开 repo）
+AGENTS.md
+INFO_TO_PROVIDE.md
+DEPLOY.md
+
 # LaTeX intermediate files (cv/ has its own .gitignore but belt-and-suspenders)
 *.aux
 *.log
