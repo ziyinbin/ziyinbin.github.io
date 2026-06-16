@@ -1,8 +1,19 @@
 /* ==========================================================================
-    DEFAULT THEME - LIGHT VERSION
+    DEFAULT THEME - LIGHT VERSION (Palette E1 "Soft paper")
     ========================================================================== */
-/* Color codes used for the theme */
-$primary-color              : #2f7f93;
+/* Palette E1: paper background, deep navy primary, amber + rust accents */
+$primary-color              : #1F3344;
+$accent-color               : #B5853A;
+$highlight-color            : #8C3818;
+
+$ink                        : #1F1A12;
+$ink-muted                  : #3D372A;
+$ink-light                  : #57534E;
+
+$paper                      : #FBFAF6;
+$paper-soft                 : #F5F1E5;
+$paper-warmer               : #F0E7D0;
+
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
@@ -11,10 +22,10 @@ $lighter-gray               : mix(#fff, $gray, 90%);
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
+$info-color                 : $primary-color;
+$notice-color               : $ink-light;
 $success-color              : #62c462;
-$warning-color              : #f89406;
+$warning-color              : $accent-color;
 
 /* Other basic settings for the template */
 $border-radius              : 4px;
@@ -29,20 +40,26 @@ $sidebar-screen-min-width   : 1024px;
 /* Default light theme for the site */
 :root {
     --global-base-color                 : #{$primary-color};
-    --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
-    --global-border-color               : #{$lighter-gray};
-    --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$lighter-gray};
+    --global-bg-color                   : #{$paper};
+    --global-footer-bg-color            : #{$paper-soft};
+    --global-border-color               : rgba(31, 26, 18, 0.12);
+    --global-dark-border-color          : rgba(31, 26, 18, 0.28);
+    --global-code-background-color      : #{$paper-soft};
+    --global-code-text-color            : #{$ink};
+    --global-fig-caption-color          : #{$ink-light};
+    --global-link-color                 : #{$primary-color};
+    --global-link-color-hover           : #{$highlight-color};
+    --global-link-color-visited         : #{$primary-color};
+    --global-masthead-link-color        : #{$ink};
+    --global-masthead-link-color-hover  : #{$highlight-color};
+    --global-text-color                 : #{$ink};
+    --global-text-color-light           : #{$ink-light};
+    --global-thead-color                : #{$paper-soft};
+    /* New tokens for pills/badges/accents */
+    --global-accent-color               : #{$accent-color};
+    --global-accent-bg                  : #{$paper-warmer};
+    --global-accent-text                : #8C5E1F;
+    --global-highlight-color            : #{$highlight-color};
+    --global-muted-text-color           : #{$ink-muted};
 }
 

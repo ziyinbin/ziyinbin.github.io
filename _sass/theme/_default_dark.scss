@@ -1,28 +1,34 @@
 /* ==========================================================================
-    DEFAULT THEME - DARK VERSION
+    DEFAULT THEME - DARK VERSION (mirror of Palette E1)
     ========================================================================== */
 
-/* Color codes used for the theme */
-$primary-color              : #0ea1c5;
+/* Dark-mode palette: ink-paper background, warm paper text, lifted navy/amber/rust */
+$primary-color              : #6A93B0;
+$accent-color               : #D4A258;
+$highlight-color            : #C46645;
+
+$background                 : #1A1A18;
+$background-light           : #2A2926;
+$background-lighter         : #383631;
+$text                       : #FBFAF6;
+$text-muted                 : #C2BBA8;
+$text-light                 : #9A9182;
+
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 
-$background                 : #474747;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
-$text                       : #ffffff;
-$link                       : #0ea1c5;
-$link-dark                  : mix(#000, $link, 25%);
-$link-light                 : mix(#fff, $link, 25%);
+$link                       : $primary-color;
+$link-dark                  : $highlight-color;
+$link-light                 : mix(#fff, $primary-color, 20%);
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
+$info-color                 : $primary-color;
+$notice-color               : $text-light;
 $success-color              : #62c462;
-$warning-color              : #f89406;
+$warning-color              : $accent-color;
 
 /* Other basic settings for the template */
 $border-radius              : 4px;
@@ -38,19 +44,25 @@ $sidebar-screen-min-width   : 1024px;
 html[data-theme="dark"] {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : #{$light-gray};
+    --global-footer-bg-color            : #{$background-light};
+    --global-border-color               : rgba(251, 250, 246, 0.14);
+    --global-dark-border-color          : rgba(251, 250, 246, 0.28);
+    --global-code-background-color      : #{$background-light};
+    --global-code-text-color            : #{$text};
+    --global-fig-caption-color          : #{$text-light};
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};
+    --global-link-color-visited         : #{$link};
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-masthead-link-color-hover  : #{$accent-color};
     --global-text-color                 : #{$text};
-    --global-text-color-light           : #f3f3f3;
+    --global-text-color-light           : #{$text-light};
     --global-thead-color                : #{$background-lighter};
+    /* Tokens for pills/badges/accents */
+    --global-accent-color               : #{$accent-color};
+    --global-accent-bg                  : rgba(212, 162, 88, 0.16);
+    --global-accent-text                : #{$accent-color};
+    --global-highlight-color            : #{$highlight-color};
+    --global-muted-text-color           : #{$text-muted};
 }
 

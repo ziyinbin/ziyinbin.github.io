@@ -8,13 +8,13 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # 可选: "default", "air", "sunrise", "mint", "dirt", "contrast"
+site_theme               : "default" # options: "default", "air", "sunrise", "mint", "dirt", "contrast"
 title                    : "Ziyin Bin"
 title_separator          : "·"
 name                     : &name "Ziyin Bin"
 description              : &description "Ziyin Bin (宾梓吟) — PhD candidate in Operations Management at Fudan University. Research on supply chain risk management, financial hedging, and structural analysis of industrial sectors."
-url                      : "https://ziyinbin.com"            # 域名上线后生效；DNS 未通时可临时改为 https://ziyinbin.github.io
-baseurl                  : ""                                # repo 命名为 username.github.io 时留空
+url                      : "https://ziyinbin.com"            # production domain; for staging, set to https://ziyinbin.github.io
+baseurl                  : ""                                # leave empty when repo is named username.github.io
 repository               : "ziyinbin/ziyinbin.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -24,17 +24,17 @@ author:
   # Biographic information
   avatar           : "my_photo_1x1.jpg"
   name             : "Ziyin Bin"
-  pronouns         : # 如需要可填 "she/her"
+  pronouns         : # fill if desired, e.g. "she/her"
   bio              : "PhD Candidate, Operations Management.<br>Supply Chain · Hedging."
   location         : "Shanghai, China"
   employer         : "Fudan University"
-  uri              : # 一般留空，主页本身就是 uri
+  uri              : # usually empty; the homepage is the uri
   email            : "zybin23@m.fudan.edu.cn"
 
   # Academic websites
   academia         :
   arxiv            :
-  googlescholar    :                                          # 注册后填 "https://scholar.google.com/citations?user=XXXXX"
+  googlescholar    :                                          # fill once registered: "https://scholar.google.com/citations?user=XXXXX"
   inspire-hep      :
   impactstory      :
   orcid            : "https://orcid.org/0009-0009-5476-5424"
@@ -54,7 +54,7 @@ author:
   kaggle           :
   stackoverflow    :
 
-  # Social media —— 学术 job market 主页一般保持极简，全部留空
+  # Social media — academic job-market homepages typically stay minimal; leave blank
   artstation       :
   bluesky          :
   facebook         :
@@ -65,7 +65,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :                                          # 如启用填 username 部分（不带 /in/）
+  linkedin         :                                          # fill the username part only (not /in/)
   mastodon         :
   medium           :
   pinterest        :
@@ -73,7 +73,7 @@ author:
   steam            :
   telegram         :
   tumblr           :
-  twitter          :                                          # 如启用填 X 的 username
+  twitter          :                                          # fill the X username if used
   vine             :
   weibo            :
   wikipedia        :
@@ -144,7 +144,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "my_photo_1x1.jpg"   # 用作 Twitter/X、Facebook、Slack 等分享时的预览图
+og_image                 : "my_photo_1x1.jpg"   # preview image used by Twitter/X, Facebook, Slack, etc.
 og_description           : "Ziyin Bin (宾梓吟) — PhD Candidate in Operations Management, Fudan University. Working papers on supply chain risk hedging and structural analysis of the photovoltaic industry."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles

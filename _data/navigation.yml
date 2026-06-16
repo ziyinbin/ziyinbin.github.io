@@ -1,4 +1,4 @@
-# 顶部导航条
+# Top navigation bar
 
 main:
   - title: "Home"
@@ -10,9 +10,6 @@ main:
   - title: "Talks"
     url: /talks/
 
-  - title: "Field Maps"
-    url: /field-maps/
-
   # Teaching: hidden from nav (2026-05-12) — TA work, not actual teaching.
   # Uncomment the two lines below to re-enable.
   # - title: "Teaching"
@@ -20,3 +17,9 @@ main:
 
   - title: "CV"
     url: /cv/
+
+  - title: "Miscellaneous"
+    url: /miscellaneous/
+
+  - title: "Field Maps"
+    url: /field-maps/

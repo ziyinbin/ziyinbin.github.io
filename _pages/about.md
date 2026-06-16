@@ -13,20 +13,33 @@ I will be on the **2026–2027 academic job market** for tenure-track positions 
 
 ## Working Papers
 
-- **[Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks](https://ssrn.com/abstract=5559558)** &nbsp;*(with [Panos Kouvelis](https://www.panoskouvelis.info/), [Xiaole Wu](https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm), Yixuan Xiao)* — Optimal joint hedging of FX and commodity risks; competition induces complementary hedging strategies in equilibrium. **Major Revision at *Management Science***. [SSRN](https://ssrn.com/abstract=5559558)
-- **Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain** &nbsp;*(with Mengfei Li, Zibo Liu, Lezhen Wu, [Xiaole Wu](https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm))* — Cournot oligopoly model for the four tiers of China's crystalline-silicon PV supply chain; recursive cost-shock and merger counterfactuals.
+<div class="publication-card">
+  <p class="publication-title"><strong><a href="https://ssrn.com/abstract=5559558">Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks</a></strong> <span class="publication-coauthors">with <a href="https://www.panoskouvelis.info/">Panos Kouvelis</a>, <a href="https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm">Xiaole Wu</a>, Yixuan Xiao</span></p>
+  <p class="publication-blurb">Optimal joint hedging of FX and commodity risks; competition induces complementary hedging strategies in equilibrium.</p>
+  <p class="pill-row">
+    <span class="pill--status">Major Revision · Management Science</span>
+    <a class="pill--venue" href="https://ssrn.com/abstract=5559558">SSRN</a>
+  </p>
+</div>
+
+<div class="publication-card">
+  <p class="publication-title"><strong>Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain</strong> <span class="publication-coauthors">with Mengfei Li, Zibo Liu, Lezhen Wu, <a href="https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm">Xiaole Wu</a></span></p>
+  <p class="publication-blurb">Cournot oligopoly model for the four tiers of China's crystalline-silicon PV supply chain; recursive cost-shock and merger counterfactuals.</p>
+  <p class="pill-row">
+    <span class="pill--status">Working Paper</span>
+  </p>
+</div>
 
 See the [Research](/publications/) page for full details.
 
 ## Upcoming Talks
 
-- **2026 Supply Chain Finance Workshop**, Singapore Management University — May 18–19, 2026 (PV paper)
-- **2026 INFORMS MSOM Annual Conference**, Harvard Business School (Boston, MA) — July 12–14, 2026 (Hedging paper)
+- **2026 INFORMS MSOM Annual Conference**, Harvard Business School (Boston, MA) — July 12–14, 2026 *(Hedging paper)*
 
 See [Talks](/talks/) for the full list.
 
 ## Contact
 
 - **Email:** [zybin23@m.fudan.edu.cn](mailto:zybin23@m.fudan.edu.cn)
-- **Office:** Li Da San Building (李达三楼), School of Management, Fudan University, Shanghai
+- **Office:** Li Da San Building, School of Management, Fudan University, Shanghai
 - **CV:** [view here](/cv/) · **SSRN:** [author page](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=8432028) · **ORCID:** [0009-0009-5476-5424](https://orcid.org/0009-0009-5476-5424)
