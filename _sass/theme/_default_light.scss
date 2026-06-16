@@ -14,6 +14,23 @@ $paper                      : #FBFAF6;
 $paper-soft                 : #F5F1E5;
 $paper-warmer               : #F0E7D0;
 
+/*  ---- Alternate palette E3 "Cool linen" ----
+    Swap by copy/pasting these over the E1 values above. The dark mirror
+    in _default_dark.scss can stay as is or be re-tuned to match.
+
+    $primary-color   : #1F3344;
+    $accent-color    : #7A8FAA;
+    $highlight-color : #7A4E60;
+
+    $ink             : #161A1F;
+    $ink-muted       : #33414E;
+    $ink-light       : #4A5A6B;
+
+    $paper           : #F8FAFC;
+    $paper-soft      : #EEF2F7;
+    $paper-warmer    : #E5ECF4;
+*/
+
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>计量经济学 · 百年谱系速记卡 v4</title>
+<style>
+  :root{
+    --bg:#EEF1F4; --surface:#FAFBFC; --ink:#16202B; --muted:#5A6B7A;
+    --rule:#CBD6DF; --grid:#DCE3EA;
+    --e1:#2E5A87; --e2:#2C7D8C; --e3:#3E8A6B; --e4:#B5862F; --e5:#C0623A; --e6:#9A4759;
+    --serif:"Iowan Old Style",Palatino,"Book Antiqua",Georgia,"Songti SC","Noto Serif CJK SC",STSong,serif;
+    --sans:system-ui,-apple-system,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+    --mono:"SF Mono","JetBrains Mono","Cascadia Code",Consolas,"Roboto Mono",monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    background:var(--bg);
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:26px 26px;
+    color:var(--ink); font-family:var(--sans); line-height:1.5;
+    -webkit-font-smoothing:antialiased; padding:40px 18px 64px;
+  }
+  .page{max-width:940px;margin:0 auto;}
+
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5.5vw,50px);line-height:1.04;margin:0 0 12px;letter-spacing:.01em;}
+  h1 .thin{color:var(--muted);font-style:italic;font-weight:400;}
+  .lede{max-width:64ch;color:var(--muted);font-size:15px;margin:0 0 26px;}
+  .lede b{color:var(--ink);font-weight:600;}
+
+  .hero{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:18px 20px 12px;margin:0 0 38px;box-shadow:0 1px 0 rgba(22,32,43,.03);}
+  .hero svg{display:block;width:100%;height:auto;}
+  .hero-cap{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin-top:6px;text-align:center;}
+
+  .era{position:relative;background:var(--surface);border:1px solid var(--rule);border-left:5px solid var(--accent);border-radius:8px;padding:18px 22px 16px;margin:0 0 16px;break-inside:avoid;}
+  .era-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:4px;}
+  .era-num{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:2px 8px;border-radius:4px;}
+  .era-name{font-family:var(--serif);font-weight:600;font-size:21px;}
+  .era-en{font-family:var(--serif);font-style:italic;font-weight:400;font-size:15.5px;color:var(--muted);}
+  .era-years{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.04em;}
+  .era-bg{flex-basis:100%;font-size:13px;color:var(--muted);margin:2px 0 12px;}
+  .era-bg::before{content:"背景 · ";font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--accent);}
+
+  .person{margin:0 0 11px;}
+  .person:last-child{margin-bottom:2px;}
+  .p-line{display:flex;align-items:baseline;gap:8px;}
+  .p-name{font-weight:600;font-size:15px;flex-shrink:0;}
+  .p-dots{flex:1 1 auto;border-bottom:1.5px dotted var(--rule);transform:translateY(-4px);min-width:18px;}
+  .p-meta{flex-shrink:0;font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .nobel{color:var(--accent);font-weight:700;}
+  .p-work{font-size:13.5px;color:var(--muted);margin-top:2px;padding-left:1px;max-width:78ch;}
+  .p-work b{color:var(--ink);font-weight:600;}
+  .p-work i{font-style:italic;color:var(--ink);}
+
+  .methods{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:20px 22px 18px;margin:26px 0 0;border-top:5px solid var(--ink);}
+  .methods-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 12px;margin-bottom:16px;}
+  .methods-head .mk{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+  .methods-head h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:0;flex-basis:100%;}
+  .lane{margin:0 0 15px;}
+  .lane-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 7px;}
+  .chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:7px 5px;}
+  .node{display:flex;flex-direction:column;justify-content:center;border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:6px 11px;background:#fff;}
+  .node b{font-size:13.5px;font-weight:600;line-height:1.18;}
+  .node span{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:2px;letter-spacing:.01em;}
+  .arrow{align-self:center;color:var(--muted);font-size:14px;padding:0 2px;}
+  .sib{align-self:center;color:var(--rule);font-size:15px;font-weight:700;padding:0 1px;}
+
+  /* 2x2 structural matrix */
+  .matrix{display:grid;grid-template-columns:minmax(92px,auto) 1fr 1fr;gap:8px;align-items:stretch;}
+  .mh{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);}
+  .mh.col{text-transform:uppercase;text-align:center;align-self:end;padding-bottom:5px;border-bottom:2px solid var(--rule);}
+  .mh.row{display:flex;align-items:center;font-family:var(--sans);font-size:12px;font-weight:600;color:var(--ink);line-height:1.2;}
+  .cell{border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:9px 11px;background:#fff;}
+  .cell b{font-size:13px;font-weight:600;line-height:1.2;}
+  .cell>span{font-family:var(--mono);font-size:10.5px;color:var(--muted);display:block;margin-top:2px;}
+  .papers{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.5;}
+  .cell-tag{display:none;}
+
+  .m-notes{margin-top:16px;border-top:1px solid var(--rule);padding-top:13px;}
+  .m-notes p{margin:0 0 7px;font-size:13px;color:var(--muted);line-height:1.55;}
+  .m-notes p:last-child{margin-bottom:0;}
+  .m-notes b{color:var(--ink);font-weight:600;}
+  .m-notes i{font-style:italic;color:var(--ink);}
+  .m-notes .tag{font-family:var(--mono);color:var(--ink);font-weight:700;margin-right:5px;}
+
+  .theme{margin:24px 0 0;background:var(--ink);color:#EDF1F5;border-radius:10px;padding:22px 24px;}
+  .theme .k{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#9FB2C2;margin:0 0 8px;}
+  .theme p{margin:0;font-family:var(--serif);font-size:clamp(16px,2.6vw,20px);line-height:1.5;}
+  .theme .arrow2{color:#7FA8C7;font-style:normal;padding:0 .25em;}
+  .legend{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:14px;letter-spacing:.03em;}
+
+  @media (max-width:560px){
+    body{padding:26px 12px 48px;}
+    .era,.methods{padding:15px 16px;}
+    .p-line{flex-wrap:wrap;}
+    .p-dots{display:none;}
+    .p-meta{flex-basis:100%;color:var(--accent);}
+    .matrix{grid-template-columns:1fr;}
+    .mh{display:none;}
+    .cell-tag{display:block;font-family:var(--mono);font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .era,.hero,.methods{animation:rise .5s ease both;}
+    .era:nth-child(2){animation-delay:.04s}.era:nth-child(3){animation-delay:.08s}
+    .era:nth-child(4){animation-delay:.12s}.era:nth-child(5){animation-delay:.16s}
+    .era:nth-child(6){animation-delay:.2s}.era:nth-child(7){animation-delay:.24s}
+    @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  }
+  @media print{
+    body{background:#fff;}
+    .era,.hero,.methods{box-shadow:none;}
+    .theme,.node,.cell{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <p class="eyebrow">人物 · 贡献 · 年代 · 方法 — 速记卡 v4</p>
+  <h1>计量经济学 <span class="thin">百年谱系</span></h1>
+  <p class="lede">把经济学变成一门<b>能测量、能检验、能预测</b>的科学,是一场跨越百年的接力。下方先按时代排<b>人</b>,末尾把他们造出的 tools 连成一棵进化树——并把 <b>structural demand-and-competition</b> 单独摊成一张 2×2。<b>N’xx</b> = 诺贝尔经济学奖年份。</p>
+
+  <div class="hero">
+    <svg viewBox="0 0 800 190" role="img" aria-label="一条从 1920 年代上升到 2020 年代的拟合直线,线上散布着代表各时代学者的彩色散点,颜色由冷到暖。">
+      <g stroke="#E3E9EF" stroke-width="1">
+        <line x1="40" y1="30" x2="40" y2="160"/><line x1="188" y1="30" x2="188" y2="160"/>
+        <line x1="336" y1="30" x2="336" y2="160"/><line x1="484" y1="30" x2="484" y2="160"/>
+        <line x1="632" y1="30" x2="632" y2="160"/><line x1="780" y1="30" x2="780" y2="160"/>
+        <line x1="40" y1="160" x2="780" y2="160" stroke="#CBD6DF"/>
+      </g>
+      <line x1="40" y1="150" x2="780" y2="45" stroke="#16202B" stroke-width="2.4" stroke-linecap="round"/>
+      <g>
+        <circle cx="84"  cy="150" r="4" fill="#2E5A87"/><circle cx="136" cy="130" r="4" fill="#2E5A87"/><circle cx="158" cy="140" r="4" fill="#2E5A87"/>
+        <circle cx="218" cy="118" r="4" fill="#2C7D8C"/><circle cx="240" cy="128" r="4" fill="#2C7D8C"/>
+        <circle cx="262" cy="112" r="4" fill="#3E8A6B"/><circle cx="299" cy="120" r="4" fill="#3E8A6B"/>
+        <circle cx="403" cy="92"  r="4" fill="#B5862F"/><circle cx="454" cy="98"  r="4" fill="#B5862F"/><circle cx="484" cy="80"  r="4" fill="#B5862F"/><circle cx="499" cy="90"  r="4" fill="#B5862F"/>
+        <circle cx="477" cy="94"  r="4" fill="#C0623A"/><circle cx="588" cy="65"  r="4" fill="#C0623A"/><circle cx="625" cy="73"  r="4" fill="#C0623A"/>
+        <circle cx="736" cy="54"  r="4" fill="#9A4759"/><circle cx="773" cy="40"  r="4" fill="#9A4759"/>
+      </g>
+      <g fill="#8A99A8" font-family="ui-monospace,Consolas,monospace" font-size="11" text-anchor="middle">
+        <text x="40" y="176">1920</text><text x="188" y="176">1950</text><text x="336" y="176">1970</text>
+        <text x="484" y="176">1985</text><text x="632" y="176">2005</text><text x="780" y="176">2020</text>
+      </g>
+    </svg>
+    <p class="hero-cap">一个世纪的工作,一条不断被重铸的回归线　·　每一点 = 一位学者 / 一件大工作</p>
+  </div>
+
+  <!-- ERA 1 -->
+  <section class="era" style="--accent:var(--e1)">
+    <div class="era-head"><span class="era-num">幕 1</span><span class="era-name">命名与奠基</span><span class="era-en">The Founders</span><span class="era-years">1920s – 1930s</span>
+      <p class="era-bg">一战后到大萧条(1929),工厂停摆、周期失控,人类亟需"测量并驯服经济"。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Ragnar Frisch</span><span class="p-dots"></span><span class="p-meta">1933 · <span class="nobel">N’69</span></span></div>
+      <p class="p-work">1926 铸造 <b>econometrics</b> 一词;1930 创立 Econometric Society、1933 创办 <i>Econometrica</i>;dynamic models 与 impulse–propagation("rocking horse")周期论;FWL theorem。<b>首届诺奖。</b></p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Jan Tinbergen</span><span class="p-dots"></span><span class="p-meta">1936 · <span class="nobel">N’69</span></span></div>
+      <p class="p-work">物理学家出身,建成<b>首批 macroeconometric models</b>(荷兰 / 美国,1936–39);提出 the Tinbergen rule(targets vs instruments)。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">J. M. Keynes</span><span class="p-dots"></span><span class="p-meta">1939</span></div>
+      <p class="p-work">1939 著名书评<b>质疑 Tinbergen 的统计方法</b>:expectations 与 fundamental uncertainty 无法装进稳定方程——计量学的"成人礼"。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Working &amp; Wright</span><span class="p-dots"></span><span class="p-meta">1927–28</span></div>
+      <p class="p-work">更早点破 supply–demand <b>identification</b> 难题(E. J. Working, 1927),并给出 <b>instrumental variables</b> 雏形(P. Wright, 1928)。</p></div>
+  </section>
+
+  <!-- ERA 2 -->
+  <section class="era" style="--accent:var(--e2)">
+    <div class="era-head"><span class="era-num">幕 2</span><span class="era-name">概率革命</span><span class="era-en">The Probability Revolution</span><span class="era-years">1940s</span>
+      <p class="era-bg">二战;欧洲学者涌入美国,计算与统计需求井喷,方法论迎来奠基时刻。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Trygve Haavelmo</span><span class="p-dots"></span><span class="p-meta">1944 · <span class="nobel">N’89</span></span></div>
+      <p class="p-work">1944 manifesto <i>The Probability Approach in Econometrics</i>,现代计量的"出生证";证明 simultaneous system 里 <b>OLS 不一致</b>(endogeneity)。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Tjalling Koopmans</span><span class="p-dots"></span><span class="p-meta">1947 · <span class="nobel">N’75</span>*</span></div>
+      <p class="p-work">把 identification 系统化:<b>order / rank conditions</b>、structural vs reduced form、FIML;1947 <i>Measurement without Theory</i>。<b>*</b>诺奖实表彰 linear programming。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Cowles Commission</span><span class="p-dots"></span><span class="p-meta">1932–</span></div>
+      <p class="p-work">Alfred Cowles 创立的理论圣殿,聚集一屋子未来诺奖得主;口号 <i>“Science Is Measurement.”</i></p></div>
+  </section>
+
+  <!-- ERA 3 -->
+  <section class="era" style="--accent:var(--e3)">
+    <div class="era-head"><span class="era-num">幕 3</span><span class="era-name">巨型机器</span><span class="era-en">The Big-Model Age</span><span class="era-years">1950s – 1960s</span>
+      <p class="era-bg">战后繁荣、凯恩斯主义盛世、电子计算机登场——相信能"驾驶整个经济"。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Lawrence Klein</span><span class="p-dots"></span><span class="p-meta">1950 · <span class="nobel">N’80</span></span></div>
+      <p class="p-work">毕生造大模型:<b>Klein Model I</b>(1950)、Klein–Goldberger(1955)、the Wharton model、全球联网的 Project LINK。</p></div>
+  </section>
+
+  <!-- ERA 4 -->
+  <section class="era" style="--accent:var(--e4)">
+    <div class="era-head"><span class="era-num">幕 4</span><span class="era-name">帝国的裂缝</span><span class="era-en">Cracks in the Empire</span><span class="era-years">1970s</span>
+      <p class="era-bg">石油危机(1973)+ 滞胀;精心搭建的大型模型集体失灵,信仰崩塌。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Robert Lucas</span><span class="p-dots"></span><span class="p-meta">1976 · <span class="nobel">N’95</span></span></div>
+      <p class="p-work"><b>Lucas critique</b>(卢卡斯批判,1976):政策一变,旧参数就漂移;主张抓 rational-expectations 下的 <b>deep parameters</b> → 催生 DSGE。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Christopher Sims</span><span class="p-dots"></span><span class="p-meta">1980 · <span class="nobel">N’11</span></span></div>
+      <p class="p-work"><i>Macroeconomics and Reality</i>(1980):反对"incredible identifying restrictions",改用 <b>VAR</b> 让数据说话。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Clive Granger</span><span class="p-dots"></span><span class="p-meta">1974 · <span class="nobel">N’03</span></span></div>
+      <p class="p-work"><b>Granger causality</b>(1969)、<b>spurious regression</b> 警报(1974)、cointegration;time-series econometrics 的奠基者。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Robert Engle</span><span class="p-dots"></span><span class="p-meta">1982 · <span class="nobel">N’03</span></span></div>
+      <p class="p-work"><b>ARCH</b>(1982)刻画 volatility clustering,金融风险管理命根;cointegration(Engle–Granger, 1987)。</p></div>
+  </section>
+
+  <!-- ERA 5 -->
+  <section class="era" style="--accent:var(--e5)">
+    <div class="era-head"><span class="era-num">幕 5</span><span class="era-name">可信性革命</span><span class="era-en">The Credibility Revolution</span><span class="era-years">1980s – 2000s</span>
+      <p class="era-bg">廉价计算 + 海量微观数据;从"预测宏观"转向"老实追问一个因果"。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Edward Leamer</span><span class="p-dots"></span><span class="p-meta">1983</span></div>
+      <p class="p-work"><i>Let’s Take the Con Out of Econometrics</i>(1983)——对脆弱 regression specification 的著名当头棒喝。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">James Heckman</span><span class="p-dots"></span><span class="p-meta">1979 · <span class="nobel">N’00</span></span></div>
+      <p class="p-work"><b>sample selection / Heckman correction</b>(1979);microeconometrics 与 program evaluation。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Daniel McFadden</span><span class="p-dots"></span><span class="p-meta"><span class="nobel">N’00</span></span></div>
+      <p class="p-work"><b>discrete choice / logit</b> 模型——刻画个体在多个选项间如何取舍的工作母机;structural demand 的基石。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Lars Peter Hansen</span><span class="p-dots"></span><span class="p-meta">1982 · <span class="nobel">N’13</span></span></div>
+      <p class="p-work"><b>GMM</b>(generalized method of moments,1982);Hansen–Singleton consumption asset pricing。OLS / IV / 2SLS 皆其 special cases。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Card &amp; Krueger</span><span class="p-dots"></span><span class="p-meta">1994 · <span class="nobel">N’21</span></span></div>
+      <p class="p-work"><b>natural experiment</b> 典范:NJ–PA minimum-wage study(1994)挑战教科书铁律。Krueger 2019 离世,无缘诺奖。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Angrist &amp; Imbens</span><span class="p-dots"></span><span class="p-meta">1994 · <span class="nobel">N’21</span></span></div>
+      <p class="p-work">厘清 IV 到底估了什么——<b>LATE</b>(local average treatment effect,1994);把 quasi-experiments 铸成可信 causal 利器。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Berry · Levinsohn · Pakes</span><span class="p-dots"></span><span class="p-meta">1995</span></div>
+      <p class="p-work"><b>BLP</b>:random-coefficients logit demand + Bertrand–Nash supply——differentiated-products demand-and-competition 的工作母机;Pakes 与 Bresnahan、Porter 共获 BBVA’17。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">John Rust</span><span class="p-dots"></span><span class="p-meta">1987</span></div>
+      <p class="p-work"><b>dynamic discrete choice</b> + NFXP(<i>Optimal Replacement of GMC Bus Engines</i>)——single-agent 动态结构估计的源头,一个 OM 味十足的 optimal-stopping 问题。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Bresnahan &amp; Corts</span><span class="p-dots"></span><span class="p-meta">1982 · 1999</span></div>
+      <p class="p-work"><b>conduct parameter</b> identification(Bresnahan ’82)、NEIO 奠基;Corts ’99 的 dynamic-bias 批评:static 法在 tacit collusion 下低估 market power。</p></div>
+  </section>
+
+  <!-- ERA 6 -->
+  <section class="era" style="--accent:var(--e6)">
+    <div class="era-head"><span class="era-num">幕 6</span><span class="era-name">大数据 × 因果</span><span class="era-en">Big Data × Causality</span><span class="era-years">2010s – 今</span>
+      <p class="era-bg">机器学习 + 海量数据;幕 2 那场"先理论还是先数据"之争借尸还魂。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">Athey &amp; Imbens · Wager</span><span class="p-dots"></span><span class="p-meta">2016–</span></div>
+      <p class="p-work"><b>causal forests</b>(Wager–Athey ’18)、generalized random forests——用机器学习估异质 treatment effects。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">V. Chernozhukov et al.</span><span class="p-dots"></span><span class="p-meta">2018</span></div>
+      <p class="p-work"><b>double / debiased ML</b>(DML)——把高维 ML 嵌入估计而不污染 causal parameter;内核即 FWL 残差化。</p></div>
+    <div class="person"><div class="p-line"><span class="p-name">DiD revival</span><span class="p-dots"></span><span class="p-meta">2018–</span></div>
+      <p class="p-work">Goodman-Bacon、Callaway–Sant’Anna、de Chaisemartin 等:修补 <b>staggered treatment</b> 下经典 DiD 的隐患。</p></div>
+  </section>
+
+  <!-- METHODS GENEALOGY -->
+  <section class="methods">
+    <div class="methods-head"><span class="mk">方法谱系</span><h2>工具如何进化 · How the Toolkit Evolved</h2></div>
+
+    <div class="lane">
+      <p class="lane-label">Regression → identification → GMM</p>
+      <div class="chain">
+        <div class="node" style="--accent:var(--e1)"><b>OLS</b><span>ordinary least squares</span></div>
+        <span class="arrow">→</span>
+        <div class="node" style="--accent:var(--e1)"><b>IV</b><span>instrumental variables · endogeneity</span></div>
+        <span class="arrow">→</span>
+        <div class="node" style="--accent:var(--e2)"><b>2SLS · LIML · FIML</b><span>simultaneous equations · Cowles</span></div>
+        <span class="arrow">→</span>
+        <div class="node" style="--accent:var(--e5)"><b>GMM</b><span>Hansen ’82 · the unifier</span></div>
+        <span class="arrow">→</span>
+        <div class="node" style="--accent:var(--e6)"><b>DML</b><span>Chernozhukov et al. ’18</span></div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <p class="lane-label">Probability / likelihood</p>
+      <div class="chain">
+        <div class="node" style="--accent:var(--e2)"><b>Probability approach</b><span>Haavelmo ’44</span></div>
+        <span class="arrow">→</span>
+        <div class="node" style="--accent:var(--e2)"><b>MLE</b><span>maximum likelihood</span></div>
+        <span class="arrow">→</span>
+        <div class="node" style="--accent:var(--e5)"><b>Logit · Probit</b><span>McFadden · discrete choice</span></div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <p class="lane-label">Time series</p>
+      <div class="chain">
+        <div class="node" style="--accent:var(--e4)"><b>VAR</b><span>Sims ’80</span></div>
+        <span class="sib">·</span>
+        <div class="node" style="--accent:var(--e4)"><b>ARCH · GARCH</b><span>Engle ’82</span></div>
+        <span class="sib">·</span>
+        <div class="node" style="--accent:var(--e4)"><b>Cointegration · ECM</b><span>Granger–Engle ’87</span></div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <p class="lane-label">Design-based causal</p>
+      <div class="chain">
+        <div class="node" style="--accent:var(--e5)"><b>Potential outcomes</b><span>Neyman–Rubin</span></div>
+        <span class="arrow">→</span>
+        <div class="node" style="--accent:var(--e5)"><b>DiD · RDD · IV→LATE · selection correction</b><span>Card / Angrist / Imbens / Heckman</span></div>
+        <span class="arrow">→</span>
+        <div class="node" style="--accent:var(--e6)"><b>Staggered-DiD fixes · causal forests · DML</b><span>2018– · Wager–Athey · Chernozhukov</span></div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <p class="lane-label">Structural demand &amp; competition — a 2×2 map</p>
+      <div class="matrix">
+        <div class="mh"></div>
+        <div class="mh col">Static</div>
+        <div class="mh col">Dynamic</div>
+
+        <div class="mh row">Homogeneous products</div>
+        <div class="cell" style="--accent:var(--e5)"><span class="cell-tag">Homog · Static</span><b>Conduct parameter / NEIO</b><span>Bresnahan ’82 · Lau ’82</span>
+          <div class="papers">demand + supply relation;需 demand rotators 才能 identify market power;cartel detection — Porter ’83。</div></div>
+        <div class="cell" style="--accent:var(--e6)"><span class="cell-tag">Homog · Dynamic</span><b>Markov-perfect industry dynamics</b><span>Ericson–Pakes ’95</span>
+          <div class="papers">entry / exit / investment;collusion dynamics — Green–Porter ’84;est. BBL ’07 · Aguirregabiria–Mira ’07。</div></div>
+
+        <div class="mh row">Differentiated products</div>
+        <div class="cell" style="--accent:var(--e5)"><span class="cell-tag">Diff · Static</span><b>BLP ’95 + Bertrand–Nash</b><span>random-coefficients logit demand</span>
+          <div class="papers">Berry ’94 inversion;Nevo ’01;conduct testing &amp; identification — Berry–Haile ’14。</div></div>
+        <div class="cell" style="--accent:var(--e6)"><span class="cell-tag">Diff · Dynamic</span><b>Dynamic demand &amp; dynamic games</b><span>durables / storables · forward-looking</span>
+          <div class="papers">Hendel–Nevo ’06;Gowrisankaran–Rysman ’12;dynamic differentiated games — BBL ’07 · AM ’07。</div></div>
+      </div>
+    </div>
+
+    <div class="m-notes">
+      <p><span class="tag">①</span><b>GMM 是总纲。</b>OLS、IV、2SLS 都是它的 special cases——只是换一组 moment conditions。</p>
+      <p><span class="tag">②</span><b>DML ≈ FWL + ML。</b>double/debiased ML 的内核正是 Frisch 的 FWL "partialling-out",只是把残差化那一步换成机器学习——绕回了起点。</p>
+      <p><span class="tag">③</span><b>两种世界观:design-based vs structural。</b>前者只求干净 <i>identify</i> "一个" causal effect(胜在可信);后者估出 <i>deep parameters</i> 再做 <i>counterfactual</i>(能问"换个 policy / price 会怎样")。你做的 structural demand-and-competition 属后者。</p>
+      <p><span class="tag">④</span><b>structural 的估计与跨界。</b>共用工具链:MLE · GMM · MSM/SMM · NFXP · CCP · MPEC(多半仍是 GMM/MLE 的变体或求解技巧)。single-agent 祖宗是 Rust ’87,这套 dynamic discrete choice / dynamic games 在 OM、marketing、IO 里通用。</p>
+      <p><span class="tag">⑤</span><b>ML 也进了结构式。</b>neural nets / random forests 用来估 demand、近似 value functions、做 debiased moments;代表是 <b>DML</b>(Chernozhukov ’18)与 <b>causal forests</b>(Wager–Athey ’18)——两者在本卡 design-based 一支与幕 6 都已列出。</p>
+    </div>
+  </section>
+
+  <!-- THEME -->
+  <div class="theme">
+    <p class="k">贯穿百年的一根线</p>
+    <p>每一代造出一件测量神兵<span class="arrow2">→</span>一场现实危机砸出裂缝<span class="arrow2">→</span>下一代在废墟上重铸。<br>从"能不能测量",到"如何严谨地测量",到"机器为什么会骗人",再到"如何老实地测一个因果"。</p>
+    <p class="legend">N’xx = 诺贝尔经济学奖年份　·　颜色由冷到暖 = 年代由早到晚　·　* Koopmans 诺奖系另一项工作(linear programming)</p>
+  </div>
+
+</main>
+</body>
+</html>

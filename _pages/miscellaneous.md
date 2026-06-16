@@ -5,15 +5,30 @@ permalink: /miscellaneous/
 author_profile: true
 ---
 
-## Favorite Quotation
+<blockquote class="motto">
+It always takes longer than you expect, even when you take into account Hofstadter's Law.
+<span class="attribution">Douglas Hofstadter, <em>Gödel, Escher, Bach</em> (1979)</span>
+</blockquote>
 
+<blockquote class="motto">
+Music is the mathematics of the senses, mathematics is the music of reason.
+<span class="attribution">James Joseph Sylvester (1865)</span>
+</blockquote>
+
+{% comment %}
+Alternate mottos — swap by uncommenting one block and removing one of the live blockquotes above.
+
+Cowles Foundation — current official motto:
 <blockquote class="motto">
 Theory and Measurement.
 <span class="attribution">Cowles Foundation, Yale University</span>
 </blockquote>
 
-{% comment %}
-Alternate mottos — swap by uncommenting one block and commenting the live one above.
+Douglas Hofstadter — strange loop:
+<blockquote class="motto">
+I am a strange loop.
+<span class="attribution">Douglas Hofstadter, <em>I Am a Strange Loop</em> (2007)</span>
+</blockquote>
 
 George E. P. Box (Empirical Model-Building and Response Surfaces, 1987):
 <blockquote class="motto">
@@ -51,11 +66,42 @@ Live the questions now. Perhaps you will then gradually, without noticing it, li
 <span class="attribution">Rainer Maria Rilke</span>
 </blockquote>
 
+Friedrich Nietzsche (Twilight of the Idols, 1888):
+<blockquote class="motto">
+Without music, life would be a mistake.
+<span class="attribution">Friedrich Nietzsche</span>
+</blockquote>
+
+Claude Debussy:
+<blockquote class="motto">
+Music is the arithmetic of sounds as optics is the arithmetic of light.
+<span class="attribution">Claude Debussy</span>
+</blockquote>
+
+Aldous Huxley (Music at Night and Other Essays, 1931):
+<blockquote class="motto">
+After silence, that which comes nearest to expressing the inexpressible is music.
+<span class="attribution">Aldous Huxley</span>
+</blockquote>
+
 {% endcomment %}
 
-## More About Me
+## Field Maps
 
-Outside of research, I am unreasonably curious, warm-tempered, and emotionally honest. I think of resilience as something that grows under pressure rather than something that protects against it. Things I quietly enjoy: long walks while thinking through a model, picking apart how a paper *frames* its question, the occasional spreadsheet for sport.
+Visual overviews of academic fields I find worth mapping.
+
+<div class="publication-card">
+  <p class="publication-title"><strong><a href="/field-maps/om-awards-overview/">OM Awards Overview — Rising Star vs. Lifetime Achievement</a></strong></p>
+  <p class="publication-blurb">A side-by-side comparison of every POMS Early Career and MSOM Distinguished Fellow recipient (2000–2026), tracing the OM field's generational shift from classical analytical models toward empirical and data-driven work.</p>
+</div>
+
+<div class="publication-card">
+  <p class="publication-title"><strong><a href="/field-maps/nobel-economics/">Nobel Economics Prize · 1969–2025</a></strong></p>
+  <p class="publication-blurb">A full chronological map of Nobel laureates in economics, kept as a personal reference for the recurring overlap between OM modeling and economic theory.</p>
+</div>
+
+{% comment %}
+Honors & Awards: hidden from rendered site (2026-06-16). Remove this Liquid comment wrapper to re-enable.
 
 ## Honors & Awards
 
@@ -63,3 +109,5 @@ Outside of research, I am unreasonably curious, warm-tempered, and emotionally h
 * Outstanding Master's Academic Scholarship, Fudan University
 * "Outstanding Student" Award, Fudan University
 * First-Class Jingshi Scholarship, Beijing Normal University
+
+{% endcomment %}
