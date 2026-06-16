@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>诺贝尔经济学奖 · 历届得主图谱 1969–2025</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16181d; --paper:#e9e6dc; --card:#f8f6f0; --card2:#f2efe6;
+  --brass:#a9822f; --brass-d:#876722; --indigo:#2e4172; --teal:#2c6e6a;
+  --line:rgba(22,24,29,.12); --line2:rgba(22,24,29,.06); --mut:#6b675c;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- HERO ---------- */
+header.hero{background:var(--ink);color:#efe9da;position:relative;overflow:hidden;
+  border-bottom:3px solid var(--brass)}
+.hero .grid-bg{position:absolute;inset:0;opacity:.5;
+  background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);
+  background-size:34px 34px;pointer-events:none}
+.hero .grid-bg::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 120% at 80% 0%,transparent 40%,rgba(0,0,0,.55))}
+.hero .inner{position:relative;padding:54px 0 30px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--brass);margin:0 0 16px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,7vw,76px);line-height:.98;
+  margin:0;letter-spacing:-.015em}
+.hero h1 em{font-style:italic;color:var(--brass);font-weight:500}
+.hero .sub{max-width:640px;margin:20px 0 0;font-size:16px;color:#cfc7b4}
+.hero .sub b{color:#efe9da;font-weight:600}
+.scatter{position:relative;margin:34px 0 4px}
+.scatter svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;
+  color:#cfc7b4;margin-top:14px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
+
+/* ---------- STATS ---------- */
+section{padding:56px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 28px;flex-wrap:wrap}
+.sec-num{font-family:var(--mono);font-size:13px;color:var(--brass);letter-spacing:.1em}
+.sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,38px);
+  margin:0;letter-spacing:-.01em}
+.sec-head p{margin:0;color:var(--mut);font-size:14px;max-width:520px}
+
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:42px}
+.kpi{background:var(--card);padding:20px 18px}
+.kpi .n{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1;letter-spacing:-.02em}
+.kpi .n small{font-size:16px;color:var(--brass);font-weight:600}
+.kpi .l{font-family:var(--mono);font-size:11px;color:var(--mut);text-transform:uppercase;
+  letter-spacing:.08em;margin-top:9px;line-height:1.4}
+
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 24px 22px}
+.panel h3{font-family:var(--serif);font-size:19px;font-weight:600;margin:0 0 4px}
+.panel .cap{font-size:13px;color:var(--mut);margin:0 0 20px}
+.bar-row{display:grid;grid-template-columns:130px 1fr 42px;align-items:center;gap:12px;margin:9px 0}
+.bar-row .blab{font-size:13px;font-weight:500;text-align:right}
+.bar-track{height:14px;background:var(--card2);border-radius:7px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:7px;transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+.bar-row .bval{font-family:var(--mono);font-size:12px;color:var(--mut)}
+@keyframes grow{from{transform:scaleX(0)}}
+.split{display:flex;height:38px;border-radius:9px;overflow:hidden;margin:4px 0 16px;border:1px solid var(--line)}
+.split>div{display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--mono);
+  font-size:12px;font-weight:600;white-space:nowrap}
+.split-key{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}
+.split-key span{display:inline-flex;align-items:center;gap:7px}
+.split-key i{width:11px;height:11px;border-radius:3px}
+.note{font-size:12px;color:var(--mut);margin-top:14px;font-style:italic}
+
+/* ---------- CONTROLS ---------- */
+.controls{position:sticky;top:0;z-index:20;background:rgba(233,230,220,.92);
+  backdrop-filter:blur(8px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:14px 0;margin-bottom:8px}
+.controls .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.search{flex:1;min-width:180px;position:relative}
+.search input{width:100%;padding:11px 14px 11px 38px;border:1px solid var(--line);border-radius:9px;
+  background:var(--card);font-family:var(--sans);font-size:14px;color:var(--ink)}
+.search input:focus{outline:2px solid var(--brass);outline-offset:1px;border-color:transparent}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.45}
+select{padding:11px 14px;border:1px solid var(--line);border-radius:9px;background:var(--card);
+  font-family:var(--sans);font-size:14px;color:var(--ink);cursor:pointer}
+select:focus{outline:2px solid var(--brass);outline-offset:1px}
+.segs{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--card)}
+.segs button{border:0;background:transparent;padding:11px 15px;font-family:var(--mono);font-size:12px;
+  cursor:pointer;color:var(--mut);border-right:1px solid var(--line)}
+.segs button:last-child{border-right:0}
+.segs button[aria-pressed=true]{background:var(--ink);color:#efe9da}
+.count{font-family:var(--mono);font-size:12px;color:var(--mut);margin-left:auto}
+
+/* ---------- GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;padding-top:18px}
+.entry{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;
+  display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s;cursor:pointer}
+.entry:hover{box-shadow:0 8px 28px -14px rgba(22,24,29,.4);transform:translateY(-2px)}
+.entry:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.entry .top{display:flex;align-items:center;gap:11px;padding:16px 18px 12px}
+.year{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--brass);
+  border:1px solid var(--brass);border-radius:6px;padding:3px 7px;flex:none}
+.avatars{display:flex;margin-left:auto}
+.av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:11px;font-weight:600;color:#fff;border:2px solid var(--card);
+  margin-left:-9px;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+.av:first-child{margin-left:0}
+.entry .body{padding:2px 18px 16px;flex:1;display:flex;flex-direction:column}
+.names{font-family:var(--serif);font-weight:600;font-size:17px;line-height:1.25;letter-spacing:-.01em;margin:2px 0 9px}
+.short{font-size:13.5px;color:#36342d;margin:0 0 14px;flex:1}
+.tags{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.03em;padding:4px 9px;border-radius:20px;
+  display:inline-flex;align-items:center;gap:5px;font-weight:500}
+.tag.field{background:var(--card2);color:#36342d}
+.tag.field i{width:8px;height:8px;border-radius:50%}
+.tag.ty{border:1px solid currentColor}
+.tag.ty.th{color:var(--indigo)}
+.tag.ty.em{color:var(--teal)}
+.tag.ty.bo{color:var(--brass-d)}
+.entry .detail{display:none;border-top:1px dashed var(--line);padding:16px 18px;background:var(--card2)}
+.entry.open .detail{display:block;animation:fade .3s both}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}}
+.detail .desc{font-size:13.5px;color:#2c2a24;margin:0 0 14px}
+.formula{background:var(--ink);border-radius:9px;padding:14px 16px;overflow-x:auto;margin:0 0 4px}
+.formula .katex{color:#f1ead9;font-size:1.05em}
+.fcap{font-family:var(--mono);font-size:10.5px;color:var(--brass);letter-spacing:.06em;
+  text-transform:uppercase;margin:0 0 8px}
+.diagram{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px}
+.diagram svg{width:100%;height:auto;display:block}
+.bornaff{font-family:var(--mono);font-size:11px;color:var(--mut);margin-top:12px;line-height:1.6}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);color:#bdb6a4;padding:40px 0;border-top:3px solid var(--brass);
+  font-size:13px;line-height:1.7}
+footer a{color:var(--brass);text-decoration:none}
+footer b{color:#efe9da}
+
+@media(max-width:860px){
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  .charts{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .bar-row{grid-template-columns:96px 1fr 38px}
+  .count{width:100%;margin:6px 0 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="grid-bg"></div>
+  <div class="wrap inner">
+    <p class="eyebrow">Sveriges Riksbank Prize · 1969–2025</p>
+    <h1>诺贝尔<br><em>经济学奖</em>图谱</h1>
+    <p class="sub">瑞典国家银行纪念阿尔弗雷德·诺贝尔经济科学奖，57 届、99 位得主的<b>核心贡献、理论/实证归属、关键公式与示意图</b>。下方为按年份排布的得主散点——颜色代表工作性质。</p>
+    <div class="scatter" id="scatter"></div>
+    <div class="legend">
+      <span><i style="background:#5b6fae"></i>理论工作</span>
+      <span><i style="background:#3a9b94"></i>实证工作</span>
+      <span><i style="background:#d4a44a"></i>理论+实证</span>
+      <span style="color:#8a8472">· 点击散点跳到对应年份</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>描述性统计</h2>
+      <p>官方数据截至 2025 年；学科与理论/实证为本页归类，仅供参考。</p>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="charts">
+      <div class="panel">
+        <h3>工作性质</h3>
+        <p class="cap">理论建模 vs. 实证检验（含方法论）的大致分布</p>
+        <div class="split" id="typeSplit"></div>
+        <div class="split-key">
+          <span><i style="background:#5b6fae"></i>理论</span>
+          <span><i style="background:#3a9b94"></i>实证</span>
+          <span><i style="background:#d4a44a"></i>理论+实证</span>
+        </div>
+        <p class="note">说明：诺奖官方不作此分类。计量方法（如 Heckman、Engle、Card 等）虽属方法论创新，本页按其服务对象归入"实证"。</p>
+      </div>
+      <div class="panel">
+        <h3>得主人数构成</h3>
+        <p class="cap">每届独享 / 二人分享 / 三人分享</p>
+        <div class="split" id="shareSplit"></div>
+        <div class="split-key">
+          <span><i style="background:#876722"></i>独享 26</span>
+          <span><i style="background:#a9822f"></i>二人 20</span>
+          <span><i style="background:#cdb27e"></i>三人 11</span>
+        </div>
+        <p class="note">三人为单届上限。无人两度获奖，亦无追授（1974 年后不得追授）。</p>
+      </div>
+      <div class="panel" style="grid-column:1/-1">
+        <h3>学科领域分布</h3>
+        <p class="cap">按主要贡献领域统计（每届归入一个主领域）</p>
+        <div id="fieldBars"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="row">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="搜索得主姓名或贡献关键词…" autocomplete="off">
+      </label>
+      <select id="fieldSel"><option value="">全部领域</option></select>
+      <div class="segs" role="group" aria-label="按工作性质筛选">
+        <button data-ty="" aria-pressed="true">全部</button>
+        <button data-ty="理论">理论</button>
+        <button data-ty="实证">实证</button>
+        <button data-ty="理论+实证">兼有</button>
+      </div>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+</div>
+
+<section style="padding-top:8px">
+  <div class="wrap">
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>关于"人像图"</b>：诺奖得主官方肖像受版权保护，本页以"姓氏首字母 + 学科配色"的圆形徽标代替真实照片。官方肖像可见 <a href="https://www.nobelprize.org/prizes/economic-sciences/" target="_blank" rel="noopener">nobelprize.org</a>。</p>
+    <p style="margin-top:10px">数据来源：诺贝尔奖官方网站（得主名单、统计事实、2025 年颁奖词）。公式与示意图为各得主代表性思想的高度简化概括，旨在帮助直观理解，非严格学术表述。</p>
+  </div>
+</footer>
+
+<script>
+/* ============ DIAGRAMS (mini schematic SVGs) ============ */
+const AX='#16181d', CV='#a9822f';
+function frame(inner){return `<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono,monospace">
+  <line x1="30" y1="124" x2="224" y2="124" stroke="${AX}" stroke-width="1.4"/>
+  <line x1="30" y1="124" x2="30" y2="14" stroke="${AX}" stroke-width="1.4"/>
+  ${inner}</svg>`;}
+const DIA={
+ cross:frame(`<line x1="40" y1="28" x2="210" y2="116" stroke="#3a9b94" stroke-width="2"/>
+   <line x1="40" y1="116" x2="210" y2="28" stroke="${CV}" stroke-width="2"/>
+   <circle cx="125" cy="72" r="4" fill="${AX}"/>
+   <text x="195" y="24" font-size="11" fill="#3a9b94">D</text>
+   <text x="195" y="40" font-size="11" fill="${CV}">S</text>
+   <text x="120" y="142" font-size="10" fill="${AX}">数量 Q</text>
+   <text x="2" y="20" font-size="10" fill="${AX}">价格 P</text>`),
+ solow:frame(`<path d="M30,124 Q90,40 210,30" fill="none" stroke="${CV}" stroke-width="2"/>
+   <line x1="30" y1="124" x2="214" y2="44" stroke="#5b6fae" stroke-width="2"/>
+   <circle cx="150" cy="64" r="4" fill="${AX}"/>
+   <line x1="150" y1="64" x2="150" y2="124" stroke="${AX}" stroke-dasharray="3 3" stroke-width="1"/>
+   <text x="146" y="138" font-size="10" fill="${AX}">k*</text>
+   <text x="166" y="40" font-size="10" fill="${CV}">s·f(k)</text>
+   <text x="150" y="40" font-size="10" fill="#5b6fae">(n+δ)k</text>`),
+ sml:frame(`<line x1="30" y1="100" x2="214" y2="30" stroke="${CV}" stroke-width="2"/>
+   <circle cx="30" cy="100" r="3.5" fill="${AX}"/>
+   <text x="6" y="104" font-size="10" fill="${AX}">Rf</text>
+   <circle cx="150" cy="66" r="4" fill="#5b6fae"/>
+   <text x="156" y="62" font-size="10" fill="#5b6fae">市场组合</text>
+   <text x="150" y="142" font-size="10" fill="${AX}">β 系统性风险</text>
+   <text x="2" y="20" font-size="10" fill="${AX}">E[R]</text>`),
+ phillips:frame(`<path d="M40,28 Q70,118 210,116" fill="none" stroke="${CV}" stroke-width="2"/>
+   <text x="120" y="142" font-size="10" fill="${AX}">失业率 u</text>
+   <text x="2" y="20" font-size="10" fill="${AX}">通胀 π</text>`),
+ kuznets:frame(`<path d="M34,118 Q120,8 214,110" fill="none" stroke="${CV}" stroke-width="2"/>
+   <text x="96" y="142" font-size="10" fill="${AX}">人均收入</text>
+   <text x="2" y="22" font-size="10" fill="${AX}">不平等</text>`),
+ prospect:frame(`<line x1="30" y1="69" x2="214" y2="69" stroke="${AX}" stroke-width="1" stroke-dasharray="3 3"/>
+   <path d="M40,118 Q96,96 124,69 Q150,42 206,32" fill="none" stroke="${CV}" stroke-width="2"/>
+   <circle cx="124" cy="69" r="3.5" fill="${AX}"/>
+   <text x="150" y="64" font-size="9" fill="${AX}">参照点</text>
+   <text x="34" y="138" font-size="9" fill="${AX}">损失</text>
+   <text x="180" y="20" font-size="9" fill="${AX}">收益→价值</text>`),
+ matching:frame(`<path d="M40,30 Q70,118 210,116" fill="none" stroke="${CV}" stroke-width="2"/>
+   <text x="120" y="142" font-size="10" fill="${AX}">失业 u</text>
+   <text x="2" y="20" font-size="10" fill="${AX}">空缺 v</text>
+   <text x="120" y="58" font-size="9" fill="${CV}">贝弗里奇曲线</text>`),
+ ladder:frame(`${[0,1,2,3].map(i=>`<line x1="${44+i*44}" y1="${118-i*26}" x2="${80+i*44}" y2="${118-i*26}" stroke="${CV}" stroke-width="3"/>
+   ${i<3?`<path d="M${80+i*44},${118-i*26} L${80+i*44},${92-i*26}" stroke="#5b6fae" stroke-width="1.6" marker-end="url(#ar)"/>`:''}`).join('')}
+   <defs><marker id="ar" markerWidth="7" markerHeight="7" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#5b6fae"/></marker></defs>
+   <text x="90" y="142" font-size="9" fill="${AX}">每次创新→生产率台阶上移</text>
+   <text x="2" y="20" font-size="9" fill="${AX}">生产率</text>`)
+};
+
+/* ============ FIELDS ============ */
+const F={
+ ge:['一般均衡 / 微观理论','#5b6b9a'], macro:['宏观经济学','#a65a3c'],
+ metrics:['计量经济学','#2f7e78'], game:['博弈论','#7c5da0'],
+ finance:['金融经济学','#3f7d52'], beh:['行为 / 实验经济学','#c28a2c'],
+ dev:['发展经济学','#6e8c3a'], trade:['国际贸易','#b5743a'],
+ growth:['增长理论','#45707e'], info:['信息 / 机制 / 合约','#8a5277'],
+ inst:['公共选择 / 制度','#75683e'], hist:['经济史','#8c4b4b'],
+ labor:['劳动经济学','#2d6e8e'], io:['产业组织','#6a6e2e']
+};
+
+/* ============ DATA: all 57 prizes ============ */
+const L=(name,mono)=>({name,mono});
+const D=[
+{y:1969,p:[L('Ragnar Frisch','RF'),L('Jan Tinbergen','JT')],f:'metrics',t:'理论+实证',s:'创建经济计量学，构建动态经济过程的数学—统计模型。',d:'两人奠定了"用数学模型 + 统计数据刻画经济波动"的范式，Frisch 创造了"计量经济学(econometrics)""宏观/微观"等术语，Tinbergen 建立首批宏观计量模型用于政策分析。',fo:'',di:null},
+{y:1970,p:[L('Paul Samuelson','PS')],f:'ge',t:'理论',s:'用统一的数学方法重写经济理论，提升其科学性。',d:'《经济分析基础》以最优化与比较静态把消费、生产、贸易、宏观纳入同一数学框架；提出显示偏好、要素价格均等化、乘数—加速数等。现代经济学"数学化"的奠基人。',fo:'\\max\\,U(x)\\quad \\text{s.t.}\\quad p^{\\top}x \\le m',di:null},
+{y:1971,p:[L('Simon Kuznets','SK')],f:'growth',t:'实证',s:'对经济增长的实证测度，揭示增长的结构性规律。',d:'系统构建国民收入核算并测量长期增长，提出收入差距随发展先升后降的"库兹涅茨曲线"假说，开创以数据驱动的增长研究。',fo:'',di:'kuznets'},
+{y:1972,p:[L('John Hicks','JH'),L('Kenneth Arrow','KA')],f:'ge',t:'理论',s:'一般均衡理论与福利经济学的开拓性贡献。',d:'Hicks 的 IS–LM 与序数效用；Arrow 的"不可能定理"证明不存在同时满足若干合理条件的社会选择规则，并与 Debreu 给出一般均衡存在性证明。',fo:'\\nexists\\,f:\\ \\text{同时满足 } U,\\,P,\\,IIA,\\,\\text{非独裁}',di:'cross'},
+{y:1973,p:[L('Wassily Leontief','WL')],f:'ge',t:'理论+实证',s:'投入—产出分析：刻画产业间相互依存。',d:'用投入产出表追踪各部门间的中间投入流动，求解满足最终需求所需的总产出，广泛用于规划与政策评估。',fo:'x = (I - A)^{-1}\\,d',di:null},
+{y:1974,p:[L('Gunnar Myrdal','GM'),L('Friedrich Hayek','FH')],f:'inst',t:'理论',s:'货币与经济波动理论，及制度对经济社会的影响。',d:'Hayek 强调价格作为分散信息的信号、对计划经济的批判与商业周期的货币理论；Myrdal 关注累积因果与制度、发展问题。两人立场迥异却同获奖。',fo:'',di:null},
+{y:1975,p:[L('Leonid Kantorovich','LK'),L('Tjalling Koopmans','TK')],f:'ge',t:'理论',s:'资源最优配置理论（线性规划基础）。',d:'独立发展了线性规划与活动分析，把"在约束下最优配置稀缺资源"化为可计算的数学问题，影响运筹学与计划经济核算。',fo:'\\max\\ c^{\\top}x\\quad \\text{s.t.}\\quad Ax \\le b,\\ x \\ge 0',di:null},
+{y:1976,p:[L('Milton Friedman','MF')],f:'macro',t:'理论+实证',s:'消费分析、货币史与稳定政策；货币主义旗手。',d:'永久收入假说重写消费理论；与 Schwartz 的《美国货币史》以史料论证货币的关键作用；主张规则化货币政策与自然失业率。',fo:'M\\,V = P\\,Y',di:null},
+{y:1977,p:[L('Bertil Ohlin','BO'),L('James Meade','JM')],f:'trade',t:'理论',s:'国际贸易与资本流动理论。',d:'赫克歇尔—俄林模型用要素禀赋差异解释贸易格局；Meade 系统分析贸易政策与国际收支的福利效应。',fo:'',di:null},
+{y:1978,p:[L('Herbert Simon','HS')],f:'beh',t:'理论',s:'组织决策过程研究；提出"有限理性"。',d:'指出真实决策者受认知与信息约束，追求"满意"而非"最优"(satisficing)，开启行为经济学、组织理论与人工智能的交叉。',fo:'',di:null},
+{y:1979,p:[L('Theodore Schultz','TS'),L('Arthur Lewis','AL')],f:'dev',t:'理论',s:'发展中国家经济发展研究。',d:'Schultz 强调人力资本（教育、健康）对农业与发展的作用；Lewis 的"二元经济"模型刻画劳动力从传统部门向现代部门转移。',fo:'',di:null},
+{y:1980,p:[L('Lawrence Klein','LK')],f:'metrics',t:'实证',s:'建立经济计量模型并用于波动与政策分析。',d:'构建大型宏观计量模型（如沃顿模型）来预测经济活动、评估财政货币政策效果，把计量经济学推向实务应用。',fo:'',di:null},
+{y:1981,p:[L('James Tobin','JT')],f:'finance',t:'理论',s:'金融市场及其与支出、就业、价格的关系。',d:'投资组合选择理论解释风险下的资产配置；提出托宾 q（市值/重置成本）作为投资动机指标；倡导对金融交易征税（"托宾税"）。',fo:'q = \\dfrac{\\text{企业市场价值}}{\\text{资本重置成本}}',di:null},
+{y:1982,p:[L('George Stigler','GS')],f:'io',t:'理论+实证',s:'产业结构、市场运行与管制的经济分析。',d:'信息经济学（搜寻成本）、管制的"俘获理论"（监管常被被监管者利用），把价格理论用于现实产业与政府行为。',fo:'',di:null},
+{y:1983,p:[L('Gerard Debreu','GD')],f:'ge',t:'理论',s:'一般均衡理论的公理化重构。',d:'《价值理论》以集合论与拓扑给出竞争均衡存在性的严格证明（阿罗—德布鲁模型），是数理经济学的典范。',fo:'\\exists\\,p^*:\\ \\textstyle\\sum_i z_i(p^*)=0',di:'cross'},
+{y:1984,p:[L('Richard Stone','RS')],f:'metrics',t:'实证',s:'国民经济核算体系的奠基者。',d:'建立现代国民账户（GDP 等指标的系统框架），使各国经济活动可比、可测，成为宏观分析与国际统计的基础。',fo:'',di:null},
+{y:1985,p:[L('Franco Modigliani','FM')],f:'finance',t:'理论',s:'储蓄的生命周期理论与公司金融。',d:'生命周期假说解释个人跨期储蓄；莫迪利安尼—米勒定理证明在理想市场中企业价值与资本结构无关。',fo:'V_L = V_U',di:null},
+{y:1986,p:[L('James Buchanan','JB')],f:'inst',t:'理论',s:'公共选择理论：把经济分析用于政治决策。',d:'将政客、官僚视为追求自身利益的理性人，分析投票、预算赤字与宪政约束，主张"宪政经济学"约束政府行为。',fo:'',di:null},
+{y:1987,p:[L('Robert Solow','RS')],f:'growth',t:'理论',s:'新古典经济增长理论。',d:'索洛增长模型证明长期人均增长主要由技术进步驱动（"索洛余值"），资本积累存在收益递减、经济收敛到稳态。',fo:'\\dot{k} = s\\,f(k) - (n+\\delta)\\,k',di:'solow'},
+{y:1988,p:[L('Maurice Allais','MA')],f:'ge',t:'理论',s:'市场理论与资源有效利用。',d:'独立发展一般均衡与福利理论；"阿莱悖论"以实验揭示人们违反期望效用公理，预示行为经济学。',fo:'',di:null},
+{y:1989,p:[L('Trygve Haavelmo','TH')],f:'metrics',t:'理论',s:'计量经济学的概率论基础。',d:'论证经济数据应被视为随机过程的实现，为参数估计与假设检验提供概率论根基，使计量经济学成为严谨的统计科学。',fo:'',di:null},
+{y:1990,p:[L('Harry Markowitz','HM'),L('Merton Miller','MM'),L('William Sharpe','WS')],f:'finance',t:'理论',s:'金融经济学：组合理论、公司金融与资产定价。',d:'Markowitz 均值—方差组合；Miller 公司资本结构；Sharpe 的资本资产定价模型(CAPM)给出风险与预期收益的线性关系。',fo:'\\mathbb{E}[R_i] = R_f + \\beta_i\\big(\\mathbb{E}[R_m]-R_f\\big)',di:'sml'},
+{y:1991,p:[L('Ronald Coase','RC')],f:'inst',t:'理论',s:'交易成本、产权与企业的本质。',d:'企业之所以存在是为节省市场交易成本；科斯定理指出在产权清晰且交易成本为零时，资源配置与初始权利归属无关。',fo:'',di:null},
+{y:1992,p:[L('Gary Becker','GB')],f:'labor',t:'理论',s:'把微观分析拓展到人类行为与社会领域。',d:'用理性选择研究人力资本、家庭、歧视与犯罪，开创"经济学帝国主义"。人力资本回报常用明瑟方程估计。',fo:'\\ln w = \\beta_0 + \\rho\\,s + \\beta_1 x + \\beta_2 x^2 + \\varepsilon',di:null},
+{y:1993,p:[L('Robert Fogel','RF'),L('Douglass North','DN')],f:'hist',t:'实证',s:'用经济理论与量化方法重写经济史。',d:'"新经济史(cliometrics)"以数据与反事实分析历史（如铁路、奴隶制）；North 强调制度与产权对长期增长的决定作用。',fo:'',di:null},
+{y:1994,p:[L('John Harsanyi','JH'),L('John Nash','JN'),L('Reinhard Selten','RS')],f:'game',t:'理论',s:'非合作博弈中均衡的开创性分析。',d:'纳什均衡：无人能单方改变策略而获益；Selten 提出子博弈完美精炼；Harsanyi 处理不完全信息博弈。现代博弈论的基石。',fo:'u_i(s_i^*,s_{-i}^*) \\ge u_i(s_i,s_{-i}^*)\\quad \\forall\\,s_i',di:null},
+{y:1995,p:[L('Robert Lucas','RL')],f:'macro',t:'理论',s:'理性预期假说及其对宏观的革命性影响。',d:'理性预期使政策效果取决于公众预期；"卢卡斯批判"指出基于历史关系的政策模型在政策改变时会失效，重塑现代宏观方法论。',fo:'x_t^e = \\mathbb{E}\\!\\left[x_t \\mid \\Omega_{t-1}\\right]',di:null},
+{y:1996,p:[L('James Mirrlees','JM'),L('William Vickrey','WV')],f:'info',t:'理论',s:'非对称信息下的激励理论。',d:'Mirrlees 的最优所得税在信息不完全下平衡公平与效率；Vickrey 的二级价格拍卖使如实出价成为占优策略。',fo:'\\text{真实出价为占优策略 (Vickrey 拍卖)}',di:null},
+{y:1997,p:[L('Robert Merton','RM'),L('Myron Scholes','MS')],f:'finance',t:'理论',s:'衍生品定价的新方法。',d:'布莱克—斯科尔斯—默顿公式给出欧式期权的无套利定价，奠定现代金融工程与风险管理的数学基础。',fo:'C = S_0\\,N(d_1) - K e^{-rT} N(d_2)',di:null},
+{y:1998,p:[L('Amartya Sen','AS')],f:'dev',t:'理论',s:'福利经济学：社会选择、贫困与发展。',d:'重振社会选择理论；以"可行能力(capability)"重新定义福利与发展；研究饥荒（与分配/权利相关而非单纯缺粮）与贫困测度。',fo:'',di:null},
+{y:1999,p:[L('Robert Mundell','RM')],f:'macro',t:'理论',s:'不同汇率制度下的货币与财政政策；最优货币区。',d:'蒙代尔—弗莱明模型分析开放经济政策效果；最优货币区理论为欧元等货币联盟提供理论依据。',fo:'',di:null},
+{y:2000,p:[L('James Heckman','JH'),L('Daniel McFadden','DM')],f:'metrics',t:'实证',s:'微观计量方法：样本选择与离散选择。',d:'Heckman 校正样本选择偏误（逆米尔斯比）；McFadden 的离散选择/条件 logit 模型用于分析个体在有限选项中的决策。',fo:'P_i = \\dfrac{e^{V_i}}{\\sum_j e^{V_j}}',di:null},
+{y:2001,p:[L('George Akerlof','GA'),L('Michael Spence','MS'),L('Joseph Stiglitz','JS')],f:'info',t:'理论',s:'非对称信息市场分析。',d:'Akerlof"柠檬市场"中信息不对称导致逆向选择；Spence 的信号传递（如教育文凭）；Stiglitz 的筛选机制。共同奠定信息经济学。',fo:'\\text{逆向选择}\\Rightarrow \\text{优质品被劣质品挤出}',di:null},
+{y:2002,p:[L('Daniel Kahneman','DK'),L('Vernon Smith','VS')],f:'beh',t:'实证',s:'将心理学引入经济学；实验经济学方法。',d:'Kahneman（与 Tversky）的前景理论刻画人在不确定下的系统性偏差；Smith 用受控实验检验市场与机制，开创实验经济学。',fo:'V = \\sum_i \\pi(p_i)\\,v(x_i)',di:'prospect'},
+{y:2003,p:[L('Robert Engle','RE'),L('Clive Granger','CG')],f:'metrics',t:'实证',s:'经济时间序列分析方法。',d:'Engle 的 ARCH 模型刻画波动率的时变聚集；Granger 的协整与"格兰杰因果"处理非平稳序列间的长期关系，是金融与宏观实证的标配工具。',fo:'\\sigma_t^2 = \\alpha_0 + \\sum_{i=1}^{q}\\alpha_i\\,\\varepsilon_{t-i}^2',di:null},
+{y:2004,p:[L('Finn Kydland','FK'),L('Edward Prescott','EP')],f:'macro',t:'理论',s:'动态宏观：政策时间一致性与商业周期。',d:'指出"相机抉择"政策存在时间不一致问题，论证规则的价值；真实商业周期(RBC)理论以技术冲击与最优化解释波动。',fo:'',di:null},
+{y:2005,p:[L('Robert Aumann','RA'),L('Thomas Schelling','TS')],f:'game',t:'理论',s:'用博弈论理解冲突与合作。',d:'Aumann 的重复博弈说明长期互动如何支撑合作；Schelling 的策略行为、承诺与"聚点"分析影响冲突、谈判与核威慑。',fo:'',di:null},
+{y:2006,p:[L('Edmund Phelps','EP')],f:'macro',t:'理论',s:'宏观政策中跨期权衡的分析。',d:'引入预期与自然失业率，改写菲利普斯曲线：通胀与失业的取舍只是短期的，长期不存在可持续的换取关系。',fo:'\\pi_t = \\pi_t^e - \\beta\\,(u_t - u^*)',di:'phillips'},
+{y:2007,p:[L('Leonid Hurwicz','LH'),L('Eric Maskin','EM'),L('Roger Myerson','RM')],f:'info',t:'理论',s:'机制设计理论的奠基。',d:'研究如何设计规则/制度，使自利个体的行为导向期望的社会结果（如有效配置、如实显示偏好）。显示原理与实施理论是其核心。',fo:'\\text{显示原理：可由直接、激励相容机制实现}',di:null},
+{y:2008,p:[L('Paul Krugman','PK')],f:'trade',t:'理论',s:'贸易格局与经济活动的区位。',d:'新贸易理论以规模经济与产品差异解释相似国家间的产业内贸易；新经济地理学解释产业为何在空间上集聚。',fo:'',di:null},
+{y:2009,p:[L('Elinor Ostrom','EO'),L('Oliver Williamson','OW')],f:'inst',t:'理论+实证',s:'经济治理：公共池塘资源与企业边界。',d:'Ostrom（首位女性得主）以大量田野证据表明社区能自行管理"公地"而不必然走向悲剧；Williamson 用交易成本解释市场与企业的边界。',fo:'',di:null},
+{y:2010,p:[L('Peter Diamond','PD'),L('Dale Mortensen','DM'),L('Christopher Pissarides','CP')],f:'labor',t:'理论',s:'带搜寻摩擦市场的分析（尤其劳动力市场）。',d:'当买卖双方匹配需要时间与成本，市场会同时存在失业与空缺。匹配函数与贝弗里奇曲线刻画这种摩擦，解释失业的持续性。',fo:'M = m(U,\\,V)',di:'matching'},
+{y:2011,p:[L('Thomas Sargent','TS'),L('Christopher Sims','CS')],f:'macro',t:'实证',s:'宏观经济中因果关系的实证研究。',d:'Sargent 在理性预期框架下识别政策与冲击；Sims 的向量自回归(VAR)用于追踪冲击在经济系统中的传导，是现代宏观实证的核心方法。',fo:'',di:null},
+{y:2012,p:[L('Alvin Roth','AR'),L('Lloyd Shapley','LS')],f:'game',t:'理论',s:'稳定配置理论与市场设计实践。',d:'Gale–Shapley"延迟接受"算法求稳定匹配；Roth 把理论用于现实——住院医生分配、学校择校、肾脏交换等市场设计。',fo:'\\text{稳定匹配：不存在愿意私下结对的阻塞对}',di:null},
+{y:2013,p:[L('Eugene Fama','EF'),L('Lars Peter Hansen','LH'),L('Robert Shiller','RS')],f:'finance',t:'实证',s:'资产价格的实证分析。',d:'Fama 的有效市场假说：短期价格难以预测；Shiller 指出长期存在可预测性与非理性波动；Hansen 的 GMM 提供检验资产定价模型的统计工具。',fo:'',di:null},
+{y:2014,p:[L('Jean Tirole','JT')],f:'io',t:'理论',s:'市场势力与监管的分析。',d:'用博弈论与合约理论系统研究寡头、平台、双边市场与垄断行业的监管，为针对不同行业的差异化反垄断与管制提供框架。',fo:'',di:null},
+{y:2015,p:[L('Angus Deaton','AD')],f:'dev',t:'实证',s:'消费、贫困与福利的分析。',d:'用微观家庭数据研究消费与需求（近乎理想需求系统）、储蓄与贫困测度，把发展与福利研究建立在扎实的个体数据之上。',fo:'',di:null},
+{y:2016,p:[L('Oliver Hart','OH'),L('Bengt Holmström','BH')],f:'info',t:'理论',s:'合约理论。',d:'Holmström 的委托—代理与激励合约（信息含量原理）；Hart 的不完全合约与控制权配置，解释企业所有权、债务与组织边界。',fo:'',di:null},
+{y:2017,p:[L('Richard Thaler','RT')],f:'beh',t:'理论+实证',s:'行为经济学：把心理现实纳入经济决策。',d:'心理账户、禀赋效应、有限自制与"助推(nudge)"——通过默认选项等温和方式改善储蓄、健康等真实决策。',fo:'',di:null},
+{y:2018,p:[L('William Nordhaus','WN'),L('Paul Romer','PR')],f:'growth',t:'理论',s:'把气候变化与技术创新纳入长期增长。',d:'Nordhaus 的综合评估模型(DICE)将碳排放与经济增长耦合，论证碳定价；Romer 的内生增长理论说明知识具非竞争性，可带来持续增长。',fo:'\\dot{A} = \\delta\\,H_A\\,A',di:null},
+{y:2019,p:[L('Abhijit Banerjee','AB'),L('Esther Duflo','ED'),L('Michael Kremer','MK')],f:'dev',t:'实证',s:'用实验方法缓解全球贫困。',d:'把随机对照试验(RCT)引入发展经济学，将"如何减贫"拆解为可检验的具体干预（疫苗激励、蚊帐、教育投入等）。Duflo 为最年轻得主。',fo:'\\text{ATE} = \\mathbb{E}[Y\\mid T{=}1] - \\mathbb{E}[Y\\mid T{=}0]',di:null},
+{y:2020,p:[L('Paul Milgrom','PM'),L('Robert Wilson','RW')],f:'game',t:'理论',s:'拍卖理论与新拍卖形式的设计。',d:'分析共同价值拍卖中的"赢者诅咒"与信息；设计同时多轮拍卖等机制，用于无线频谱等复杂资源的高效配置。',fo:'',di:null},
+{y:2021,p:[L('David Card','DC'),L('Joshua Angrist','JA'),L('Guido Imbens','GI')],f:'metrics',t:'实证',s:'自然实验与因果推断方法论。',d:'Card 用自然实验研究最低工资、移民等劳动经济问题；Angrist 与 Imbens 给出从自然实验中识别因果（LATE、工具变量）的方法论框架。',fo:'\\hat{\\delta}_{DiD}=(\\bar Y^{T}_{post}-\\bar Y^{T}_{pre})-(\\bar Y^{C}_{post}-\\bar Y^{C}_{pre})',di:null},
+{y:2022,p:[L('Ben Bernanke','BB'),L('Douglas Diamond','DD'),L('Philip Dybvig','PD')],f:'finance',t:'理论+实证',s:'银行与金融危机研究。',d:'Bernanke 用实证说明银行倒闭如何加深大萧条；Diamond–Dybvig 模型解释银行挤兑为何是一种自我实现的多重均衡，论证存款保险的作用。',fo:'\\text{挤兑为自我实现的多重均衡之一}',di:null},
+{y:2023,p:[L('Claudia Goldin','CG')],f:'labor',t:'实证',s:'增进对女性劳动力市场结果的理解。',d:'以两百年的历史数据揭示女性就业与性别工资差距的长期演变及其驱动因素（教育、避孕技术、职业的"贪婪工作"特征等）。第三位女性得主。',fo:'',di:null},
+{y:2024,p:[L('Daron Acemoglu','DA'),L('Simon Johnson','SJ'),L('James Robinson','JR')],f:'inst',t:'理论+实证',s:'制度如何形成并影响繁荣。',d:'用殖民地历史等自然实验论证"包容性"与"汲取性"制度对长期繁荣差异的决定作用，把制度差异置于增长研究的中心。',fo:'',di:null},
+{y:2025,p:[L('Joel Mokyr','JM'),L('Philippe Aghion','PA'),L('Peter Howitt','PH')],f:'growth',t:'理论+实证',s:'解释由创新驱动的经济增长。',d:'Mokyr 以经济史指出持续增长需要支撑性制度与"有用知识"的积累；Aghion 与 Howitt 用熊彼特式"创造性破坏"建立内生增长模型——新创新不断取代旧技术。',fo:'g = \\lambda\\,(\\gamma - 1)\\quad(\\lambda:\\text{创新到达率},\\ \\gamma:\\text{生产率跃升})',di:'ladder'}
+];
+
+/* ============ STATS ============ */
+const kpis=[
+ ['57','届颁奖','1969–2025'], ['99','位得主',''], ['3','位女性得主','Ostrom·Duflo·Goldin'],
+ ['67','平均获奖年龄','岁'], ['90','最年长','Hurwicz · 2007'], ['46','最年轻','Duflo · 2019']
+];
+document.getElementById('kpis').innerHTML=kpis.map(k=>
+ `<div class="kpi"><div class="n">${k[0]}${k[2]&&!isNaN(k[0])?'':''}</div><div class="l">${k[1]}${k[2]?'<br>'+k[2]:''}</div></div>`).join('');
+
+// type split
+const tc={'理论':0,'实证':0,'理论+实证':0};
+D.forEach(d=>tc[d.t]++);
+const tcol={'理论':'#5b6fae','实证':'#3a9b94','理论+实证':'#d4a44a'};
+document.getElementById('typeSplit').innerHTML=Object.entries(tc).map(([k,v])=>
+ `<div style="flex:${v};background:${tcol[k]}">${v}</div>`).join('');
+
+// share split (official: 26 / 20 / 11)
+const sh=[['独享',26,'#876722'],['二人',20,'#a9822f'],['三人',11,'#cdb27e']];
+document.getElementById('shareSplit').innerHTML=sh.map(s=>
+ `<div style="flex:${s[1]};background:${s[2]}">${s[1]}</div>`).join('');
+
+// field bars
+const fc={}; D.forEach(d=>fc[d.f]=(fc[d.f]||0)+1);
+const fbars=Object.entries(fc).sort((a,b)=>b[1]-a[1]);
+const fmax=Math.max(...fbars.map(x=>x[1]));
+document.getElementById('fieldBars').innerHTML=fbars.map(([k,v])=>
+ `<div class="bar-row"><div class="blab">${F[k][0]}</div>
+  <div class="bar-track"><div class="bar-fill" style="width:${v/fmax*100}%;background:${F[k][1]}"></div></div>
+  <div class="bval">${v}</div></div>`).join('');
+
+/* ============ SCATTER (hero) ============ */
+(function(){
+ const W=1100,H=160,pad=24,y0=H-44;
+ const x=y=>pad+ (y-1969)/(2025-1969)*(W-2*pad);
+ const tcolH={'理论':'#5b6fae','实证':'#3a9b94','理论+实证':'#d4a44a'};
+ let dots='',ticks='';
+ for(let yr=1970;yr<=2025;yr+=5){ticks+=`<line x1="${x(yr)}" y1="${y0}" x2="${x(yr)}" y2="${y0+6}" stroke="#6b6450" stroke-width="1"/><text x="${x(yr)}" y="${y0+22}" font-size="13" fill="#8a8472" text-anchor="middle" font-family="IBM Plex Mono,monospace">${yr}</text>`;}
+ D.forEach((d,i)=>{
+   const n=d.p.length, base=y0-20;
+   d.p.forEach((_,j)=>{
+     const yy=base - (n>1?(j-(n-1)/2)*11:0);
+     dots+=`<circle cx="${x(d.y).toFixed(1)}" cy="${yy.toFixed(1)}" r="4.4" fill="${tcolH[d.t]}" opacity=".92" style="cursor:pointer" onclick="jump(${d.y})"><title>${d.y} · ${d.p.map(p=>p.name).join(', ')}</title></circle>`;
+   });
+ });
+ document.getElementById('scatter').innerHTML=
+  `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+    <line x1="${pad}" y1="${y0}" x2="${W-pad}" y2="${y0}" stroke="#5a5444" stroke-width="1.2"/>
+    ${ticks}${dots}</svg>`;
+})();
+function jump(yr){
+ const el=document.querySelector('[data-year="'+yr+'"]');
+ if(el){document.getElementById('q').value='';document.getElementById('fieldSel').value='';
+   setType('');render();const t=document.querySelector('[data-year="'+yr+'"]');
+   t.scrollIntoView({behavior:'smooth',block:'center'});t.classList.add('open');
+   t.style.boxShadow='0 0 0 2px var(--brass)';setTimeout(()=>t.style.boxShadow='',1600);}
+}
+
+/* ============ GRID + FILTER ============ */
+const tcl={'理论':'th','实证':'em','理论+实证':'bo'};
+function card(d){
+ const av=d.p.map((p,i)=>`<span class="av" style="background:${F[d.f][1]};${i?'':''}">${p.mono}</span>`).join('');
+ const names=d.p.map(p=>p.name).join(' · ');
+ let det=`<div class="detail"><p class="desc">${d.d}</p>`;
+ if(d.fo){det+=`<p class="fcap">核心公式 / 思想</p><div class="formula" data-tex="${d.fo.replace(/"/g,'&quot;')}"></div>`;}
+ if(d.di){det+=`<div class="diagram">${DIA[d.di]}</div>`;}
+ det+=`<p class="bornaff">学科：${F[d.f][0]}　·　性质：${d.t}</p></div>`;
+ return `<article class="entry" data-year="${d.y}" tabindex="0" role="button" aria-expanded="false">
+   <div class="top"><span class="year">${d.y}</span><div class="avatars">${av}</div></div>
+   <div class="body">
+     <h3 class="names">${names}</h3>
+     <p class="short">${d.s}</p>
+     <div class="tags">
+       <span class="tag field"><i style="background:${F[d.f][1]}"></i>${F[d.f][0]}</span>
+       <span class="tag ty ${tcl[d.t]}">${d.t}</span>
+     </div>
+   </div>${det}</article>`;
+}
+let curType='';
+function setType(t){curType=t;document.querySelectorAll('.segs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.ty===t));}
+function render(){
+ const q=document.getElementById('q').value.trim().toLowerCase();
+ const fs=document.getElementById('fieldSel').value;
+ const list=D.filter(d=>{
+   if(curType&&d.t!==curType)return false;
+   if(fs&&d.f!==fs)return false;
+   if(q){const hay=(d.p.map(p=>p.name).join(' ')+' '+d.s+' '+d.d+' '+F[d.f][0]).toLowerCase();
+     if(!hay.includes(q))return false;}
+   return true;
+ }).sort((a,b)=>b.y-a.y);
+ const g=document.getElementById('grid');
+ g.innerHTML=list.map(card).join('');
+ document.getElementById('count').textContent=`显示 ${list.length} / 57 届`;
+ // render formulas
+ g.querySelectorAll('.formula').forEach(el=>{
+   try{katex.render(el.dataset.tex,el,{throwOnError:false,displayMode:true});}catch(e){el.textContent=el.dataset.tex;}
+ });
+ // interactions
+ g.querySelectorAll('.entry').forEach(e=>{
+   const toggle=()=>{e.classList.toggle('open');e.setAttribute('aria-expanded',e.classList.contains('open'));};
+   e.addEventListener('click',toggle);
+   e.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();toggle();}});
+ });
+}
+// field select options
+document.getElementById('fieldSel').insertAdjacentHTML('beforeend',
+ Object.entries(F).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join(''));
+document.getElementById('q').addEventListener('input',render);
+document.getElementById('fieldSel').addEventListener('change',render);
+document.querySelectorAll('.segs button').forEach(b=>b.addEventListener('click',()=>{setType(b.dataset.ty);render();}));
+render();
+</script>
+</body>
+</html>

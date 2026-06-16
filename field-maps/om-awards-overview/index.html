@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OM 两大奖对比概览 · 新星 vs 终身成就</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --paper:#f3ede1;
+    --paper2:#faf5ea;
+    --ink:#1d1a14;
+    --ink-soft:#4a4439;
+    --line:#d8cdb8;
+    --poms:#c0791a;        /* 新星 — amber/gold */
+    --poms-soft:#e4b367;
+    --poms-bg:#f7ead1;
+    --msom:#1f5450;        /* 终身 — deep petrol */
+    --msom-soft:#5b938d;
+    --msom-bg:#dfe9e6;
+    --rust:#a23b22;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Newsreader","Noto Serif SC",Georgia,serif;
+    font-size:18px;line-height:1.65;
+    background-image:radial-gradient(circle at 12% 8%, rgba(192,121,26,.06), transparent 40%),radial-gradient(circle at 88% 92%, rgba(31,84,80,.07), transparent 42%);
+    background-attachment:fixed;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
+  h1,h2,h3,.disp{font-family:"Fraunces","Noto Serif SC",serif;}
+  ::selection{background:var(--poms);color:#fff;}
+
+  /* HERO */
+  header.hero{padding:78px 0 30px;border-bottom:2px solid var(--ink);}
+  .kicker{font-family:"Fraunces",serif;font-style:italic;font-size:1.05rem;color:var(--rust);letter-spacing:.02em;margin-bottom:14px;}
+  h1{font-size:clamp(2.6rem,6vw,4.7rem);line-height:1.02;font-weight:900;margin:0 0 18px;letter-spacing:-.015em;}
+  h1 .a{color:var(--poms);}
+  h1 .b{color:var(--msom);}
+  .lede{font-size:1.22rem;max-width:760px;color:var(--ink-soft);font-weight:300;}
+  .meta{margin-top:26px;font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);font-family:"Fraunces",serif;}
+
+  /* SECTION */
+  section{padding:62px 0;border-bottom:1px solid var(--line);}
+  .eyebrow{font-family:"Fraunces",serif;font-style:italic;color:var(--rust);font-size:1.02rem;margin-bottom:6px;}
+  h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:600;margin:0 0 8px;letter-spacing:-.01em;}
+  .sub{color:var(--ink-soft);max-width:780px;margin-bottom:30px;font-weight:300;}
+
+  /* TWO-CARD COMPARE */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .card{border:1.5px solid var(--ink);border-radius:3px;padding:26px 24px;position:relative;overflow:hidden;background:var(--paper2);}
+  .card.poms{box-shadow:7px 7px 0 var(--poms);}
+  .card.msom{box-shadow:7px 7px 0 var(--msom);}
+  .card .tag{font-family:"Fraunces",serif;font-weight:900;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;border-radius:2px;display:inline-block;color:#fff;}
+  .card.poms .tag{background:var(--poms);}
+  .card.msom .tag{background:var(--msom);}
+  .card h3{font-size:1.35rem;margin:14px 0 4px;font-weight:600;line-height:1.2;}
+  .card .en{font-style:italic;color:var(--ink-soft);font-size:.98rem;margin-bottom:14px;}
+  .card p{font-size:1rem;color:var(--ink-soft);margin:0 0 10px;}
+  .bignum{font-family:"Fraunces",serif;font-weight:900;font-size:3.2rem;line-height:1;}
+  .card.poms .bignum{color:var(--poms);}
+  .card.msom .bignum{color:var(--msom);}
+  .bignum small{font-size:.95rem;font-family:"Newsreader";font-weight:400;color:var(--ink-soft);margin-left:6px;}
+
+  /* STAT STRIP */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:10px;}
+  .stat{border-top:3px solid var(--ink);padding-top:12px;}
+  .stat .n{font-family:"Fraunces",serif;font-weight:900;font-size:2.3rem;line-height:1;}
+  .stat .l{font-size:.86rem;color:var(--ink-soft);margin-top:6px;}
+
+  /* CHART */
+  .chartbox{background:var(--paper2);border:1px solid var(--line);border-radius:3px;padding:22px 20px 16px;margin-top:8px;}
+  .chartbox h4{font-family:"Fraunces",serif;font-size:1.1rem;margin:0 0 2px;font-weight:600;}
+  .chartbox .cnote{font-size:.85rem;color:var(--ink-soft);margin-bottom:16px;}
+  .canvas-h{position:relative;height:330px;}
+  .canvas-h.tall{height:420px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+
+  .legend{display:flex;gap:20px;flex-wrap:wrap;font-size:.9rem;margin:4px 0 18px;}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .sw{width:14px;height:14px;border-radius:2px;display:inline-block;}
+
+  /* INSIGHT */
+  .insight{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px dashed var(--line);}
+  .insight:last-child{border-bottom:none;}
+  .insight .ix{font-family:"Fraunces",serif;font-weight:900;font-size:2.1rem;color:var(--rust);line-height:1;min-width:54px;}
+  .insight h3{font-size:1.18rem;margin:0 0 6px;font-weight:600;}
+  .insight p{margin:0;color:var(--ink-soft);font-size:1rem;}
+  .insight b{color:var(--ink);}
+
+  /* PIPELINE highlight */
+  .pipe{background:var(--ink);color:var(--paper);border-radius:4px;padding:30px 28px;margin-top:8px;}
+  .pipe h3{color:var(--poms-soft);font-size:1.3rem;margin:0 0 14px;}
+  .pipe .row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:14px 0;font-size:1.05rem;}
+  .pipe .chip{border:1px solid var(--poms-soft);color:var(--poms-soft);padding:3px 11px;border-radius:20px;font-size:.85rem;font-family:"Fraunces",serif;}
+  .pipe .chip.m{border-color:var(--msom-soft);color:var(--msom-soft);}
+  .pipe .arrow{color:var(--rust);font-weight:700;}
+  .pipe small{color:#b6ab97;}
+
+  /* TABLE */
+  .tabs{display:flex;gap:0;margin-bottom:0;border-bottom:2px solid var(--ink);}
+  .tab{flex:1;text-align:center;padding:14px;cursor:pointer;font-family:"Fraunces",serif;font-weight:600;font-size:1rem;background:transparent;border:none;color:var(--ink-soft);transition:.15s;}
+  .tab.active{color:#fff;}
+  .tab.active.t-poms{background:var(--poms);}
+  .tab.active.t-msom{background:var(--msom);}
+  .tablewrap{max-height:560px;overflow-y:auto;border:1px solid var(--line);border-top:none;}
+  table{width:100%;border-collapse:collapse;font-size:.96rem;}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);}
+  thead th{position:sticky;top:0;background:var(--paper2);font-family:"Fraunces",serif;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);z-index:2;}
+  tbody tr:hover{background:var(--poms-bg);}
+  .msomtable tbody tr:hover{background:var(--msom-bg);}
+  td.yr{font-family:"Fraunces",serif;font-weight:900;color:var(--rust);white-space:nowrap;}
+  td.nm{font-weight:600;}
+  .area-pill{font-size:.78rem;padding:2px 8px;border-radius:20px;white-space:nowrap;background:var(--paper);border:1px solid var(--line);color:var(--ink-soft);}
+  .hide{display:none;}
+  .dot{font-size:.7rem;color:var(--poms);}
+
+  /* CAVEAT */
+  .caveat{background:var(--poms-bg);border-left:4px solid var(--poms);padding:20px 24px;border-radius:0 4px 4px 0;font-size:.95rem;color:var(--ink-soft);}
+  .caveat b{color:var(--ink);}
+  .caveat ul{margin:10px 0 0;padding-left:20px;}
+  .caveat li{margin-bottom:7px;}
+
+  footer{padding:40px 0 70px;font-size:.85rem;color:var(--ink-soft);}
+  footer a{color:var(--rust);}
+
+  @media(max-width:720px){
+    body{font-size:16px;}
+    .duo,.grid2,.stats{grid-template-columns:1fr;}
+    .stats{grid-template-columns:1fr 1fr;}
+    .canvas-h{height:300px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">运筹与运营管理 · 学术荣誉地图 · 写给 OM 博士生</div>
+    <h1><span class="a">新星</span> 与 <span class="b">终身成就</span><br>OM 两大奖的群像对比</h1>
+    <p class="lede">同一个领域,两座灯塔:一座照亮谁正在升起(POMS 早期职业研究奖),一座定义谁已成传奇(MSOM Distinguished Fellow)。把两份完整名单放在一起,你能看清这门学科<b>从哪里来、要到哪里去</b>。</p>
+    <div class="meta">数据来源 · POMS.org / INFORMS.org 官方名录 ｜ 涵盖 2000–2026 年 ｜ 共约 90 位学者</div>
+  </div>
+</header>
+
+<!-- ================ THE TWO AWARDS ================ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">两座奖的定位</div>
+    <h2>一个看潜力,一个看一生</h2>
+    <p class="sub">两奖在 OM 学术圈分别占据「入场即封神的起点」与「盖棺定论的顶点」。理解它们的差异,是理解整个领域价值坐标的第一步。</p>
+    <div class="duo">
+      <div class="card poms">
+        <span class="tag">新星 · Rising Star</span>
+        <h3>POMS 早期职业研究成就奖</h3>
+        <div class="en">Chelliah Sriskandarajah Early Career Research Accomplishments Award<br>(原 Wickham Skinner Award)</div>
+        <p>授予<b>博士毕业 6 年以内</b>的学者,表彰其早期研究已展现出「改变 POM 被理解、实践与看待方式」的影响力。每年至多一名正奖 + 一名 runner-up(并列时可两名正奖)。</p>
+        <div style="margin-top:18px;"><span class="bignum">35</span><small>位正奖得主(2001–2026)</small></div>
+      </div>
+      <div class="card msom">
+        <span class="tag">终身 · Lifetime</span>
+        <h3>MSOM 杰出会士</h3>
+        <div class="en">MSOM Distinguished Fellow Award<br>INFORMS 制造与服务运营管理分会</div>
+        <p>1999 年设立,表彰运营管理领域<b>毕生的卓越研究与学术贡献</b>,「应被视为罕有的殊荣,堪比 Omega Rho 会籍」。教学与服务不计入评选。可视为 OM 的「名人堂」。</p>
+        <div style="margin-top:18px;"><span class="bignum">55</span><small>位会士(2000–2025)</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ AT A GLANCE ================ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">数字速览</div>
+    <h2>规模与节奏</h2>
+    <p class="sub">两奖每年都只授予 1–3 人,稀缺度相近;但「终身成就」累积了更长的历史与更厚的名单,因为它表彰的是数十年的积累。</p>
+    <div class="grid2">
+      <div>
+        <div class="stats">
+          <div class="stat" style="border-color:var(--poms)"><div class="n" style="color:var(--poms)">35</div><div class="l">新星正奖得主</div></div>
+          <div class="stat" style="border-color:var(--poms)"><div class="n" style="color:var(--poms)">≤6<small style="font-size:.5em">年</small></div><div class="l">博士毕业资格上限</div></div>
+          <div class="stat" style="border-color:var(--poms)"><div class="n" style="color:var(--poms)">1.4</div><div class="l">年均得主数</div></div>
+          <div class="stat" style="border-color:var(--poms)"><div class="n" style="color:var(--poms)">26</div><div class="l">覆盖年份</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="stats">
+          <div class="stat" style="border-color:var(--msom)"><div class="n" style="color:var(--msom)">55</div><div class="l">终身会士总数</div></div>
+          <div class="stat" style="border-color:var(--msom)"><div class="n" style="color:var(--msom)">∞</div><div class="l">荣誉终身有效</div></div>
+          <div class="stat" style="border-color:var(--msom)"><div class="n" style="color:var(--msom)">2.1</div><div class="l">年均会士数</div></div>
+          <div class="stat" style="border-color:var(--msom)"><div class="n" style="color:var(--msom)">26</div><div class="l">覆盖年份</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="chartbox" style="margin-top:30px;">
+      <h4>历年授予人数</h4>
+      <div class="cnote">两奖逐年得主数(POMS 仅计正奖)。2010、2015、2021 年 POMS 正奖在官方名录中存在缺口/未公布。</div>
+      <div class="canvas-h"><canvas id="timeline"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ FIELD DISTRIBUTION ================ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">领域分布 · 全文最关键的一张图</div>
+    <h2>这门学科正在换代</h2>
+    <p class="sub">把得主按<b>主要研究领域</b>分类(每人取其代表性方向,多数人实际跨领域)。对比一目了然:终身会士由 OM 的<b>古典分析内核</b>构成——库存、随机模型、排队论;而新星得主则压倒性地转向<b>实证 / 数据驱动、服务与医疗、行为运营</b>。一句话:会士名单告诉你 OM 从哪里来,新星名单告诉你 OM 要到哪里去。</p>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--poms)"></i>新星 · POMS 早期职业奖</span>
+      <span><i class="sw" style="background:var(--msom)"></i>终身 · MSOM 会士</span>
+    </div>
+    <div class="chartbox">
+      <h4>各研究领域的得主占比对比</h4>
+      <div class="cnote">横轴为占比(%),便于跨两个不同规模名单比较。领域分类为编者依据各学者代表性工作所作的单一主方向归类。</div>
+      <div class="canvas-h tall"><canvas id="fields"></canvas></div>
+    </div>
+    <div class="grid2" style="margin-top:22px;">
+      <div class="chartbox"><h4>终身会士 · 领域构成</h4><div class="cnote">古典分析内核(库存供应链 + 随机排队)合计逾 ⅔</div><div class="canvas-h"><canvas id="msomDonut"></canvas></div></div>
+      <div class="chartbox"><h4>新星得主 · 领域构成</h4><div class="cnote">实证/数据驱动 + 服务医疗合计约一半</div><div class="canvas-h"><canvas id="pomsDonut"></canvas></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ INSTITUTIONS ================ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">学校与重镇</div>
+    <h2>权力的引力中心</h2>
+    <p class="sub">按<b>获奖时所在机构</b>统计。无论新星还是终身,得主都高度集中在同一批院系——这些就是精英 OM 的引力中心。对一个博士生而言,这张图大致勾勒出「明星密度最高」的地方。</p>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--msom)"></i>终身会士所在院校</span>
+      <span><i class="sw" style="background:var(--poms)"></i>新星得主所在院校</span>
+    </div>
+    <div class="chartbox">
+      <h4>各院校累计产生的得主数(获奖时口径)</h4>
+      <div class="cnote">仅显示出现 ≥2 次的院校;其余「单次」院校合并。早期与最近若干 POMS 得主的机构为近似值。</div>
+      <div class="canvas-h tall"><canvas id="inst"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ PIPELINE ================ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">从新星到传奇</div>
+    <h2>这条路真的走得通</h2>
+    <p class="sub">早期职业奖到底是不是「未来大师」的领先指标?名单给出了实证答案:有学者<b>同时出现在两份名单上</b>,中间相隔约 13–18 年。</p>
+    <div class="pipe">
+      <h3>同时拿下「新星」与「终身」的学者</h3>
+      <div class="row">
+        <b>Serguei Netessine</b>
+        <span class="chip">POMS 新星 2005</span><span class="arrow">→ 13 年 →</span><span class="chip m">MSOM 会士 2018</span>
+      </div>
+      <div class="row">
+        <b>Vishal Gaur</b>
+        <span class="chip">POMS 新星 2006</span><span class="arrow">→ 18 年 →</span><span class="chip m">MSOM 会士 2024</span>
+      </div>
+      <p style="margin-top:18px;color:#cfc4ad;">此外,多位新星得主已成长为旗舰期刊主编 / 系主任 / 院长 / 学会主席(如 Annabelle Feng、Atalay Atasu、Maxime Cohen、Christian Terwiesch 等),进一步印证早期职业奖的「预测力」。<small>注:Terwiesch 仅获 MSOM 会士(2016),未列于新星名单,此处作为「新星辈分学者已登顶」的旁证。</small></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================ PUBLICATION PROFILE ================ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">发表与影响力画像</div>
+    <h2>两种「水平」长什么样</h2>
+    <p class="sub">两奖看的是同一组顶刊——<b>MS、OR、M&amp;SOM、POM</b>(及 MnSc)——但所处人生阶段不同,「合格的发表画像」截然不同。逐人精确的发表计数并未由任一官方集中公布,因此下面以<b>典型画像 + 可核实的代表作</b>来刻画,而非编造数字。</p>
+    <div class="duo">
+      <div class="card poms">
+        <span class="tag">新星画像</span>
+        <h3>少而锋利</h3>
+        <p>在 ≤6 年窗口内,典型为<b>数篇(约 4–10 篇)顶刊</b>,常由 1–3 篇「签名之作」支撑——往往是开辟新方法/新现象的高影响论文。</p>
+        <p style="margin-top:14px;font-size:.93rem;"><b>可核实的代表作示例:</b><br>· Dennis Zhang — MS《Airbnb 共享经济中的歧视:田野实验》<br>· Ruomeng Cui — MS《Amazon/Airbnb 田野实验》系列<br>· Moreno-Garcia & Gallino — MS/M&amp;SOM 全渠道零售实证<br>· Hummy Song — MS/OR 医疗运营实证</p>
+      </div>
+      <div class="card msom">
+        <span class="tag">终身画像</span>
+        <h3>厚而奠基</h3>
+        <p>跨越<b>数十年的整片文献</b>,常包含定义子领域的奠基论文,乃至成为标准教材的著作。其名字往往就写在定理、模型与课本上。</p>
+        <p style="margin-top:14px;font-size:.93rem;"><b>奠基性著作/成果示例:</b><br>· Zipkin —《Foundations of Inventory Management》<br>· Hopp & Spearman —《Factory Physics》<br>· Cachon & Terwiesch —《Matching Supply with Demand》<br>· Gallego & van Ryzin — 收益管理奠基论文<br>· Harrison — 排队网络的 Brownian 近似</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ KEY TAKEAWAYS ================ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">给博士生的五条结论</div>
+    <h2>如何读这两份名单</h2>
+    <div style="margin-top:10px;">
+      <div class="insight"><div class="ix">01</div><div><h3>两者衡量的是不同人生阶段,不是「谁更牛」</h3><p>新星看<b>斜率</b>(早期上升速度),终身看<b>积分</b>(一生总贡献)。它们互补,而非可比的高低。</p></div></div>
+      <div class="insight"><div class="ix">02</div><div><h3>领域代际更替是最大的信号</h3><p>终身会士里 <b>≈68% 是库存/供应链 + 随机排队</b>的古典内核,行为运营为 0;新星得主里 <b>≈26% 实证/数据驱动、23% 服务医疗、9% 行为</b>。OM 的方法论重心正从「定理」转向「因果识别、田野实验与机器学习」。</p></div></div>
+      <div class="insight"><div class="ix">03</div><div><h3>新星是终身的领先指标</h3><p>Netessine 与 Gaur 同时在两份名单上,间隔 13–18 年。想预判未来的会士,看今天的新星名单。</p></div></div>
+      <div class="insight"><div class="ix">04</div><div><h3>明星高度集中在少数院系</h3><p>Wharton、Columbia、Stanford、MIT、Cornell、Chicago Booth、Kellogg、UCLA、Michigan 反复出现。这是 OM 的引力中心,也是择校/求职的高密度区。</p></div></div>
+      <div class="insight"><div class="ix">05</div><div><h3>方法不是站队,而是工具箱</h3><p>同一位学者常横跨随机建模、博弈、实证与优化。名单上的「领域标签」是主方向的近似;真正的 star 往往以问题为锚,按需调用方法。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ FULL ROSTER ================ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">完整名录</div>
+    <h2>逐人查阅</h2>
+    <p class="sub">点击切换两份名单。机构为<b>获奖当时</b>所在单位;领域为主方向归类。</p>
+    <div class="tabs">
+      <button class="tab t-poms active" onclick="showTab('poms')">新星 · POMS 早期职业奖(35)</button>
+      <button class="tab t-msom" onclick="showTab('msom')">终身 · MSOM 会士(55)</button>
+    </div>
+    <div id="pomsTable" class="tablewrap">
+      <table><thead><tr><th>年份</th><th>姓名</th><th>获奖时机构</th><th>主要领域</th></tr></thead><tbody id="pomsBody"></tbody></table>
+    </div>
+    <div id="msomTable" class="tablewrap msomtable hide">
+      <table><thead><tr><th>年份</th><th>姓名</th><th>获奖时机构</th><th>主要领域</th></tr></thead><tbody id="msomBody"></tbody></table>
+    </div>
+    <p style="font-size:.86rem;color:var(--ink-soft);margin-top:14px;">值得一提的 runner-up / honorable mention:Tinglong Dai(2020 RU)、Soo-Haeng Cho(2015 RU)、Vishal Agrawal(2017 RU)、Mahesh Nagarajan(2009 RU)、Andrew Davis(2018 HM)——他们同样是各自方向的重要学者。</p>
+  </div>
+</section>
+
+<!-- ================ CAVEAT ================ -->
+<section style="border-bottom:none;">
+  <div class="wrap">
+    <div class="eyebrow">方法与边界</div>
+    <h2>这份概览能信几分</h2>
+    <div class="caveat">
+      <b>请把它当作「可靠骨架 + 诚实标注的判断」来读:</b>
+      <ul>
+        <li><b>名单与年份、获奖机构</b>:来自 POMS.org 与 INFORMS.org 官方名录,可靠度高。少数早期/最近 POMS 得主的机构为近似(已在图中标注)。</li>
+        <li><b>逐人发表计数</b>:无任一官方来源集中公布「获奖当时」的 MS/OR/M&amp;SOM/POM 精确篇数。为避免编造,本概览用<b>典型画像 + 可核实代表作</b>替代精确计数。</li>
+        <li><b>领域分布</b>:为编者的<b>单一主方向</b>归类。绝大多数学者跨多个领域,占比仅反映「重心」,不代表唯一身份。</li>
+        <li><b>师承(PhD 导师/毕业校)</b>:为防错误,本概览未逐人断言导师血统,而以「获奖时所在院校」这一可核实口径刻画机构集中度;真正的学术谱系建议进一步查阅各人 CV。</li>
+        <li><b>名录缺口</b>:POMS 早期职业奖在 2010、2015(正奖)、2021 年于官方页面存在空缺或未公布;两奖的早年与并列规则亦有少量不一致。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    数据整理 · 截至 2026 年 5 月 ｜ 来源:<a href="https://www.poms.org/pomsocietyawards/earlycareerresearchaward">POMS 官方名录</a> · <a href="https://www.informs.org/Recognizing-Excellence/Community-Prizes/Manufacturing-and-Service-Operations-Management/MSOM-Distinguished-Fellows-Award">INFORMS MSOM 官方名录</a><br>
+    本页为学习/研究用途的非官方汇编,领域分类与画像描述为编者判断,可能存在误差,欢迎对照原始 CV 校正。
+  </div>
+</footer>
+
+<script>
+/* ---------- DATA ---------- */
+const AREA={A:"库存与供应链",B:"随机/排队/应用概率",C:"收益管理/定价",D:"服务与医疗运营",E:"行为运营",F:"实证/数据驱动",G:"可持续运营",H:"平台/运营经济/方法"};
+const AREA_COLOR={A:"#7a5a2e",B:"#3f6f8f",C:"#c0791a",D:"#1f5450",E:"#a23b22",F:"#d99a2b",G:"#5b7a4a",H:"#7d6b8a"};
+
+/* POMS winners (first place). area = primary research area key */
+const POMS=[
+ [2001,"Ram Ganeshan","Univ. of Cincinnati ~","A"],
+ [2001,"Rohit Verma","DePaul University ~","D"],
+ [2002,"Edward Anderson","UT Austin","A"],
+ [2003,"Geoffrey Parker","Tulane University","H"],
+ [2004,"Gilvan C. Souza","Univ. of Maryland","G"],
+ [2004,"Özalp Özer","Stanford University","A"],
+ [2005,"Terry Taylor","Columbia University","A"],
+ [2005,"Metin Çakanyıldırım","UT Dallas","A"],
+ [2005,"Serguei Netessine","Wharton (Penn)","F"],
+ [2006,"Vishal Gaur","NYU Stern","F"],
+ [2007,"Z. Justin Ren","Boston University","D"],
+ [2007,"Rachna Shah","Univ. of Minnesota","F"],
+ [2008,"Xuanming Su","UC Berkeley (Haas)","E"],
+ [2009,"Fuqiang Zhang","WashU (Olin)","A"],
+ [2011,"Gad Allon","Northwestern (Kellogg)","D"],
+ [2012,"Atalay Atasu","Georgia Tech","G"],
+ [2012,"Qi (Annabelle) Feng","Purdue University","A"],
+ [2013,"Bradley Staats","UNC (Kenan-Flagler)","E"],
+ [2014,"Karan Girotra","INSEAD","H"],
+ [2016,"Carri Chan","Columbia University","D"],
+ [2016,"Ming Hu","Univ. of Toronto (Rotman)","H"],
+ [2017,"Antonio Moreno-Garcia","Harvard (HBS)","F"],
+ [2018,"Tingliang Huang","Boston College","E"],
+ [2018,"Srikanth Jagabathula","NYU Stern","F"],
+ [2019,"Ryan Buell","Harvard (HBS)","D"],
+ [2020,"Santiago Gallino","Wharton (Penn)","F"],
+ [2020,"Maxime C. Cohen","McGill University","C"],
+ [2022,"Ruomeng Cui","Emory University","F"],
+ [2022,"Hummy Song","Wharton (Penn)","D"],
+ [2022,"Dennis Zhang","WashU (Olin)","F"],
+ [2023,"Luyi Yang","UC Berkeley (Haas)","D"],
+ [2024,"Yining Wang","UT Dallas ~","F"],
+ [2024,"Guihua Wang","UT Dallas","D"],
+ [2025,"Fasheng Xu","Univ. of Connecticut ~","G"],
+ [2026,"Sentao Miao","Univ. of Miami ~","C"]
+];
+
+/* MSOM Distinguished Fellows */
+const MSOM=[
+ [2000,"John Buzacott","York University","A"],
+ [2000,"Steve Graves","MIT","A"],
+ [2000,"Ed Silver","Univ. of Calgary","A"],
+ [2001,"Ken Baker","Dartmouth College","A"],
+ [2001,"Hau Lee","Stanford University","A"],
+ [2001,"Paul H. Zipkin","Duke (Fuqua)","A"],
+ [2002,"Marshall L. Fisher","Wharton (Penn)","A"],
+ [2002,"Evan Porteus","Stanford University","A"],
+ [2003,"Lawrence M. Wein","Stanford University","B"],
+ [2004,"Morris A. Cohen","Wharton (Penn)","A"],
+ [2004,"Awi Federgruen","Columbia University","A"],
+ [2005,"Warren J. Hahn","UT Austin","H"],
+ [2005,"Wallace J. Hopp","Univ. of Michigan","A"],
+ [2005,"Bill Maxwell","Cornell University","A"],
+ [2006,"Linus Schrage","Univ. of Chicago","H"],
+ [2006,"Harvey M. Wagner","UNC (Kenan-Flagler)","A"],
+ [2007,"Garrett van Ryzin","Columbia University","C"],
+ [2008,"Sven Axsäter","Lund University","A"],
+ [2008,"J. Michael Harrison","Stanford University","B"],
+ [2008,"John A. Muckstadt","Cornell University","A"],
+ [2009,"Gabriel R. Bitran","MIT","A"],
+ [2009,"Aleda Roth","Clemson University","F"],
+ [2009,"Luk Van Wassenhove","INSEAD","G"],
+ [2010,"Steve Nahmias","Santa Clara University","A"],
+ [2011,"Gérard P. Cachon","Wharton (Penn)","A"],
+ [2011,"Peter Kolesar","Columbia University","D"],
+ [2012,"Paul R. Kleindorfer","INSEAD","G"],
+ [2012,"Jan A. Van Mieghem","Northwestern (Kellogg)","H"],
+ [2012,"Ward Whitt","Columbia University","B"],
+ [2013,"John R. Birge","Univ. of Chicago (Booth)","H"],
+ [2013,"Guillermo Gallego","Columbia University","C"],
+ [2013,"David Simchi-Levi","MIT","A"],
+ [2014,"Uday S. Karmarkar","UCLA Anderson","A"],
+ [2014,"Robin O. Roundy","Cornell University","A"],
+ [2014,"Matthew J. Sobel","Case Western Reserve","B"],
+ [2015,"Martin A. Lariviere","Northwestern (Kellogg)","A"],
+ [2015,"Christopher Tang","UCLA Anderson","A"],
+ [2016,"Christian Terwiesch","Wharton (Penn)","D"],
+ [2017,"Jeannette Song","Duke (Fuqua)","A"],
+ [2017,"Sridhar Tayur","Carnegie Mellon (Tepper)","A"],
+ [2017,"Beril Toktay","Georgia Tech","G"],
+ [2018,"Edward H. Kaplan","Yale University","D"],
+ [2018,"Serguei Netessine","Wharton (Penn)","F"],
+ [2019,"Charles Corbett","UCLA Anderson","G"],
+ [2019,"Linda Green","Columbia University","D"],
+ [2019,"Avishai Mandelbaum","Technion","B"],
+ [2020,"Jayashankar Swaminathan","UNC (Kenan-Flagler)","A"],
+ [2021,"Georgia Perakis","MIT Sloan","C"],
+ [2021,"Brian Tomlin","Dartmouth (Tuck)","A"],
+ [2022,"Panos Kouvelis","WashU (Olin)","A"],
+ [2023,"Amy R. Ward","Univ. of Chicago (Booth)","B"],
+ [2024,"Mor Armony","NYU Stern","B"],
+ [2024,"Saif Benjaafar","Univ. of Michigan","A"],
+ [2024,"Vishal Gaur","Cornell (Johnson)","F"],
+ [2025,"Izak Duenyas","Univ. of Michigan (Ross)","B"]
+];
+
+/* ---------- TABLES ---------- */
+function pill(a){return `<span class="area-pill" style="border-color:${AREA_COLOR[a]};color:${AREA_COLOR[a]}">${AREA[a]}</span>`;}
+function fill(id,data){document.getElementById(id).innerHTML=data.map(r=>`<tr><td class="yr">${r[0]}</td><td class="nm">${r[1]}</td><td>${r[2]}</td><td>${pill(r[3])}</td></tr>`).join("");}
+fill("pomsBody",POMS);fill("msomBody",MSOM);
+function showTab(t){
+  document.getElementById("pomsTable").classList.toggle("hide",t!=="poms");
+  document.getElementById("msomTable").classList.toggle("hide",t!=="msom");
+  document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));
+  document.querySelector(t==="poms"?".t-poms":".t-msom").classList.add("active");
+}
+
+/* ---------- CHART DEFAULTS ---------- */
+Chart.defaults.font.family="'Newsreader','Noto Serif SC',serif";
+Chart.defaults.font.size=13;
+Chart.defaults.color="#4a4439";
+const POMS_C="#c0791a",MSOM_C="#1f5450";
+
+/* TIMELINE */
+const years=[];for(let y=2000;y<=2026;y++)years.push(y);
+function perYear(data){const m={};years.forEach(y=>m[y]=0);data.forEach(r=>m[r[0]]++);return years.map(y=>m[y]);}
+new Chart(document.getElementById("timeline"),{
+ type:"bar",
+ data:{labels:years,datasets:[
+   {label:"新星 POMS",data:perYear(POMS),backgroundColor:POMS_C,borderRadius:2},
+   {label:"终身 MSOM",data:perYear(MSOM),backgroundColor:MSOM_C,borderRadius:2}
+ ]},
+ options:{maintainAspectRatio:false,responsive:true,
+   scales:{x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:14}},
+           y:{beginAtZero:true,ticks:{stepSize:1},grid:{color:"#e3d9c5"},title:{display:true,text:"当年人数"}}},
+   plugins:{legend:{position:"top",labels:{usePointStyle:true,pointStyle:"rectRounded"}}}}
+});
+
+/* FIELD % COMPARISON (horizontal grouped) */
+const order=["A","B","F","D","E","C","G","H"];
+function pct(data){const m={};order.forEach(k=>m[k]=0);data.forEach(r=>m[r[3]]++);return order.map(k=>+(m[k]/data.length*100).toFixed(1));}
+new Chart(document.getElementById("fields"),{
+ type:"bar",
+ data:{labels:order.map(k=>AREA[k]),datasets:[
+   {label:"新星 POMS %",data:pct(POMS),backgroundColor:POMS_C,borderRadius:3},
+   {label:"终身 MSOM %",data:pct(MSOM),backgroundColor:MSOM_C,borderRadius:3}
+ ]},
+ options:{indexAxis:"y",maintainAspectRatio:false,responsive:true,
+  scales:{x:{beginAtZero:true,grid:{color:"#e3d9c5"},title:{display:true,text:"占该名单的比例 (%)"}},
+          y:{grid:{display:false}}},
+  plugins:{legend:{position:"top",labels:{usePointStyle:true,pointStyle:"rectRounded"}},
+    tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.x}%`}}}}
+});
+
+/* DONUTS */
+function donutData(data){const m={};order.forEach(k=>m[k]=0);data.forEach(r=>m[r[3]]++);
+ const keys=order.filter(k=>m[k]>0);
+ return{labels:keys.map(k=>AREA[k]),values:keys.map(k=>m[k]),colors:keys.map(k=>AREA_COLOR[k])};}
+function donut(id,data){const d=donutData(data);
+ new Chart(document.getElementById(id),{type:"doughnut",
+  data:{labels:d.labels,datasets:[{data:d.values,backgroundColor:d.colors,borderColor:"#faf5ea",borderWidth:2}]},
+  options:{maintainAspectRatio:false,responsive:true,cutout:"58%",
+   plugins:{legend:{position:"right",labels:{boxWidth:12,font:{size:11.5}}},
+    tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} 人 (${(c.parsed/data.length*100).toFixed(0)}%)`}}}}});}
+donut("msomDonut",MSOM);donut("pomsDonut",POMS);
+
+/* INSTITUTIONS */
+function normInst(s){return s.replace(/\s*~$/,"").trim();}
+function instCount(data){const m={};data.forEach(r=>{const k=normInst(r[2]);m[k]=(m[k]||0)+1;});return m;}
+const pInst=instCount(POMS),mInst=instCount(MSOM);
+const allInst=new Set([...Object.keys(pInst),...Object.keys(mInst)]);
+let instArr=[...allInst].map(k=>({k,p:pInst[k]||0,m:mInst[k]||0,t:(pInst[k]||0)+(mInst[k]||0)}));
+const multi=instArr.filter(o=>o.t>=2).sort((a,b)=>b.t-a.t);
+const singP=instArr.filter(o=>o.t<2&&o.p>0).length;
+const singM=instArr.filter(o=>o.t<2&&o.m>0).length;
+multi.push({k:"其他(各单次院校)",p:singP,m:singM,t:singP+singM});
+new Chart(document.getElementById("inst"),{
+ type:"bar",
+ data:{labels:multi.map(o=>o.k),datasets:[
+   {label:"终身 MSOM",data:multi.map(o=>o.m),backgroundColor:MSOM_C,borderRadius:2},
+   {label:"新星 POMS",data:multi.map(o=>o.p),backgroundColor:POMS_C,borderRadius:2}
+ ]},
+ options:{indexAxis:"y",maintainAspectRatio:false,responsive:true,
+  scales:{x:{stacked:true,beginAtZero:true,ticks:{stepSize:1},grid:{color:"#e3d9c5"},title:{display:true,text:"累计得主数"}},
+          y:{stacked:true,grid:{display:false},ticks:{font:{size:12}}}},
+  plugins:{legend:{position:"top",labels:{usePointStyle:true,pointStyle:"rectRounded"}}}}
+});
+</script>
+</body>
+</html>
