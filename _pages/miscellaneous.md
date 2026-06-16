@@ -100,6 +100,11 @@ Visual overviews of academic fields I find worth mapping.
   <p class="publication-blurb">A full chronological map of Nobel laureates in economics, kept as a personal reference for the recurring overlap between OM modeling and economic theory.</p>
 </div>
 
+<div class="publication-card">
+  <p class="publication-title"><strong><a href="/field-maps/econometrics_timeline_v4.html">Econometrics · A Century Lineage</a></strong></p>
+  <p class="publication-blurb">A timeline of econometric methods over the past century, tracing how the toolkit evolved from early structural estimation to modern causal inference and machine learning.</p>
+</div>
+
 {% comment %}
 Honors & Awards: hidden from rendered site (2026-06-16). Remove this Liquid comment wrapper to re-enable.
 
