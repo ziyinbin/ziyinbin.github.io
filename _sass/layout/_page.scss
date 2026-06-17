@@ -53,12 +53,25 @@
   h2 {
     margin-top: 2.5em;
     margin-bottom: 1em;
-    padding-bottom: 0.45em;
+    padding-bottom: 0.55em;
     color: var(--global-link-color);
     border-bottom: 1px solid var(--global-border-color);
-    font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: 0;
+    font-family: $sans-serif;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-family: $sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--global-highlight-color);
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
   }
 
   p, li, dl {

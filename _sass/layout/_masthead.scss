@@ -52,20 +52,16 @@
 }
 
 .masthead__brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.72rem;
-  height: 1.72rem;
-  border-radius: 0.46rem;
-  background: var(--global-link-color);
-  color: var(--global-bg-color);
-  font-family: $sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: lowercase;
+  display: inline-block;
+  width: 1.42rem;
+  height: 1.42rem;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.masthead__brand-text {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .masthead__menu {

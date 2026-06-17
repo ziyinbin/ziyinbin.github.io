@@ -12,6 +12,26 @@
   border-bottom: 1px solid var(--global-border-color);
 }
 
+/* Landing-only hero (root /), photo larger, no bottom border, no follow-up content */
+.home-hero--landing {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  gap: 4rem;
+  margin: 1rem 0 0;
+  padding: 4rem 0 5rem;
+  border-bottom: none;
+  min-height: 70vh;
+}
+
+.home-hero__name-zh {
+  margin: 0.45rem 0 0;
+  font-family: $serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--global-muted-text-color);
+  letter-spacing: 0.04em;
+}
+
 .home-hero__eyebrow {
   margin: 0 0 0.9rem;
   font-family: $sans-serif;
@@ -91,6 +111,10 @@
 .home-hero__photo {
   justify-self: end;
   width: min(100%, 300px);
+}
+
+.home-hero--landing .home-hero__photo {
+  width: min(100%, 420px);
 }
 
 .home-hero__photo img {
