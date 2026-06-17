@@ -200,6 +200,7 @@ exclude:
   - INFO_TO_PROVIDE.md
   - DEPLOY.md
   - CONTRIBUTING.md
+  - STYLE.md
   - docker-compose.yaml
   - markdown_generator
   - scripts
@@ -248,7 +249,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    # output: false (2026-06-17) → no /talks/<slug>/ detail pages. Nothing links to
+    # them anymore; talk content lives in the CV. _talks/*.md stay as the data source.
+    output: false
     permalink: /:collection/:path/
 
 

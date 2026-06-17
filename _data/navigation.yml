@@ -7,8 +7,9 @@ main:
   - title: "Research"
     url: /publications/
 
-  - title: "Talks"
-    url: /talks/
+  # Talks: removed from nav (2026-06-17) — content lives in the CV's
+  # Conference Presentations section and on the Research detail pages.
+  # /talks/ now redirects to /cv/ (see _pages/talks.html).
 
   # Teaching: hidden from nav (2026-05-12) — TA work, not actual teaching.
   # Uncomment the two lines below to re-enable.

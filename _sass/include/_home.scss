@@ -116,8 +116,13 @@ body.landing {
   padding: 2.4rem 0 1rem;
 }
 
-.home-section h2 {
+/* Landing section heading: keep the navy-eyebrow + rust bar, but no top
+   hairline (the user removed the divider above Upcoming Talks). The extra
+   `body.landing` specificity beats `.page__content h2`. */
+body.landing .home-section h2 {
   margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .home-section__more {
@@ -137,12 +142,13 @@ body.landing {
   border-bottom-color: var(--global-link-color);
 }
 
+/* Mini-eyebrow recipe (matches .eyebrow / .page__content h3) */
 .home-hero__eyebrow {
   margin: 0 0 0.9rem;
   font-family: $sans-serif;
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--global-highlight-color);
   white-space: nowrap;
@@ -191,7 +197,7 @@ body.landing {
   background: var(--global-bg-color);
   color: var(--global-link-color);
   font-family: $sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 500;
   line-height: 1.35;
 }
@@ -284,6 +290,10 @@ body.landing {
   .home-hero h1,
   .home-hero__name {
     font-size: 2.6rem;
+    white-space: normal;
+  }
+
+  .home-hero__eyebrow {
     white-space: normal;
   }
 }
