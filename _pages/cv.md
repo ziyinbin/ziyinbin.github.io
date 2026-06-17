@@ -64,7 +64,7 @@ Conference Presentations & Invited Talks
 <!-- Grouped by paper for brevity. Per-talk detail pages still live under /_talks/ and /talks/. -->
 <!-- When adding a new talk: 1) add the file under /_talks/, 2) add a bullet under the matching paper below. -->
 
-**Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks**
+**[Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks](/publication/2025-integrated-hedging)**
 
 * INFORMS MSOM Annual Conference, Harvard Business School, Boston, MA, Jul 2026 *(Accepted)*
 * POMS Annual Conference, Reno, NV, May 2026 *(Invited)*
@@ -76,7 +76,7 @@ Conference Presentations & Invited Talks
 * CSAMSE Annual Meeting, Jul 2024
 * POMS-China Annual Meeting, Dec 2023
 
-**Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain**
+**[Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain](/publication/2025-photovoltaic-industry)**
 
 * INFORMS Annual Meeting, San Francisco, CA, Nov 2026
 * Supply Chain Finance Workshop, Singapore Management University, May 2026 *(Invited)*

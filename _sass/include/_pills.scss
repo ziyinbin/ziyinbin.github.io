@@ -58,7 +58,8 @@
 }
 
 /* ----- Publication card ----- */
-.page__content {
+.page__content,
+.archive {
   counter-reset: publication-card;
 }
 
@@ -66,7 +67,7 @@
   counter-increment: publication-card;
   position: relative;
   margin: 0 0 1.55em;
-  padding: 1.1rem 1.25rem 1.15rem 4.35rem;
+  padding: 1.1rem 1.25rem 1.15rem 3.1rem;
   border: 1px solid rgba(73, 83, 112, 0.14);
   border-left: 3px solid var(--global-link-color);
   border-radius: 0.45rem;
@@ -77,28 +78,18 @@
   margin-top: 1rem;
 }
 
+/* Number badge: gray bold text (no filled circle) */
 .publication-card::before {
   content: counter(publication-card, decimal-leading-zero);
   position: absolute;
-  left: 1.15rem;
-  top: 1.24rem;
-  width: 2rem;
-  height: 2rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  left: 1.25rem;
+  top: 1.35rem;
   font-family: $sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: 0;
-  color: var(--global-bg-color);
-  background: var(--global-link-color);
-  border-radius: 999px;
-}
-
-.publication-card + .publication-card::before {
-  top: 1.24rem;
+  letter-spacing: 0.02em;
+  color: var(--global-muted-text-color);
 }
 
 .publication-title {
@@ -176,13 +167,11 @@
 
 @media (max-width: 600px) {
   .publication-card {
-    padding: 1rem 1rem 1.05rem 3.65rem;
+    padding: 1rem 1rem 1.05rem 2.8rem;
   }
 
   .publication-card::before {
-    left: 0.9rem;
-    width: 1.8rem;
-    height: 1.8rem;
+    left: 1rem;
   }
 }
 

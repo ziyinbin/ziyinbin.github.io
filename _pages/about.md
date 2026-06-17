@@ -34,7 +34,7 @@ redirect_from:
 
 <div class="talk-entry">
   <div class="talk-entry__main">
-    <p class="talk-entry__title">Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks</p>
+    <p class="talk-entry__title"><a href="/publication/2025-integrated-hedging">Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks</a></p>
     <p class="talk-entry__meta">2026 INFORMS MSOM Annual Conference · Harvard Business School, Boston, MA</p>
   </div>
   <p class="talk-entry__date">Jul 12–14, 2026</p>
@@ -42,7 +42,7 @@ redirect_from:
 
 <div class="talk-entry">
   <div class="talk-entry__main">
-    <p class="talk-entry__title">Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain</p>
+    <p class="talk-entry__title"><a href="/publication/2025-photovoltaic-industry">Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain</a></p>
     <p class="talk-entry__meta">2026 INFORMS Annual Meeting · San Francisco, CA</p>
   </div>
   <p class="talk-entry__date">Nov 1–4, 2026</p>
