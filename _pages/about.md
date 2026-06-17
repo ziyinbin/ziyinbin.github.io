@@ -17,6 +17,7 @@ redirect_from:
       <span>PhD Candidate · Operations Management</span>
       <span>Supply Chain</span>
       <span>Hedging</span>
+      <span>Empirical</span>
     </div>
     <div class="home-hero__bio">
       <p>I am a PhD candidate in Management Science at the <a href="https://www.fdsm.fudan.edu.cn/en/">School of Management, Fudan University</a>, advised by Prof. <a href="https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm">Xiaole Wu</a>. I am currently a visiting PhD student at the <a href="https://olin.wustl.edu/">Olin Business School, Washington University in St. Louis</a> (Jan – Jul 2026), hosted by Prof. <a href="https://www.panoskouvelis.info/">Panos Kouvelis</a>. My research lies at the intersection of operations management and financial risk management, with a current focus on hedging strategies for supply chains exposed to exchange rate, commodity, and policy risks, and structural analysis of capital-intensive manufacturing supply chains.</p>

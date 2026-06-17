@@ -15,14 +15,13 @@ Music is the mathematics of the senses, mathematics is the music of reason.
 <span class="attribution">James Joseph Sylvester (1865)</span>
 </blockquote>
 
-{% comment %}
-Alternate mottos — swap by uncommenting one block and removing one of the live blockquotes above.
-
-Cowles Foundation — current official motto:
 <blockquote class="motto">
 Theory and Measurement.
 <span class="attribution">Cowles Foundation, Yale University</span>
 </blockquote>
+
+{% comment %}
+Alternate mottos — swap by uncommenting one block and removing one of the live blockquotes above.
 
 Douglas Hofstadter — strange loop:
 <blockquote class="motto">
@@ -90,19 +89,19 @@ After silence, that which comes nearest to expressing the inexpressible is music
 
 Visual overviews of academic fields I find worth mapping.
 
-<div class="publication-card">
-  <p class="publication-title"><strong><a href="/field-maps/om-awards-overview/">OM Awards Overview — Rising Star vs. Lifetime Achievement</a></strong></p>
-  <p class="publication-blurb">A side-by-side comparison of every POMS Early Career and MSOM Distinguished Fellow recipient (2000–2026), tracing the OM field's generational shift from classical analytical models toward empirical and data-driven work.</p>
+<div class="field-entry">
+  <p class="field-entry__title"><a href="/field-maps/om-awards-overview/">OM Awards Overview — Rising Star vs. Lifetime Achievement</a></p>
+  <p class="field-entry__blurb">A side-by-side comparison of every POMS Early Career and MSOM Distinguished Fellow recipient (2000–2026), tracing the OM field's generational shift from classical analytical models toward empirical and data-driven work.</p>
 </div>
 
-<div class="publication-card">
-  <p class="publication-title"><strong><a href="/field-maps/nobel-economics/">Nobel Economics Prize · 1969–2025</a></strong></p>
-  <p class="publication-blurb">A full chronological map of Nobel laureates in economics, kept as a personal reference for the recurring overlap between OM modeling and economic theory.</p>
+<div class="field-entry">
+  <p class="field-entry__title"><a href="/field-maps/nobel-economics/">Nobel Economics Prize · 1969–2025</a></p>
+  <p class="field-entry__blurb">A full chronological map of Nobel laureates in economics, kept as a personal reference for the recurring overlap between OM modeling and economic theory.</p>
 </div>
 
-<div class="publication-card">
-  <p class="publication-title"><a href="/field-maps/econometrics-timeline/">Econometrics · A Century Lineage</a></p>
-  <p class="publication-blurb">A timeline of econometric methods over the past century, tracing how the toolkit evolved from early structural estimation to modern causal inference and machine learning.</p>
+<div class="field-entry">
+  <p class="field-entry__title"><a href="/field-maps/econometrics-timeline/">Econometrics · A Century Lineage</a></p>
+  <p class="field-entry__blurb">A timeline of econometric methods over the past century, tracing how the toolkit evolved from early structural estimation to modern causal inference and machine learning.</p>
 </div>
 
 {% comment %}
