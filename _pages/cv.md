@@ -34,6 +34,30 @@ Working Papers
   {% include archive-single-cv.html %}
 {% endfor %}
 
+{% comment %}
+Industry Experience: hidden from rendered site (2026-05-03). Remove this Liquid comment wrapper to re-enable.
+
+Industry Experience
+======
+* **Data Analyst Intern**, Nielsen, *Dec 2020 – Feb 2021*
+  * Cleaned, encoded and analyzed survey data from 46 branches of a regional bank and 59 branches of a state-owned commercial bank using R and Excel.
+  * Co-authored 10+ client reports on customer satisfaction (banking, insurance).
+* **Trading Department Intern**, CITIC Securities Futures, *Aug – Sep 2019*
+  * Analyzed natural-rubber industry chain and TSR-20 futures contracts; built option hedging strategies for tire manufacturers.
+  * Maintained daily option-hedging risk dashboard; priced options in MATLAB with volatility-adjusted quotes.
+{% endcomment %}
+
+
+Research Projects (Selected)
+======
+* **Research Assistant**, NSFC Major Project *"Theoretical Foundations of Supply Chain Resilience and Security"*, Fudan University, Jul 2022 – present
+* **Member**, *"The Impact of Photovoltaic Supply-Chain Capacity and Firm Mergers on Industry Competition"*, China Energy Research Society – Green Supply Chain Committee, Dec 2025 – Apr 2026
+
+
+Professional Service
+======
+* Ad-hoc Reviewer, *Naval Research Logistics*
+
 Conference Presentations & Invited Talks
 ======
 
@@ -58,29 +82,6 @@ Conference Presentations & Invited Talks
 * Supply Chain Finance Workshop, Singapore Management University, May 2026 *(Invited)*
 * POMS Annual Conference, Reno, NV, May 2026 *(Invited)*
 * ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
-
-{% comment %}
-Industry Experience: hidden from rendered site (2026-05-03). Remove this Liquid comment wrapper to re-enable.
-
-Industry Experience
-======
-* **Data Analyst Intern**, Nielsen, *Dec 2020 – Feb 2021*
-  * Cleaned, encoded and analyzed survey data from 46 branches of a regional bank and 59 branches of a state-owned commercial bank using R and Excel.
-  * Co-authored 10+ client reports on customer satisfaction (banking, insurance).
-* **Trading Department Intern**, CITIC Securities Futures, *Aug – Sep 2019*
-  * Analyzed natural-rubber industry chain and TSR-20 futures contracts; built option hedging strategies for tire manufacturers.
-  * Maintained daily option-hedging risk dashboard; priced options in MATLAB with volatility-adjusted quotes.
-{% endcomment %}
-
-
-Research Projects (Selected)
-======
-* **Research Assistant**, NSFC Major Project *"Theoretical Foundations of Supply Chain Resilience and Security"*, Fudan University, Jul 2022 – present
-
-
-Professional Service
-======
-* Ad-hoc Reviewer, *Naval Research Logistics*
 
 Teaching Experience
 ======
