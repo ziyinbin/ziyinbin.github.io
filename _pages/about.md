@@ -11,10 +11,10 @@ redirect_from:
 
 <section class="home-hero home-hero--landing">
   <div class="home-hero__copy">
-    <p class="home-hero__eyebrow">Fudan University · Operations Management</p>
+    <p class="home-hero__eyebrow">Fudan University</p>
     <h1 class="home-hero__name">Ziyin Bin <span class="home-hero__name-sep">·</span> <span class="home-hero__name-zh">宾梓吟</span></h1>
     <div class="home-hero__chips">
-      <span>PhD Candidate, Operations Management</span>
+      <span>PhD Candidate · Operations Management</span>
       <span>Supply Chain</span>
       <span>Hedging</span>
     </div>
