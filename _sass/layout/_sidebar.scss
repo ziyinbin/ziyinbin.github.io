@@ -217,24 +217,31 @@
   }
 }
 
+/* Outline pills: white background, navy border + text */
 .author-bio-pill {
   display: inline-flex;
   align-items: center;
   margin: 0 0.35rem 0.42rem 0;
-  padding: 0.26rem 0.58rem;
-  border: 1px solid var(--global-border-color);
+  padding: 0.26rem 0.62rem;
+  border: 1px solid var(--global-link-color);
   border-radius: 999px;
-  background: var(--global-accent-bg);
-  color: var(--global-muted-text-color);
+  background: var(--global-bg-color);
+  color: var(--global-link-color);
   font-size: 0.76rem;
   font-weight: 500;
   line-height: 1.25;
 }
 
+/* Role line: plain navy text, not a pill, on its own row */
 .author-bio-pill--primary {
-  background: var(--global-link-color);
-  border-color: var(--global-link-color);
-  color: var(--global-bg-color);
+  display: block;
+  margin: 0 0 0.55rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--global-link-color);
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
 .author__urls-wrapper {

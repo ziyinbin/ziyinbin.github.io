@@ -5,7 +5,7 @@ author_profile: true
 hide_github: true
 ---
 
-I study how firms manage financial and operational risks in supply chains, with current projects on integrated hedging and the photovoltaic manufacturing chain. I am advised by **Prof. [Xiaole Wu](https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm)** at Fudan University, and currently a **visiting PhD student** at the **[Olin Business School, WashU](https://olin.wustl.edu/)** (Jan – Jul 2026), hosted by **Prof. [Panos Kouvelis](https://www.panoskouvelis.info/)**.
+I am a PhD candidate in Management Science at the [School of Management, Fudan University](https://www.fdsm.fudan.edu.cn/en/), advised by **Prof. [Xiaole Wu](https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm)**. I am currently a **visiting PhD student** at the [Olin Business School, Washington University in St. Louis](https://olin.wustl.edu/) (Jan – Jul 2026), hosted by **Prof. [Panos Kouvelis](https://www.panoskouvelis.info/)**. My research lies at the intersection of operations management and financial risk management, with a current focus on hedging strategies for supply chains exposed to exchange rate, commodity, and policy risks, and structural analysis of capital-intensive manufacturing supply chains.
 
 I will be on the **2026–2027 academic job market** for tenure-track positions in Operations Management.
 

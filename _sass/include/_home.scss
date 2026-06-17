@@ -96,13 +96,19 @@ body.landing {
   border-bottom: 1px solid var(--global-border-color);
 }
 
-/* Landing-only hero (root /), photo larger */
+/* Landing-only hero (root /), photo larger, no divider rule */
 .home-hero--landing {
   grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
   gap: 4rem;
+  align-items: start;
   margin: 0;
-  padding: 2.4rem 0 2.8rem;
-  border-bottom: 1px solid var(--global-border-color);
+  padding: 2.6rem 0 1.2rem;
+  border-bottom: none;
+}
+
+.home-hero--landing .home-hero__photo {
+  position: sticky;
+  top: 5.5rem;
 }
 
 /* Content section under the landing hero (fills the page, pushes footer below the fold) */
@@ -131,16 +137,6 @@ body.landing {
   border-bottom-color: var(--global-link-color);
 }
 
-.home-hero__name-zh {
-  margin: 0.45rem 0 0;
-  font-family: $serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--global-muted-text-color);
-  letter-spacing: 0.04em;
-}
-
 .home-hero__eyebrow {
   margin: 0 0 0.9rem;
   font-family: $sans-serif;
@@ -152,15 +148,28 @@ body.landing {
   white-space: nowrap;
 }
 
-.home-hero h1 {
+/* Hero name: magazine serif, English + Chinese on one line */
+.home-hero__name {
   margin: 0;
-  color: var(--global-link-color);
-  font-family: $sans-serif;
-  font-size: 4.1rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  color: var(--global-text-color);
+  font-family: $serif;
+  font-size: 3.7rem;
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.005em;
   white-space: nowrap;
+}
+
+.home-hero__name-sep {
+  margin: 0 0.18em;
+  color: var(--global-accent-color);
+  font-weight: 400;
+}
+
+.home-hero__name-zh {
+  font-family: "Noto Serif SC", $serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .home-hero__chips {
@@ -168,7 +177,7 @@ body.landing {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
-  margin: 1.5rem 0 0;
+  margin: 1.35rem 0 0;
 }
 
 /* Outline pills: white background, navy border + text */
@@ -200,6 +209,33 @@ body.landing {
   font-size: 0.98rem;
 }
 
+/* Hero bio: extra space above (separates it clearly from the chips) */
+.home-hero__bio {
+  max-width: 38rem;
+  margin: 2.4rem 0 0;
+}
+
+.home-hero__bio p {
+  margin: 0 0 0.9rem;
+  color: var(--global-text-color-light);
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.home-hero__bio p:last-child {
+  margin-bottom: 0;
+}
+
+.home-hero__bio a {
+  color: var(--global-link-color);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31, 51, 68, 0.3);
+}
+
+.home-hero__bio a:hover {
+  border-bottom-color: var(--global-link-color);
+}
+
 .home-hero__lede {
   max-width: 36rem;
   margin: 1.45rem 0 0;
@@ -208,33 +244,13 @@ body.landing {
   line-height: 1.75;
 }
 
-.home-hero__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin: 1.65rem 0 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.home-hero__links a {
-  color: var(--global-link-color);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.home-hero__links a:hover {
-  color: var(--global-link-color-hover);
-  border-bottom-color: var(--global-link-color-hover);
-}
-
 .home-hero__photo {
   justify-self: end;
   width: min(100%, 300px);
 }
 
 .home-hero--landing .home-hero__photo {
-  width: min(100%, 420px);
+  width: min(100%, 400px);
 }
 
 .home-hero__photo img {
@@ -260,7 +276,14 @@ body.landing {
     order: -1;
   }
 
-  .home-hero h1 {
-    font-size: 3.1rem;
+  .home-hero--landing .home-hero__photo {
+    position: static;
+    top: auto;
+  }
+
+  .home-hero h1,
+  .home-hero__name {
+    font-size: 2.6rem;
+    white-space: normal;
   }
 }

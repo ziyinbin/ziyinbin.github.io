@@ -12,20 +12,16 @@ redirect_from:
 <section class="home-hero home-hero--landing">
   <div class="home-hero__copy">
     <p class="home-hero__eyebrow">Fudan University · Operations Management</p>
-    <h1>Ziyin Bin</h1>
-    <p class="home-hero__name-zh">宾梓吟</p>
+    <h1 class="home-hero__name">Ziyin Bin <span class="home-hero__name-sep">·</span> <span class="home-hero__name-zh">宾梓吟</span></h1>
     <div class="home-hero__chips">
       <span>PhD Candidate, Operations Management</span>
       <span>Supply Chain</span>
       <span>Hedging</span>
     </div>
-    <p class="home-hero__lede">I study how firms manage financial and operational risks in supply chains, with current projects on integrated hedging and the photovoltaic manufacturing chain.</p>
-    <p class="home-hero__links">
-      <a href="/home/">Read more</a>
-      <a href="/publications/">Research</a>
-      <a href="/cv/">CV</a>
-      <a href="mailto:zybin23@m.fudan.edu.cn">Email</a>
-    </p>
+    <div class="home-hero__bio">
+      <p>I am a PhD candidate in Management Science at the <a href="https://www.fdsm.fudan.edu.cn/en/">School of Management, Fudan University</a>, advised by Prof. <a href="https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm">Xiaole Wu</a>. I am currently a visiting PhD student at the <a href="https://olin.wustl.edu/">Olin Business School, Washington University in St. Louis</a> (Jan – Jul 2026), hosted by Prof. <a href="https://www.panoskouvelis.info/">Panos Kouvelis</a>. My research lies at the intersection of operations management and financial risk management, with a current focus on hedging strategies for supply chains exposed to exchange rate, commodity, and policy risks, and structural analysis of capital-intensive manufacturing supply chains.</p>
+      <p>I will be on the 2026–2027 academic job market for tenure-track positions in Operations Management.</p>
+    </div>
   </div>
   <div class="home-hero__photo">
     <img src="/images/my_photo_1x1.jpg" alt="Ziyin Bin">
@@ -38,20 +34,18 @@ redirect_from:
 
 <div class="talk-entry">
   <div class="talk-entry__main">
-    <p class="talk-entry__title">INFORMS MSOM Annual Conference</p>
-    <p class="talk-entry__meta">Harvard Business School, Boston, MA · Hedging paper</p>
+    <p class="talk-entry__title">Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks</p>
+    <p class="talk-entry__meta">2026 INFORMS MSOM Annual Conference · Harvard Business School, Boston, MA</p>
   </div>
   <p class="talk-entry__date">Jul 12–14, 2026</p>
 </div>
 
 <div class="talk-entry">
   <div class="talk-entry__main">
-    <p class="talk-entry__title">INFORMS Annual Meeting</p>
-    <p class="talk-entry__meta">San Francisco, CA · Photovoltaic paper</p>
+    <p class="talk-entry__title">Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain</p>
+    <p class="talk-entry__meta">2026 INFORMS Annual Meeting · San Francisco, CA</p>
   </div>
   <p class="talk-entry__date">Nov 1–4, 2026</p>
 </div>
-
-<p class="home-section__more"><a href="/home/">Full bio, working papers, and contact →</a></p>
 
 </section>
