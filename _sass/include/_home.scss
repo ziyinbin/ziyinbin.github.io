@@ -2,6 +2,27 @@
    HOME
    ========================================================================== */
 
+/* Landing page (/) uses the full content width - no sidebar reserved */
+body.landing {
+  .page {
+    float: none;
+    clear: both;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page__inner-wrap,
+  .page__content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
 .home-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
@@ -12,14 +33,39 @@
   border-bottom: 1px solid var(--global-border-color);
 }
 
-/* Landing-only hero (root /), photo larger, no bottom border, no follow-up content */
+/* Landing-only hero (root /), photo larger */
 .home-hero--landing {
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
   gap: 4rem;
-  margin: 1rem 0 0;
-  padding: 4rem 0 5rem;
-  border-bottom: none;
-  min-height: 70vh;
+  margin: 0;
+  padding: 2.4rem 0 2.8rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+/* Content section under the landing hero (fills the page, pushes footer below the fold) */
+.home-section {
+  padding: 2.4rem 0 1rem;
+}
+
+.home-section h2 {
+  margin-top: 0;
+}
+
+.home-section__more {
+  margin: 1.8rem 0 0;
+  font-family: $sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.home-section__more a {
+  color: var(--global-link-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.home-section__more a:hover {
+  border-bottom-color: var(--global-link-color);
 }
 
 .home-hero__name-zh {
@@ -35,49 +81,60 @@
 .home-hero__eyebrow {
   margin: 0 0 0.9rem;
   font-family: $sans-serif;
-  font-size: 0.76rem;
+  font-size: 0.66rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--global-highlight-color);
+  white-space: nowrap;
 }
 
 .home-hero h1 {
   margin: 0;
   color: var(--global-link-color);
   font-family: $sans-serif;
-  font-size: 4.8rem;
+  font-size: 4.1rem;
   font-weight: 700;
-  line-height: 0.96;
-  letter-spacing: 0;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .home-hero__chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 1.25rem 0 0;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.5rem 0 0;
 }
 
+/* Outline pills: white background, navy border + text */
 .home-hero__chips span {
   display: inline-flex;
   align-items: center;
-  min-height: 2rem;
-  padding: 0.38rem 0.78rem;
-  border: 1px solid var(--global-border-color);
+  min-height: 1.9rem;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--global-link-color);
   border-radius: 999px;
-  background: var(--global-accent-bg);
-  color: var(--global-muted-text-color);
+  background: var(--global-bg-color);
+  color: var(--global-link-color);
   font-family: $sans-serif;
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   font-weight: 500;
   line-height: 1.35;
 }
 
+/* First item (role) is plain navy text on its own line, not a pill */
 .home-hero__chips span:first-child {
-  background: var(--global-link-color);
-  color: var(--global-bg-color);
-  border-color: var(--global-link-color);
+  flex-basis: 100%;
+  margin: 0 0 0.55rem;
+  padding: 0;
+  min-height: 0;
+  border: none;
+  background: transparent;
+  color: var(--global-link-color);
+  font-weight: 600;
+  font-size: 0.98rem;
 }
 
 .home-hero__lede {
