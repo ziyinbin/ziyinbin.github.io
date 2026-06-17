@@ -9,6 +9,8 @@ I am a PhD candidate in Management Science at the [School of Management, Fudan U
 
 I will be on the **2026–2027 academic job market** for tenure-track positions in Operations Management.
 
+<p class="home-hero__cv"><a href="/cv/">View full CV →</a></p>
+
 ## Working Papers
 
 <div class="publication-card">

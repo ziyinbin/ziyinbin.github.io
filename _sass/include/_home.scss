@@ -254,6 +254,29 @@ body.landing .home-section h2 {
   border-bottom-color: var(--global-link-color);
 }
 
+/* CV call-to-action link under the job-market line */
+.home-hero__cv {
+  margin: 1.3rem 0 0;
+  font-family: $sans-serif;
+  font-weight: 600;
+}
+
+.home-hero__bio .home-hero__cv {
+  margin: 1.3rem 0 0;
+}
+
+.home-hero__cv a {
+  color: var(--global-link-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: $global-transition;
+}
+
+.home-hero__cv a:hover {
+  color: var(--global-link-color-hover);
+  border-bottom-color: var(--global-link-color-hover);
+}
+
 .home-hero__lede {
   max-width: 36rem;
   margin: 1.45rem 0 0;
