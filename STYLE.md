@@ -111,11 +111,15 @@ Miscellaneous and the Liquid `<h2>` on Publications all resolve to
   `.author-bio-pill--primary`.)
 - **Entry** — serif title + sans meta; optional right-aligned italic date;
   hairline separator between entries. (`.talk-entry`, CV bullets.)
+- **Light entry** — serif linked title + gray blurb + hairline separator, **no
+  box, no number**. For lists that aren't papers (e.g. Field Maps).
+  (`.field-entry` in `_sass/include/_pills.scss`.)
 - **Quote** — serif italic + 2px navy left rule; attribution in sans muted with a
   leading em-dash. (`.motto` + `.motto .attribution`, in `_sass/include/_pills.scss`.)
 - **Publication card** — serif title, sans coauthors (smaller), sans blurb
-  (smallest), pill row; numbered counter; card frame (§6.4).
-  (`.publication-card` in `_sass/include/_pills.scss`.)
+  (smallest), pill row; gray-bold `01/02` counter (no filled circle); card frame
+  (§6.4). The boxed card is **reserved for papers** — other lists use the light
+  entry above. (`.publication-card` in `_sass/include/_pills.scss`.)
 
 ## 8. Navigation
 
