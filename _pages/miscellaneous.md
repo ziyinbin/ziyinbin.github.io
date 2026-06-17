@@ -101,7 +101,7 @@ Visual overviews of academic fields I find worth mapping.
 </div>
 
 <div class="publication-card">
-  <p class="publication-title"><strong><a href="/field-maps/econometrics_timeline_v4.html">Econometrics · A Century Lineage</a></strong></p>
+  <p class="publication-title"><a href="/field-maps/econometrics-timeline/">Econometrics · A Century Lineage</a></p>
   <p class="publication-blurb">A timeline of econometric methods over the past century, tracing how the toolkit evolved from early structural estimation to modern causal inference and machine learning.</p>
 </div>
 

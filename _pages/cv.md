@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+<div class="cv-page" markdown="1">
+
 Education
 ======
 * **Ph.D. Candidate in Management Science**, *2021 – present (MPhil-PhD Program)*
@@ -44,15 +46,16 @@ Conference Presentations & Invited Talks
 * POMS Annual Conference, Reno, NV, May 2026 *(Invited)*
 * ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
 * CSAMSE Annual Meeting, Jul 2025
-* Supply Chain Finance & Risk Management Workshop, Olin Business School, WUSTL, May 2025
+* Supply Chain Finance & Risk Management Workshop, Olin Business School, WUSTL, May 2025 *(Invited)*
 * POMS-HK International Conference, Hong Kong, Jan 2025
 * POMS-China Annual Meeting, Dec 2024
 * CSAMSE Annual Meeting, Jul 2024
 * POMS-China Annual Meeting, Dec 2023
 
-**Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain**
+**Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain**
 
-* Supply Chain Finance Workshop, Singapore Management University, May 2026
+* INFORMS Annual Meeting, San Francisco, CA, Nov 2026
+* Supply Chain Finance Workshop, Singapore Management University, May 2026 *(Invited)*
 * POMS Annual Conference, Reno, NV, May 2026 *(Invited)*
 * ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
 
@@ -88,3 +91,5 @@ Teaching Experience
 {% for post in site.teaching reversed %}
 * **{{ post.title }}** — {{ post.type }}, {{ post.venue }}, {{ post.date | date: "%b %Y" }}
 {% endfor %}
+
+</div>

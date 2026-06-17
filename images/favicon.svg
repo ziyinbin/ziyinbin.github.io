@@ -1,6 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Ziyin Bin favicon">
-  <rect x="0" y="0" width="64" height="64" rx="6" fill="#1F3344"/>
-  <g transform="translate(32.0,32.0) scale(0.070270,-0.070270) translate(-234.0,-357.0)">
-    <path d="M147 -13Q97 -13 69.5 11.0Q42 35 50 77L152 619Q158 655 143.5 664.0Q129 673 83 651Q79 649 77.0 655.0Q75 661 79 662L207 725Q212 727 216.0 723.0Q220 719 219 717L105 96Q99 59 122.5 36.0Q146 13 188 13Q220 13 252.5 37.0Q285 61 311.0 107.5Q337 154 348 220Q356 257 353.5 287.0Q351 317 337.0 335.5Q323 354 294 354Q253 354 215.0 321.5Q177 289 148.5 231.0Q120 173 105 96L99 116Q108 173 131.0 224.5Q154 276 186.5 315.0Q219 354 257.5 376.5Q296 399 335 399Q382 399 404.0 357.5Q426 316 413 251Q400 186 370.0 136.5Q340 87 301.0 54.0Q262 21 221.5 4.0Q181 -13 147 -13Z" fill="#FBFAF6"/>
-  </g>
+  <rect x="0" y="0" width="64" height="64" rx="12" fill="#1F3344"/>
+  <text x="31.5" y="42" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="39" font-weight="700" fill="#FBFAF6">z</text>
 </svg>

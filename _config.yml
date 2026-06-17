@@ -25,7 +25,7 @@ author:
   avatar           : "my_photo_1x1.jpg"
   name             : "Ziyin Bin"
   pronouns         : # fill if desired, e.g. "she/her"
-  bio              : "PhD Candidate, Operations Management.<br>Supply Chain · Hedging."
+  bio              : "<span class='author-bio-pill author-bio-pill--primary'>PhD Candidate, Operations Management</span><span class='author-bio-pill'>Supply Chain</span><span class='author-bio-pill'>Hedging</span>"
   location         : "Shanghai, China"
   employer         : "Fudan University"
   uri              : # usually empty; the homepage is the uri

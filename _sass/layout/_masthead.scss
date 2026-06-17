@@ -4,7 +4,8 @@
 
 .masthead {
   position: fixed;
-  background: var(--global-bg-color);
+  background: rgba(251, 250, 246, 0.88);
+  backdrop-filter: blur(12px);
   height: fit-content;
   top: 0;
   width: 100%;
@@ -44,6 +45,29 @@
   }
 }
 
+.masthead__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+}
+
+.masthead__brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.72rem;
+  height: 1.72rem;
+  border-radius: 0.46rem;
+  background: var(--global-link-color);
+  color: var(--global-bg-color);
+  font-family: $sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
 .masthead__menu {
 
   ul {
@@ -62,7 +86,7 @@
 
   &--lg {
     padding-right: 2em;
-    font-weight: 700;
+    font-weight: 650;
   }
 }
 

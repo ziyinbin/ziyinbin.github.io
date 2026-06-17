@@ -1,5 +1,6 @@
 ---
-title: "Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain"
+title: "Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain"
+coauthors: "Mengfei Li, Zibo Liu, Lezhen Wu, Xiaole Wu"
 collection: publications
 category: working-papers
 permalink: /publication/2025-photovoltaic-industry
@@ -8,7 +9,7 @@ date: 2025-01-01
 venue: 'Working Paper'
 slidesurl: ''
 paperurl: ''
-citation: 'Bin, Z., Li, M., Liu, Z., Wu, L., & Wu, X. (2025). Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain. Working Paper.'
+citation: 'Bin, Z., Li, M., Liu, Z., Wu, L., & Wu, X. (2025). Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain. Working Paper.'
 ---
 
 **Coauthors** (all at School of Management, Fudan University):
@@ -29,4 +30,5 @@ In recursive counterfactual exercises, an upstream cost shock is amplified at th
 ### Presentations
 - ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
 - **POMS Annual Conference 2026** — Saturday, May 9, 2026, 1:45–3:15 PM, Reno, NV (Nevada 6); session: *Strategic Competition and Cooperation in Sustainable Markets* (Track: Industry Studies & Public Policy)
-- *Upcoming:* **2026 Supply Chain Finance Workshop**, Singapore Management University — May 18–19, 2026
+- *Upcoming:* **2026 Supply Chain Finance Workshop**, Singapore Management University — May 18–19, 2026 (invited)
+- *Upcoming:* **2026 INFORMS Annual Meeting**, San Francisco, CA — Nov 1–4, 2026

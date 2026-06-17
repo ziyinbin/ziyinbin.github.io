@@ -217,6 +217,26 @@
   }
 }
 
+.author-bio-pill {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.35rem 0.42rem 0;
+  padding: 0.26rem 0.58rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  background: var(--global-accent-bg);
+  color: var(--global-muted-text-color);
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.author-bio-pill--primary {
+  background: var(--global-link-color);
+  border-color: var(--global-link-color);
+  color: var(--global-bg-color);
+}
+
 .author__urls-wrapper {
   position: relative;
   display: table-cell;

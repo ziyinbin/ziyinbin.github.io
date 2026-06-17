@@ -1,5 +1,6 @@
 ---
 title: "Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks"
+coauthors: "Panos Kouvelis, Xiaole Wu, Yixuan Xiao"
 collection: publications
 category: working-papers
 permalink: /publication/2025-integrated-hedging
@@ -28,7 +29,7 @@ In the **duopoly setting**, competition drives firms to adopt complementary hedg
 - CSAMSE Annual Meeting, 2024
 - CSAMSE Annual Meeting, 2025
 - POMS-HK International Conference, 2025
-- 2025 Supply Chain Finance & Risk Management Workshop, Olin Business School, Washington University in St. Louis (May 2025)
+- 2025 Supply Chain Finance & Risk Management Workshop, Olin Business School, Washington University in St. Louis (May 2025, invited)
 - ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
 - **POMS Annual Conference 2026** — Sunday, May 10, 2026, 10:20–11:50 AM, Reno, NV (Nevada 11); session: *Risk, Signals, and Supply Chain Strategy* (Track: Supply Chain Risk & Resilience)
 - *Upcoming:* **2026 INFORMS MSOM Annual Conference**, Harvard Business School (Boston, MA) — July 12–14, 2026 (Accepted)

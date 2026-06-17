@@ -51,6 +51,12 @@
   }
 }
 
+@media (min-width: 900px) {
+  .greedy-nav > button {
+    display: none;
+  }
+}
+
 
 /*
    Post pagination navigation links

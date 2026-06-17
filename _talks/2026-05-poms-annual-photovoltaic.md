@@ -1,5 +1,5 @@
 ---
-title: "Competition, Overcapacity, and Consolidation in a Multi-Tier Solar Manufacturing Chain (Invited)"
+title: "Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain (Invited)"
 collection: talks
 type: "Invited talk"
 permalink: /talks/2026-05-poms-annual-photovoltaic
