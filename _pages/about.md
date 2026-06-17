@@ -34,27 +34,24 @@ redirect_from:
 
 <section class="home-section" markdown="1">
 
-## Working Papers
+## Upcoming Talks
 
-<div class="publication-card">
-  <p class="publication-title"><a href="https://ssrn.com/abstract=5559558">Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks</a></p>
-  <p class="publication-coauthors">with <a href="https://www.panoskouvelis.info/">Panos Kouvelis</a>, <a href="https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm">Xiaole Wu</a>, Yixuan Xiao</p>
-  <p class="publication-blurb">Optimal joint hedging of FX and commodity risks; competition induces complementary hedging strategies in equilibrium.</p>
-  <p class="pill-row">
-    <span class="pill--status">Major Revision · Management Science</span>
-    <a class="pill--venue" href="https://ssrn.com/abstract=5559558">SSRN</a>
-  </p>
+<div class="talk-entry">
+  <div class="talk-entry__main">
+    <p class="talk-entry__title">INFORMS MSOM Annual Conference</p>
+    <p class="talk-entry__meta">Harvard Business School, Boston, MA · Hedging paper</p>
+  </div>
+  <p class="talk-entry__date">Jul 12–14, 2026</p>
 </div>
 
-<div class="publication-card">
-  <p class="publication-title">Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain</p>
-  <p class="publication-coauthors">with Mengfei Li, Zibo Liu, Lezhen Wu, <a href="https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm">Xiaole Wu</a></p>
-  <p class="publication-blurb">Cournot oligopoly model for the four tiers of China's crystalline-silicon PV supply chain; recursive cost-shock and merger counterfactuals.</p>
-  <p class="pill-row">
-    <span class="pill--status">Working Paper</span>
-  </p>
+<div class="talk-entry">
+  <div class="talk-entry__main">
+    <p class="talk-entry__title">INFORMS Annual Meeting</p>
+    <p class="talk-entry__meta">San Francisco, CA · Photovoltaic paper</p>
+  </div>
+  <p class="talk-entry__date">Nov 1–4, 2026</p>
 </div>
 
-<p class="home-section__more"><a href="/home/">Full bio, talks, and contact →</a></p>
+<p class="home-section__more"><a href="/home/">Full bio, working papers, and contact →</a></p>
 
 </section>

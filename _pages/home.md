@@ -36,8 +36,6 @@ See the [Research](/publications/) page for full details.
 
 - **2026 INFORMS MSOM Annual Conference**, Harvard Business School (Boston, MA) — July 12–14, 2026 *(Hedging paper)*
 - **2026 INFORMS Annual Meeting**, San Francisco, CA — Nov 1–4, 2026 *(Photovoltaic paper)*
-- **Supply Chain Finance Workshop**, Singapore Management University — May 2026 *(Invited; photovoltaic paper)*
-- **Supply Chain Finance & Risk Management Workshop**, Olin Business School, Washington University in St. Louis — May 2025 *(Invited; hedging paper)*
 
 See [Talks](/talks/) for the full list.
 

@@ -180,6 +180,9 @@
 
 .greedy-nav {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
   min-width: 250px;
   background: var(--global-bg-color);
 
@@ -216,9 +219,6 @@
       vertical-align: middle;
 
       &:first-child {
-        font-weight: bold;
-        text-wrap: wrap;
-
         a {
           margin-left: 0;
         }
