@@ -12,7 +12,7 @@ I will be on the **2026–2027 academic job market** for tenure-track positions 
 ## Working Papers
 
 <div class="publication-card">
-  <p class="publication-title"><a href="https://ssrn.com/abstract=5559558">Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks</a></p>
+  <p class="publication-title"><a href="/publication/2025-integrated-hedging">Integrated Hedging Strategies for Exchange Rate and Commodity Price Risks</a></p>
   <p class="publication-coauthors">with <a href="https://www.panoskouvelis.info/">Panos Kouvelis</a>, <a href="https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm">Xiaole Wu</a>, Yixuan Xiao</p>
   <p class="publication-blurb">Optimal joint hedging of FX and commodity risks; competition induces complementary hedging strategies in equilibrium.</p>
   <p class="pill-row">
@@ -22,7 +22,7 @@ I will be on the **2026–2027 academic job market** for tenure-track positions 
 </div>
 
 <div class="publication-card">
-  <p class="publication-title">Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain</p>
+  <p class="publication-title"><a href="/publication/2025-photovoltaic-industry">Utilization-Dependent Costs, Shock Propagation, and Consolidation in a Multi-Tier Photovoltaic Supply Chain</a></p>
   <p class="publication-coauthors">with Mengfei Li, Zibo Liu, Lezhen Wu, <a href="https://www.fdsm.fudan.edu.cn/En/2025/1106/c1052a24525/page.htm">Xiaole Wu</a></p>
   <p class="publication-blurb">Cournot oligopoly model for the four tiers of China's crystalline-silicon PV supply chain; recursive cost-shock and merger counterfactuals.</p>
   <p class="pill-row">
