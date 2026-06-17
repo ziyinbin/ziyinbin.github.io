@@ -4,7 +4,7 @@
 
 .masthead {
   position: fixed;
-  background: rgba(251, 250, 246, 0.88);
+  background: var(--global-masthead-bg-color);
   backdrop-filter: blur(12px);
   height: fit-content;
   top: 0;
@@ -88,7 +88,7 @@
 }
 
 .masthead__menu-item {
-  background-color: var(--global-bg-color);
+  background-color: transparent;
   display: block;
   list-style-type: none;
   white-space: nowrap;

@@ -55,6 +55,7 @@ html[data-theme="dark"] {
     --global-link-color-visited         : #{$link};
     --global-masthead-link-color        : #{$text};
     --global-masthead-link-color-hover  : #{$accent-color};
+    --global-masthead-bg-color          : rgba(26, 26, 24, 0.85);
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$text-light};
     --global-thead-color                : #{$background-lighter};
