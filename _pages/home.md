@@ -34,8 +34,8 @@ See the [Research](/publications/) page for full details.
 
 ## Upcoming Talks
 
-- **2026 INFORMS MSOM Annual Conference**, Harvard Business School (Boston, MA) — July 12–14, 2026 *(Hedging paper)*
 - **2026 INFORMS Annual Meeting**, San Francisco, CA — Nov 1–4, 2026 *(Photovoltaic paper)*
+- **2026 INFORMS MSOM Annual Conference**, Harvard Business School (Boston, MA) — July 12–14, 2026 *(Hedging paper)*
 
 See [Talks](/talks/) for the full list.
 

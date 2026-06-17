@@ -51,7 +51,7 @@ Industry Experience
 Research Projects (Selected)
 ======
 * **Research Assistant**, NSFC Major Project *"Theoretical Foundations of Supply Chain Resilience and Security"*, Fudan University, Jul 2022 – present
-* **Member**, *"The Impact of Photovoltaic Supply-Chain Capacity and Firm Mergers on Industry Competition"*, China Energy Research Society – Green Supply Chain Committee, Dec 2025 – Apr 2026
+* **Member**, *"Capacity, Mergers, and Competition in the Photovoltaic Supply Chain"*, China Energy Research Society – Green Supply Chain Committee, Dec 2025 – Apr 2026
 
 
 Professional Service

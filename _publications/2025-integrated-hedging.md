@@ -24,12 +24,12 @@ In the **monopoly setting**, the firm's optimal hedging strategy is shaped by th
 In the **duopoly setting**, competition drives firms to adopt complementary hedging strategies. For non-positive correlation, one firm hedges both risks while the other firm hedges neither. For positive correlation, in most equilibria one firm hedges the exchange rate risk while the other hedges the commodity price risk.
 
 ### Presentations
-- POMS-China Annual Meeting, 2023
+- *Upcoming:* **2026 INFORMS MSOM Annual Conference**, Harvard Business School (Boston, MA) — July 12–14, 2026 (Accepted)
+- **POMS Annual Conference 2026** — Sunday, May 10, 2026, 10:20–11:50 AM, Reno, NV (Nevada 11); session: *Risk, Signals, and Supply Chain Strategy* (Track: Supply Chain Risk & Resilience)
+- ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
+- CSAMSE Annual Meeting, 2025
+- 2025 Supply Chain Finance & Risk Management Workshop, Olin Business School, Washington University in St. Louis (May 2025, invited)
+- POMS-HK International Conference, 2025
 - POMS-China Annual Meeting, 2024
 - CSAMSE Annual Meeting, 2024
-- CSAMSE Annual Meeting, 2025
-- POMS-HK International Conference, 2025
-- 2025 Supply Chain Finance & Risk Management Workshop, Olin Business School, Washington University in St. Louis (May 2025, invited)
-- ISCOM (International Symposium on Contemporary Operations Management), Dec 2025
-- **POMS Annual Conference 2026** — Sunday, May 10, 2026, 10:20–11:50 AM, Reno, NV (Nevada 11); session: *Risk, Signals, and Supply Chain Strategy* (Track: Supply Chain Risk & Resilience)
-- *Upcoming:* **2026 INFORMS MSOM Annual Conference**, Harvard Business School (Boston, MA) — July 12–14, 2026 (Accepted)
+- POMS-China Annual Meeting, 2023
