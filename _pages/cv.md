@@ -57,6 +57,7 @@ Research Projects (Selected)
 Professional Service
 ======
 * Ad-hoc Reviewer, *Naval Research Logistics*
+* Session Chair, *Risk-aware Analytics and Decision Models*, CSAMSE Annual Meeting, Jul 2025
 
 Conference Presentations & Invited Talks
 ======
